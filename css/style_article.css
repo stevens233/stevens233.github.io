@@ -20,7 +20,7 @@ body {
 
 /* 头部样式 */
 header {
-    background-color: rgba(33, 33, 33);
+    background-color: rgba(33, 33, 33, 0.9);
     color: #fff;
     text-align: center;
     padding: 1em 0;
