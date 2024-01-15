@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<!-- <style>
+    .noSelect {
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none;   /* Chrome/Safari/Opera */
+        -moz-user-select: none;      /* Firefox */
+        -ms-user-select: none;       /* Internet Explorer/Edge */
+        user-select: none;           /* Non-prefixed version, currently supported by most modern browsers */
+    }
+</style> -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steven的个人博客</title>
+    <link rel="stylesheet" href="/css/style_article.css">
+</head>
+<script src="script.js"></script>
+<body>
+    <header>
+        <h1>欢迎来到Steven的博客</h1>
+        <nav>
+            <ul>
+                <li><a href="/index.html">首页</a></li>
+                <li><a href="#">文章</a></li>
+                <li><a href="#">关于我</a></li>
+                <li><a href="#">联系方式</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>视频音频相关AI技术调研报告</h2>
+            <!-- 文章列表-->
+            <article>
+                <style type="text/css">
+                    .awlist1 {
+                        list-style: none;
+                        counter-reset: awlistcounter1_0
+                    }
+                
+                    .awlist1>li:before {
+                        content: counter(awlistcounter1_0) '．';
+                        counter-increment: awlistcounter1_0
+                    }
+                </style>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:22pt;"><strong><span style="font-family:宋体;">视频音频相关</span></strong><strong>AI</strong><strong><span style="font-family:宋体;">技术调研报告</span></strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:22pt;"><strong>&nbsp;</strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol type="1" class="awlist1" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:16pt; font-weight:bold; list-style-position:inside;"><span style="font-family:宋体;">调研方式</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;"><span style="font-family:宋体;">根据需求与</span>heygen<span style="font-family:宋体;">相关技术的研究与分析，在各大论坛与平台寻找总体解决方案与技术路径，通过阅读大量文献、技术分享以及说明文档一步一步推进项目的调研与实现，并追求各个不同技术之间的配合，实现更大的成果。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:16pt;"><strong><span style="font-family:宋体;">二．一个完整的</span></strong><strong>ai video translation</strong><strong><span style="font-family:宋体;">项目是如何实现的</span></strong></p>
+                <ol type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:12pt; list-style-position:inside;">Extract audio from video - ffmpeg</li>
+                    <li style="font-size:12pt; list-style-position:inside;">Extract text from audio - whisper, paddle speech</li>
+                    <li style="font-size:12pt; list-style-position:inside;">Translate the text - googletrans</li>
+                    <li style="font-size:12pt; list-style-position:inside;">Voice synthesis(Text to speech) - tts, paddle speech</li>
+                    <li style="font-size:12pt; list-style-position:inside;">Voice conversion(Singing voice conversion) - so-vits-svc</li>
+                    <li style="font-size:12pt; list-style-position:inside;">Lip sync - video-retalking, Wav2Lip</li>
+                    <li style="font-size:12pt; list-style-position:inside;">separate audio into vocal and instrument - python-audio-separator</li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">https://github.com/pranauv1/AI-Video-Translation/blob/main/Video_Translation_%26_Lipsync.ipynb</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:16pt;"><strong><span style="font-family:宋体;">三．各个技术框架介绍</span></strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">FFmpeg<span style="font-family:宋体;">是领先的多媒体框架，能够解码、编码、转码、多路复用、解复用、流式传输、过滤和播放人类和机器创造的几乎所有内容。它支持最晦涩的古代格式，直至达到最前沿。无论它们是由某个标准委员会、社区还是公司设计的。它还具有高度的可移植性：</span>FFmpeg<span style="font-family:宋体;">在各种构建环境、机器体系结构和配置下，在</span>Linux<span style="font-family:宋体;">、</span>Mac OS X<span style="font-family:宋体;">、</span>Microsoft Windows<span style="font-family:宋体;">、</span>BSD<span style="font-family:宋体;">、</span>Solaris<span style="font-family:宋体;">等平台上编译、运行并通过我们的测试。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">https://zhuanlan.zhihu.com/p/592988688</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">https://github.com/FFmpeg/FFmpeg</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">Whisper<span style="font-family:宋体;">是一个开源的自动语音识别系统，它在网络上收集了</span>680,000<span style="font-family:宋体;">小时的多语种和多任务监督数据进行训练，使得它可以将多种语言的音频转文字。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">Whisper<span style="font-family:宋体;">的好处是开源免费、支持多语种（包括中文），有不同模型可供选择，最终的效果比市面上很多音频转文字的效果都要好。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">https://zhuanlan.zhihu.com/p/618598430</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">https://github.com/openai/whisper</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">Googletrans<span style="font-family:宋体;">是一个免费和无限制的</span>python<span style="font-family:宋体;">库，实现了谷歌翻译</span>API<span style="font-family:宋体;">。使用</span>Google Translate Ajax API<span style="font-family:宋体;">来调用诸如检测和翻译之类的方法。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">https://github.com/ssut/py-googletrans</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">TTS<span style="font-family:宋体;">全称</span>Text-to-Speech<span style="font-family:宋体;">，翻译过来叫做文本生成音频。这种方式大家比较熟悉，抖音上，有许多应用</span>TTS<span style="font-family:宋体;">技术的视频。比如配着大叔口音的搞笑视频，再比如主人公叫小帅、小美的三分电影解说。特点就是声音带着机械感，可选模板比较少。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">https://baijiahao.baidu.com/s?id=1765686678971119247&amp;wfr=spider&amp;for=pc</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">https://github.com/coqui-ai/TTS</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">So-vits-svc,<span style="font-family:宋体;">，</span>SVC<span style="font-family:宋体;">（</span>Singing Voice Conversion<span style="font-family:宋体;">），歌声转换，也就是类似变声器的玩意，抽取一个人的声音作为训练数据，训练一个神经网络模型，学习他的声线；然后用模型在目标歌曲上做推理，即可实现用自己的声线唱目标歌曲。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">https://zhuanlan.zhihu.com/p/626164250?utm_id=0</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">https://www.bilibili.com/read/cv23788651/</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">https://github.com/svc-develop-team/so-vits-svc</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">VideoReTalking<span style="font-family:宋体;">是一个新系统，可以根据输入音频编辑现实世界中会说话的头部视频的人脸，即使在不同的情绪下也能产生高质量的假唱输出视频。系统将这一目标分解为三个顺序任务：</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;"><span style="font-family:宋体;">（</span>1<span style="font-family:宋体;">） 基于正则表达式的人脸视频生成</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;"><span style="font-family:宋体;">（</span>2<span style="font-family:宋体;">） 音频驱动的唇同步和</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;"><span style="font-family:宋体;">（</span>3<span style="font-family:宋体;">） 面部增强，以提高照片的真实感。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;"><a href="https://github.com/OpenTalker/video-retalking" style="text-decoration:none;"><span style="color:#000000;">https://github.com/OpenTalker/video-retalking</span></a></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">Audio Separator<span style="font-family:宋体;">是一个</span>Python<span style="font-family:宋体;">包，允许使用训练的</span>ONNX<span style="font-family:宋体;">格式模型将音频文件分离为两个词干，一个是</span>vocal<span style="font-family:宋体;">词干，另一个是</span>instrument<span style="font-family:宋体;">词干。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;"><a href="https://github.com/karaokenerds/python-audio-separator" style="text-decoration:none;"><span style="color:#000000;">https://github.com/karaokenerds/python-audio-separator</span></a></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">PaddleSpeech<span style="font-family:宋体;">是</span>PaddlePadle<span style="font-family:宋体;">百度飞桨深度学习框架下的语音服务工具包。</span>PaddleSpeech<span style="font-family:宋体;">包括自监督学习模型、带标点符号的&nbsp;</span>SOTA/<span style="font-family:宋体;">流式&nbsp;</span>ASR<span style="font-family:宋体;">、带文本前端的流式&nbsp;</span>TTS<span style="font-family:宋体;">、说话人验证系统、端到端语音翻译和关键字识别。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">http://wed.xjx100.cn/news/200818.html?action=onClick</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;"><a href="https://github.com/PaddlePaddle/PaddleSpeech" style="text-decoration:none;"><span style="color:#000000;">https://github.com/PaddlePaddle/PaddleSpeech</span></a></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:16pt;"><strong><span style="font-family:宋体;">四．当前成果</span></strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;"><span style="font-family:宋体;">经过研究，已经成功实现了视频提取音频并转换为文本，可以通过</span>api<span style="font-family:宋体;">借口进行调用，通过入参传入</span>mp4<span style="font-family:宋体;">或</span>wav<span style="font-family:宋体;">等主流视频格式即可将视频内的文本提取出来以</span>json<span style="font-family:宋体;">格式返回。</span></p>
+                <img src="/resources/pic1.png" alt="图片1" width="617" height="460">
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;"><span style="font-family:宋体;">通过</span>tts<span style="font-family:宋体;">与</span>paddle speech<span style="font-family:宋体;">进行文本语音合成，由于依赖环境差距过大无法直接置于当前环境下使用需要额外配置隔离运行，仅在测试环境下进行了尝试，成功生成了音频。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;"><span style="font-family:宋体;">通过</span>so-vits-svc<span style="font-family:宋体;">实现了对录制音频与</span>tts<span style="font-family:宋体;">生成音频的音源替换，利用</span>audio separator<span style="font-family:宋体;">将歌曲的人声部与伴奏部进行分离，并使用</span>so-vits-svc<span style="font-family:宋体;">实现让特朗普来唱中文歌。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:16pt;"><strong><span style="font-family:宋体;">五．面临的困难与下一步计划</span></strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">1. <span style="font-family:宋体;">由于各个技术框架间的依赖环境差异过大，无法在同一个环境配置下使用，导致需要开启多个服务才能实现对应功能，从而影响了功能间的整合与交互。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;"><span style="font-family:宋体;">设想通过开启多个服务进行服务间的调用，从而实现整套链路的闭环，相对应的要处理好多线程并发可能带来的问题。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">&nbsp;</p>
+                <ol start="2" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:12pt; list-style-position:inside;">tts<span style="font-family:宋体;">与</span>paddle speech<span style="font-family:宋体;">可用模型数量较少，</span>paddle speech<span style="font-family:宋体;">功能偏向与单独生成中文或英文的音频，语言混合效果较差。</span>tts<span style="font-family:宋体;">主要侧重于英语音频生成，对中文的优化效果有待开发。可以再寻找其他模型或技术来代替，或者将英文先全部翻译为中文再进行单一语言的音频生成，声音效果可以通过</span>svc<span style="font-family:宋体;">来更改音源。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">&nbsp;</p>
+                <ol start="3" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:12pt; list-style-position:inside;"><span style="font-family:宋体;">要对文本生成的音频与视频进行一对一的适配，在正确的时间点插入音频，这项难点有待研究。预计可行的方案为将对话按照间隔拆开，对单一音频进行操作，最后根据顺序拼接，但若生成音频时间长于原音频则会产生错位，可以考虑加速以缩短时间。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:16pt;"><strong><span style="font-family:宋体;">六．可能实现的功能与服务</span></strong></p>
+                <ol type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:12pt; list-style-position:inside;"><span style="font-family:宋体;">视频转换为音频</span></li>
+                    <li style="font-size:12pt; list-style-position:inside;"><span style="font-family:宋体;">视频、音频转换为文本</span></li>
+                    <li style="font-size:12pt; list-style-position:inside;"><span style="font-family:宋体;">视频、音频转换文本并翻译</span></li>
+                    <li style="font-size:12pt; list-style-position:inside;"><span style="font-family:宋体;">视频、音频转换文本翻译后进行</span>tts<span style="font-family:宋体;">音频合成，或根据</span>svc<span style="font-family:宋体;">进行音源转换</span></li>
+                    <li style="font-size:12pt; list-style-position:inside;"><span style="font-family:宋体;">根据文本通过</span>tts<span style="font-family:宋体;">进行音频合成，或根据</span>svc<span style="font-family:宋体;">进行音源转换</span></li>
+                    <li style="font-size:12pt; list-style-position:inside;"><span style="font-family:宋体;">音频通过</span>svc<span style="font-family:宋体;">进行音源转换</span></li>
+                    <li style="font-size:12pt; list-style-position:inside;"><span style="font-family:宋体;">歌曲的伴奏与人声提取</span></li>
+                    <li style="font-size:12pt; list-style-position:inside;"><span style="font-family:宋体;">歌曲的</span>svc<span style="font-family:宋体;">换声</span></li>
+                    <li style="font-size:12pt; list-style-position:inside;"><span style="font-family:宋体;">视频音频文本翻译后</span>tts<span style="font-family:宋体;">生成音频，进行</span>svc<span style="font-family:宋体;">音源转换后再通过对嘴形合成为新视频</span></li>
+                    <li style="font-size:12pt; list-style-position:inside;"><span style="font-family:宋体;">通过文本总结</span>ai<span style="font-family:宋体;">将视频提取的文本进行内容提取与总结</span></li>
+                    <li style="font-size:12pt; list-style-position:inside;"><span style="font-family:宋体;">将伴奏通过</span>ai<span style="font-family:宋体;">转换为曲谱，便于演奏</span></li>
+                    <li style="font-size:12pt; list-style-position:inside;">etc...</li>
+                </ol>
+            </article>
+            <!-- 更多文章-->
+        </section>
+    </main>
+
+    <footer>
+        <p>版权所有 &copy; 2024 Steven的博客</p>
+    </footer>
+
+</body>
+</html>
