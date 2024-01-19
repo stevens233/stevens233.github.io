@@ -67,15 +67,19 @@ main {
 
 .contact-info {
     text-align: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    min-height: 1000px;
+    margin: auto;
+    width: 75%;
+    overflow: hidden;
 }
 
 .contact-info ul {
     list-style: none;
-    padding: 0;
 }
 
 .contact-info li {
-    margin-bottom: 1em;
+    margin-bottom: 10px;
 }
 
 .contact-info a {
@@ -87,8 +91,13 @@ main {
     text-decoration: underline;
 }
 
+.contact-info p {
+    margin: 10px;
+}
+
 h2 {
-    margin-bottom: 0px;
+    margin: 20px;
+    /* margin-bottom: 20px; */
 }
 
 /* 页脚样式 */
