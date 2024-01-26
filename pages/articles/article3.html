@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<!-- <style>
+    .noSelect {
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none;   /* Chrome/Safari/Opera */
+        -moz-user-select: none;      /* Firefox */
+        -ms-user-select: none;       /* Internet Explorer/Edge */
+        user-select: none;           /* Non-prefixed version, currently supported by most modern browsers */
+    }
+</style> -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steven的个人博客</title>
+    <link rel="stylesheet" href="/css/style_article.css">
+</head>
+<script src="script.js"></script>
+<body>
+    <header>
+        <h1>欢迎来到Steven的博客</h1>
+        <nav>
+            <ul>
+                <li><a href="/index.html">首页</a></li>
+                <li><a href="#">文章</a></li>
+                <li><a href="/pages/about_me.html">关于我</a></li>
+                <li><a href="/pages/contact_me.html">联系方式</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>网络通信学习记录</h2>
+            <!-- 文章列表-->
+            <article>
+                <style type="text/css">
+                    .awlist1 {
+                        list-style: none;
+                        counter-reset: awlistcounter1_0
+                    }
+                
+                    .awlist1>li:before {
+                        content: counter(awlistcounter1_0) '．';
+                        counter-increment: awlistcounter1_0
+                    }
+                
+                    .awlist2 {
+                        list-style: none;
+                        counter-reset: awlistcounter1_0 1
+                    }
+                
+                    .awlist2>li:before {
+                        content: counter(awlistcounter1_0) '．';
+                        counter-increment: awlistcounter1_0
+                    }
+                
+                    .awlist3 {
+                        list-style: none;
+                        counter-reset: awlistcounter1_0 2
+                    }
+                
+                    .awlist3>li:before {
+                        content: counter(awlistcounter1_0) '．';
+                        counter-increment: awlistcounter1_0
+                    }
+                
+                    .awlist4 {
+                        list-style: none;
+                        counter-reset: awlistcounter1_0 3
+                    }
+                
+                    .awlist4>li:before {
+                        content: counter(awlistcounter1_0) '．';
+                        counter-increment: awlistcounter1_0
+                    }
+                
+                    .awlist5 {
+                        list-style: none;
+                        counter-reset: awlistcounter1_0 4
+                    }
+                
+                    .awlist5>li:before {
+                        content: counter(awlistcounter1_0) '．';
+                        counter-increment: awlistcounter1_0
+                    }
+                
+                    .awlist6 {
+                        list-style: none;
+                        counter-reset: awlistcounter1_0 5
+                    }
+                
+                    .awlist6>li:before {
+                        content: counter(awlistcounter1_0) '．';
+                        counter-increment: awlistcounter1_0
+                    }
+                
+                    .awlist7 {
+                        list-style: none;
+                        counter-reset: awlistcounter1_0 6
+                    }
+                
+                    .awlist7>li:before {
+                        content: counter(awlistcounter1_0) '．';
+                        counter-increment: awlistcounter1_0
+                    }
+                
+                    .awlist8 {
+                        list-style: none;
+                        counter-reset: awlistcounter1_0 7
+                    }
+                
+                    .awlist8>li:before {
+                        content: counter(awlistcounter1_0) '．';
+                        counter-increment: awlistcounter1_0
+                    }
+                
+                    .awlist9 {
+                        list-style: none;
+                        counter-reset: awlistcounter1_0 8
+                    }
+                
+                    .awlist9>li:before {
+                        content: counter(awlistcounter1_0) '．';
+                        counter-increment: awlistcounter1_0
+                    }
+                </style>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:22pt;"><strong><span style="font-family:宋体;">网络通信学习记录</span></strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol type="1" class="awlist1" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:15pt; font-weight:bold; list-style-position:inside;"><span style="font-family:宋体;">网络</span>OSI<span style="font-family:宋体;">（开放系统互联）模型七层结构</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">物理层（</span>Physical Layer<span style="font-family:宋体;">）：处理网络的物理连接，如电缆、光纤和无线电波。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="2" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">数据链路层（</span>Data Link Layer<span style="font-family:宋体;">）：负责在两个直接相连的节点之间传输原始比特流。它处理错误检测和纠正，以及流量控制。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="3" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">网络层（</span>Network Layer<span style="font-family:宋体;">）：管理设备之间的数据包传输，包括寻址、路由和数据包转发。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="4" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">传输层（</span>Transport Layer<span style="font-family:宋体;">）：负责在源端和目的端之间的通信会话，确保数据的完整性。常见的协议有</span>TCP<span style="font-family:宋体;">（传输控制协议）和</span>UDP<span style="font-family:宋体;">（用户数据报协议）。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="5" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">会话层（</span>Session Layer<span style="font-family:宋体;">）：负责建立、管理和终止两个应用程序之间的会话。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="6" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">表现层（</span>Presentation Layer<span style="font-family:宋体;">）：确保从一个系统发送的数据能被另一个系统的应用层理解，涉及数据格式化、数据加密等。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="7" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">应用层（</span>Application Layer<span style="font-family:宋体;">）：为最终用户或应用程序提供网络服务。这一层包括各种标准的高级协议，如</span>HTTP<span style="font-family:宋体;">、</span>FTP<span style="font-family:宋体;">等。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="2" type="1" class="awlist2" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:15pt; font-weight:bold; list-style-position:inside;">TCP/IP<span style="font-family:宋体;">模型</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">链路层（</span>Link Layer<span style="font-family:宋体;">）：这是最底层，直接与物理网络媒介交互，负责在两个直接连接的节点之间传输原始比特流。例如，以太网（</span>Ethernet<span style="font-family:宋体;">）、</span>Wi-Fi<span style="font-family:宋体;">和</span>PPP<span style="font-family:宋体;">（点对点协议）等工作在这一层。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="2" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">网络层（</span>Internet Layer<span style="font-family:宋体;">）：这一层主要负责将数据包从源主机传输到目的主机，可能涉及不同的网络和链路。</span>IP<span style="font-family:宋体;">（互联网协议）是这一层的核心，负责路由和寻址，以确保数据包正确地到达目的地。除了</span>IP<span style="font-family:宋体;">，还有</span>ICMP<span style="font-family:宋体;">（用于诊断和报告错误的互联网控制消息协议）和</span>IGMP<span style="font-family:宋体;">（用于管理多播组成员资格的互联网组管理协议）也在这一层工作。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="3" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">传输层（</span>Transport Layer<span style="font-family:宋体;">）：这一层负责在网络中的两个主机之间提供端到端的数据传输。</span>TCP<span style="font-family:宋体;">（传输控制协议）和</span>UDP<span style="font-family:宋体;">（用户数据报协议）是这一层的主要协议。</span>TCP<span style="font-family:宋体;">提供可靠的、有序的和基于连接的数据传输，而</span>UDP<span style="font-family:宋体;">提供了一种简单的无连接服务。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="4" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">应用层（</span>Application Layer<span style="font-family:宋体;">）：这是</span>TCP/IP<span style="font-family:宋体;">模型中最高层，负责处理特定的应用程序细节。这一层包含所有高级协议，如</span>HTTP<span style="font-family:宋体;">（用于</span>Web<span style="font-family:宋体;">浏览）、</span>FTP<span style="font-family:宋体;">（文件传输协议）、</span>SMTP<span style="font-family:宋体;">（简单邮件传输协议）等。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="3" type="1" class="awlist3" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:15pt; font-weight:bold; list-style-position:inside;">HTTP<span style="font-family:宋体;">（超文本传输协议）</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">基本概念：</span>HTTP<span style="font-family:宋体;">是基于客户端</span>-<span style="font-family:宋体;">服务器模型的。一个客户端（通常是</span>Web<span style="font-family:宋体;">浏览器）发送一个</span>HTTP<span style="font-family:宋体;">请求到服务器，然后服务器返回一个响应给客户端。响应中包含了请求的资源（比如</span>HTML<span style="font-family:宋体;">文档）。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="2" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">无状态协议：</span>HTTP<span style="font-family:宋体;">是无状态的，意味着服务器不会保留任何数据（状态）之间的请求。然而，为了实现诸如登录状态保持，</span>HTTP Cookie<span style="font-family:宋体;">可以被用来在请求之间保持状态。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="3" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">请求和响应：</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">HTTP<span style="font-family:宋体;">请求由以下几部分组成：</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-indent:21pt;"><span style="font-family:宋体;">请求行：包含方法（如</span>GET<span style="font-family:宋体;">或</span>POST<span style="font-family:宋体;">）、请求的</span>URL<span style="font-family:宋体;">和</span>HTTP<span style="font-family:宋体;">版本。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-indent:21pt;"><span style="font-family:宋体;">请求头：包含有关客户端环境和请求正文的元数据，如</span>User-Agent<span style="font-family:宋体;">、</span>Accept<span style="font-family:宋体;">、</span>Content-Type<span style="font-family:宋体;">等。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-indent:21pt;"><span style="font-family:宋体;">请求正文：并非所有请求都有正文（如</span>GET<span style="font-family:宋体;">请求），主要用于</span>POST<span style="font-family:宋体;">和</span>PUT<span style="font-family:宋体;">请求，在提交表单数据时尤其重要。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-indent:21pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">HTTP<span style="font-family:宋体;">响应也有类似的结构：</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-indent:21pt;"><span style="font-family:宋体;">状态行：包含</span>HTTP<span style="font-family:宋体;">版本、状态码（如</span>200<span style="font-family:宋体;">、</span>404<span style="font-family:宋体;">等）和状态消息。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-indent:21pt;"><span style="font-family:宋体;">响应头：包含有关服务器和响应正文的信息，如</span>Content-Type<span style="font-family:宋体;">、</span>Content-Length<span style="font-family:宋体;">等。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-indent:21pt;"><span style="font-family:宋体;">响应正文：包含请求的资源内容，例如</span>HTML<span style="font-family:宋体;">文档、图像等。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-indent:21pt;">&nbsp;</p>
+                <ol start="4" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">安全性：</span>HTTP<span style="font-family:宋体;">本身不加密，这意味着</span>HTTP<span style="font-family:宋体;">通信容易受到中间人攻击。因此，通常与</span>SSL/TLS<span style="font-family:宋体;">一起使用，以提供加密通信（</span>HTTPS<span style="font-family:宋体;">）。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="5" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">方法：</span>HTTP<span style="font-family:宋体;">定义了一系列的请求方法，用于不同的操作。最常见的是</span>GET<span style="font-family:宋体;">（请求资源）和</span>POST<span style="font-family:宋体;">（提交数据），还有</span>PUT<span style="font-family:宋体;">、</span>DELETE<span style="font-family:宋体;">、</span>HEAD<span style="font-family:宋体;">等。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">6.<span style="font-family:宋体;">状态码：</span>HTTP<span style="font-family:宋体;">响应状态码提供了关于请求是否成功以及如何处理响应的信息。例如，</span>200<span style="font-family:宋体;">系列表示成功，</span>400<span style="font-family:宋体;">系列表示客户端错误，</span>500<span style="font-family:宋体;">系列表示服务器错误。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="4" type="1" class="awlist4" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:15pt; font-weight:bold; list-style-position:inside;">IPv6</li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;"><strong><span style="font-family:宋体;">为什么</span></strong><strong>IPv6</strong><strong><span style="font-family:宋体;">的应用不普及？</span></strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">兼容性和升级成本：许多旧设备和软件只支持</span>IPv4<span style="font-family:宋体;">，而升级它们以支持</span>IPv6<span style="font-family:宋体;">需要时间和金钱。对于许多公司来说，这种升级并非迫切需要。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="2" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">转换成本和复杂性：</span>IPv4<span style="font-family:宋体;">到</span>IPv6<span style="font-family:宋体;">的迁移并不是简单地替换旧协议。它涉及整个网络架构的更新，包括硬件（如路由器、交换机）和软件。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="3" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">缺乏紧迫感：尽管</span>IPv4<span style="font-family:宋体;">地址枯竭，但通过地址复用技术（如</span>NAT<span style="font-family:宋体;">）和其他技术手段，许多组织依然能够高效地使用</span>IPv4<span style="font-family:宋体;">。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="4" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">教育和知识的缺乏：许多网络专业人员对</span>IPv6<span style="font-family:宋体;">的了解有限，导致他们在实践中不愿意或不知道如何采用它。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;"><strong><span style="font-family:宋体;">如何使用</span></strong><strong>IPv6</strong><strong><span style="font-family:宋体;">？</span></strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">硬件和软件的兼容性：确保网络设备和软件支持</span>IPv6<span style="font-family:宋体;">。这可能需要更新或更换一些旧设备。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="2" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">获取</span>IPv6<span style="font-family:宋体;">地址：你需要从你的互联网服务提供商（</span>ISP<span style="font-family:宋体;">）获取</span>IPv6<span style="font-family:宋体;">地址。大多数现代</span>ISP<span style="font-family:宋体;">都能提供</span>IPv6<span style="font-family:宋体;">支持。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="3" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">配置网络设备：在你的路由器和其他网络设备上配置</span>IPv6<span style="font-family:宋体;">。这通常涉及到更改网络设置以接受和使用</span>IPv6<span style="font-family:宋体;">地址。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="4" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">确保安全：</span>IPv6<span style="font-family:宋体;">具有一些不同于</span>IPv4<span style="font-family:宋体;">的安全考虑，比如直接的端到端连接，这就需要更新和调整你的网络安全策略。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="5" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">测试和监控：在全面部署</span>IPv6<span style="font-family:宋体;">之前，进行彻底的测试以确保一切正常工作。监控网络性能和安全也是重要的。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="6" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">逐步过渡：大多数网络将经历一个从</span>IPv4<span style="font-family:宋体;">向</span>IPv6<span style="font-family:宋体;">过渡的阶段，这可能包括运行一个双栈网络，同时支持</span>IPv4<span style="font-family:宋体;">和</span>IPv6<span style="font-family:宋体;">。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="5" type="1" class="awlist5" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:15pt; font-weight:bold; list-style-position:inside;"><span style="font-family:宋体;">物理</span>MAC<span style="font-family:宋体;">地址</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">物理</span>MAC<span style="font-family:宋体;">地址（</span>Media Access Control Address<span style="font-family:宋体;">）是一种在网络硬件设备中用于确保网络通信的唯一标识符。每个网络接口卡（</span>NIC<span style="font-family:宋体;">），如以太网卡、</span>Wi-Fi<span style="font-family:宋体;">卡等，出厂时都被分配了一个全球唯一的</span>MAC<span style="font-family:宋体;">地址。这个地址主要在</span>OSI<span style="font-family:宋体;">模型的数据链路层（第</span>2<span style="font-family:宋体;">层）被使用，用于局域网（</span>LAN<span style="font-family:宋体;">）内的设备识别和通信。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="6" type="1" class="awlist6" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:15pt; font-weight:bold; list-style-position:inside;"><span style="font-family:宋体;">交换机与路由器</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">当一个公网请求（例如，通过互联网发起的请求）进入一个网络系统时，交换机和路由器各自扮演不同的角色：</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;"><strong><span style="font-family:宋体;">路由器的角色</span></strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">边界网关：路由器通常作为网络的边界网关，连接内部网络（例如家庭或企业网络）和外部网络（例如互联网）。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">地址转换：在家庭或小型企业网络中，路由器通常执行网络地址转换（</span>NAT<span style="font-family:宋体;">），将公网</span>IP<span style="font-family:宋体;">地址转换为私网</span>IP<span style="font-family:宋体;">地址。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">路由决策：路由器根据其路由表，确定如何将公网请求转发到内部网络中正确的设备。它使用目的</span>IP<span style="font-family:宋体;">地址来做出这些决策。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;"><strong><span style="font-family:宋体;">交换机的角色</span></strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">内部数据转发：一旦路由器确定了数据包的目标</span>IP<span style="font-family:宋体;">地址属于内部网络，数据包将被转发到交换机。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">MAC<span style="font-family:宋体;">地址识别：交换机使用</span>MAC<span style="font-family:宋体;">地址来确定数据包应该转发到哪个内部设备。它查看自己的</span>MAC<span style="font-family:宋体;">地址表来找出连接到哪个端口的设备拥有数据包中目标</span>MAC<span style="font-family:宋体;">地址。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">有效传输：交换机确保数据包有效且高效地传达到目标设备，通常是通过直接将数据包发送到连接该目标</span>MAC<span style="font-family:宋体;">地址的端口。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">总结来说，当公网请求进入网络时，路由器首先在网络层处理请求，做出路由决策，并将请求转发到内部网络。然后交换机在数据链路层接管，根据</span>MAC<span style="font-family:宋体;">地址将请求精确地转发到正确的设备。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="7" type="1" class="awlist7" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:15pt; font-weight:bold; list-style-position:inside;"><span style="font-family:宋体;">地址解析协议（</span>Address Resolution Protocol, ARP<span style="font-family:宋体;">）</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;"><strong>ARP</strong><strong><span style="font-family:宋体;">的工作流程</span></strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">发起</span>ARP<span style="font-family:宋体;">请求：当一个设备（比如一台计算机）需要将数据包发送到局域网内的另一台设备时，它首先检查自己的</span>ARP<span style="font-family:宋体;">缓存，看是否已经有目标设备的</span>IP<span style="font-family:宋体;">地址到</span>MAC<span style="font-family:宋体;">地址的映射。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="2" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">广播</span>ARP<span style="font-family:宋体;">查询：如果没有找到映射，设备会在局域网上广播一个</span>ARP<span style="font-family:宋体;">查询，询问拥有特定</span>IP<span style="font-family:宋体;">地址的设备的</span>MAC<span style="font-family:宋体;">地址是什么。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="3" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">响应</span>ARP<span style="font-family:宋体;">请求：网络上拥有该</span>IP<span style="font-family:宋体;">地址的设备会识别这个查询，并向原始设备发送一个</span>ARP<span style="font-family:宋体;">响应，提供其</span>MAC<span style="font-family:宋体;">地址。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="4" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">更新</span>ARP<span style="font-family:宋体;">缓存：原始设备接收到</span>ARP<span style="font-family:宋体;">响应后，会在自己的</span>ARP<span style="font-family:宋体;">缓存中更新这个</span>IP<span style="font-family:宋体;">地址和</span>MAC<span style="font-family:宋体;">地址的映射，以便将来的通信。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="5" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">开始数据传输：一旦知道了目标设备的</span>MAC<span style="font-family:宋体;">地址，原始设备就可以开始通过交换机将数据包发送到正确的设备了。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;"><strong><span style="font-family:宋体;">总结</span></strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;">ARP<span style="font-family:宋体;">的作用：</span>ARP<span style="font-family:宋体;">在网络层和数据链路层之间架起了一座桥梁，将网络层的</span>IP<span style="font-family:宋体;">地址转换为数据链路层的</span>MAC<span style="font-family:宋体;">地址，使得数据包能够在局域网内正确传递。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="2" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">路由器和交换机的协作：在这个过程中，路由器依然负责根据</span>IP<span style="font-family:宋体;">地址决定数据包的路由，而交换机则利用</span>MAC<span style="font-family:宋体;">地址将数据包准确地送达到指定的物理设备。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="8" type="1" class="awlist8" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:15pt; font-weight:bold; list-style-position:inside;">CGNAT<span style="font-family:宋体;">（</span>Carrier-Grade NAT<span style="font-family:宋体;">）</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">CGNAT<span style="font-family:宋体;">是一种网络技术，由互联网服务提供商（</span>ISP<span style="font-family:宋体;">）用于在他们的网络中实施</span>IP<span style="font-family:宋体;">地址共享。随着</span>IPv4<span style="font-family:宋体;">地址的日益稀缺，</span>CGNAT<span style="font-family:宋体;">成为了一种延长</span>IPv4<span style="font-family:宋体;">寿命的策略。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">CGNAT<span style="font-family:宋体;">的工作原理：</span></p>
+                <ol type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">多个端用户共享单个或少量的公网</span>IPv4<span style="font-family:宋体;">地址。</span></li>
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">用户的私有</span>IP<span style="font-family:宋体;">地址通过</span>ISP<span style="font-family:宋体;">的</span>CGNAT<span style="font-family:宋体;">设备映射到一个公共</span>IP<span style="font-family:宋体;">地址和端口号。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;"><strong>CGNAT</strong><strong><span style="font-family:宋体;">的挑战</span></strong></p>
+                <ol type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">用户无法直接从互联网访问其家庭网络，因为公网</span>IP<span style="font-family:宋体;">地址是共享的。</span></li>
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">对于需要端到端连接的应用（如某些类型的游戏、视频会议软件）可能导致连接问题。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="9" type="1" class="awlist9" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:15pt; font-weight:bold; list-style-position:inside;"><span style="font-family:宋体;">网络地址转换&nbsp;</span>(NAT)</li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">NAT<span style="font-family:宋体;">是一种网络技术，它允许多个设备在私有网络上使用一个或几个公共</span>IP<span style="font-family:宋体;">地址进行互联网通信。通过这种方式，</span>NAT<span style="font-family:宋体;">有助于节省</span>IP<span style="font-family:宋体;">地址并提供一定程度的安全性。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;"><strong>NAT</strong><strong><span style="font-family:宋体;">的基本工作原理</span></strong></p>
+                <ol type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">地址和端口的转换：当私有网络内的设备向互联网发送数据时，</span>NAT<span style="font-family:宋体;">设备会将数据包中的私有</span>IP<span style="font-family:宋体;">地址和端口号转换为公共</span>IP<span style="font-family:宋体;">地址和端口号。</span></li>
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">反向映射：接收到响应时，</span>NAT<span style="font-family:宋体;">设备再将公共</span>IP<span style="font-family:宋体;">地址和端口号转换回原来设备的私有</span>IP<span style="font-family:宋体;">地址和端口号。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;"><strong>NAT</strong><strong><span style="font-family:宋体;">行为类型</span></strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">全锥形</span>NAT<span style="font-family:宋体;">（</span>Full Cone NAT<span style="font-family:宋体;">）：</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">一旦一个内部地址（</span>IP<span style="font-family:宋体;">和端口）映射到一个外部地址，任何外部主机都可以通过这个外部地址发送数据到内部主机。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">这是最</span>&ldquo;<span style="font-family:宋体;">宽松</span>&rdquo;<span style="font-family:宋体;">的</span>NAT<span style="font-family:宋体;">类型，允许任意外部主机通过已建立的映射发送数据。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="2" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">地址限制锥形</span>NAT<span style="font-family:宋体;">（</span>Address Restricted Cone NAT<span style="font-family:宋体;">）：</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">内部地址映射到外部地址后，只有内部主机先前发送过数据的外部地址才能回送数据。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">这种</span>NAT<span style="font-family:宋体;">类型只允许从特定地址的响应进入。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="3" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">端口限制锥形</span>NAT<span style="font-family:宋体;">（</span>Port Restricted Cone NAT<span style="font-family:宋体;">）：</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">类似于地址限制锥形</span>NAT<span style="font-family:宋体;">，但更加严格，它要求外部主机的地址和端口与内部主机先前发送过数据的目标地址和端口相匹配。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">这种类型的</span>NAT<span style="font-family:宋体;">对外部主机的地址和端口都有限制。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="4" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">对称型</span>NAT<span style="font-family:宋体;">（</span>Symmetric NAT<span style="font-family:宋体;">）：</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">每次内部地址与一个新的外部地址通信时，都会创建一个新的映射。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">这是最严格的</span>NAT<span style="font-family:宋体;">类型，通常用于企业和教育网络。对网络穿透的实现是最具挑战性的。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;"><strong><span style="font-family:宋体;">如何影响网络穿透</span></strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;"><strong>&nbsp;</strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">在实现内网穿透时，</span>NAT<span style="font-family:宋体;">类型是一个重要的考虑因素。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">对称型</span>NAT<span style="font-family:宋体;">和端口限制锥形</span>NAT<span style="font-family:宋体;">可能导致在某些场景下无法实现或困难重重的网络穿透。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">全锥形</span>NAT<span style="font-family:宋体;">和地址限制锥形</span>NAT<span style="font-family:宋体;">相对更容易进行内网穿透。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;"><strong><span style="font-family:宋体;">如何实现内网穿透</span></strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">端口映射</span>/<span style="font-family:宋体;">端口转发：在路由器设置中配置，将来自互联网的特定端口的流量转发到内网的特定设备和端口。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">2.<span style="font-family:宋体;">使用内网穿透服务：如</span>NGROK<span style="font-family:宋体;">、</span>FRP<span style="font-family:宋体;">等，这些服务提供了一个公共地址，用于将互联网流量转发到你的私有网络设备。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">FRP<span style="font-family:宋体;">等内网穿透应用工作原理</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">客户端</span>/<span style="font-family:宋体;">服务端模型：</span>frp<span style="font-family:宋体;">使用客户端和服务端模型。您需要在您想要从外部访问的设备上运行</span>frp<span style="font-family:宋体;">的客户端，在某个具有公网</span>IP<span style="font-family:宋体;">的服务器上运行</span>frp<span style="font-family:宋体;">的服务端。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="2" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">建立隧道：</span>frp<span style="font-family:宋体;">客户端会与</span>frp<span style="font-family:宋体;">服务端建立一个隧道连接。这意味着，即使您的设备位于</span>CGNAT<span style="font-family:宋体;">之后，</span>frp<span style="font-family:宋体;">客户端仍然能够主动连接到公网上的</span>frp<span style="font-family:宋体;">服务端。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="3" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">转发请求：当有来自公网的请求时，</span>frp<span style="font-family:宋体;">服务端可以将这些请求通过预先建立的隧道转发到</span>frp<span style="font-family:宋体;">客户端，然后</span>frp<span style="font-family:宋体;">客户端将请求转发到本地网络上的适当设备。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="4" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">配置：您需要在</span>frp<span style="font-family:宋体;">客户端配置要穿透的服务（例如</span>HTTP<span style="font-family:宋体;">服务器、</span>SSH<span style="font-family:宋体;">等）和端口。同时，您还需要在</span>frp<span style="font-family:宋体;">服务端配置相应的端口映射。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="bottom: 10px; right: 10px; position: absolute;"><a href="https://wordtohtml.net" target="_blank" style="font-size:11px; color: #d0d0d0;">Converted to HTML with WordToHTML.net</a></p>
+            </article>
+            <!-- 更多文章-->
+        </section>
+    </main>
+
+    <footer>
+        <p>版权所有 &copy; 2024 Steven的博客</p>
+    </footer>
+
+</body>
+</html>

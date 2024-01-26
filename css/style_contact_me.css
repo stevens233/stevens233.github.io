@@ -68,7 +68,7 @@ main {
 .contact-info {
     text-align: center;
     background-color: rgba(255, 255, 255, 0.7);
-    min-height: 1000px;
+    min-height: 200vh;
     margin: auto;
     width: 75%;
     overflow: hidden;
