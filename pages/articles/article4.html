@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<!-- <style>
+    .noSelect {
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none;   /* Chrome/Safari/Opera */
+        -moz-user-select: none;      /* Firefox */
+        -ms-user-select: none;       /* Internet Explorer/Edge */
+        user-select: none;           /* Non-prefixed version, currently supported by most modern browsers */
+    }
+</style> -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steven的个人博客</title>
+    <link rel="icon" href="/resources/steven.png" type="image/png">
+    <link rel="stylesheet" href="/css/style_article.css">
+</head>
+<script src="script.js"></script>
+<body>
+    <header>
+        <h1>欢迎来到Steven的博客</h1>
+        <nav>
+            <ul>
+                <li><a href="/index.html">首页</a></li>
+                <li><a href="/pages/article.html">文章</a></li>
+                <li><a href="/pages/about_me.html">关于我</a></li>
+                <li><a href="/pages/contact_me.html">联系方式</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Android sdk开发记录</h2>
+            <!-- 文章列表-->
+            <article>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:22pt;"><strong>Android sdk</strong><strong><span style="font-family:宋体;">开发记录</span></strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">1. <span style="font-family:宋体;">参考</span>https://blog.csdn.net/weixin_51522235/article/details/128216091<span style="font-family:宋体;">，将项目修改为</span>sdk</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">2. <span style="font-family:宋体;">使用</span>fat-arr<span style="font-family:宋体;">对集成</span>sdk<span style="font-family:宋体;">进行</span>embed<span style="font-family:宋体;">打包，注意</span>so<span style="font-family:宋体;">库的</span>cpu<span style="font-family:宋体;">框架与位置，</span>aar<span style="font-family:宋体;">文件一定要放在</span>libs<span style="font-family:宋体;">文件夹下不然达不到</span>so<span style="font-family:宋体;">库，搞不定就重启清缓存重</span>build<span style="font-family:宋体;">三重大法，</span>as<span style="font-family:宋体;">一坨不出</span>bug<span style="font-family:宋体;">有鬼。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">ndk {</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-indent:21pt;">abiFilters &quot;armeabi-v7a&quot;, &quot;arm64-v8a&quot;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">}</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">sourceSets {</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-indent:21pt;">main {</p>
+                <p style="margin-top:0pt; margin-left:21pt; margin-bottom:0pt; text-indent:21pt;">jniLibs.srcDirs = [&apos;libs&apos;]</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">}</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">repositories {</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-indent:21pt;">flatDir {</p>
+                <p style="margin-top:0pt; margin-left:21pt; margin-bottom:0pt; text-indent:21pt;">dirs &apos;libs&apos;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-indent:21pt;">}</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">}</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">3. <span style="font-family:宋体;">打不进去的</span>so<span style="font-family:宋体;">库干脆手动塞进去算了，说的就是你身份证的！</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">4. <span style="font-family:宋体;">重复的资源要手动删除，转移</span>module<span style="font-family:宋体;">时要把资源也一并全都转移过去。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:16pt;"><strong><span style="font-family:宋体;">逻辑更改事项：</span></strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">1. <span style="font-family:宋体;">传入通过一个接口与一个实现类实现，通过接口传入账户、密钥、卡类型、是否人脸、原活动等。实现跳转至不展现的导引类</span>main1<span style="font-family:宋体;">。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">2. main1<span style="font-family:宋体;">将输入数据存入</span>userinfo<span style="font-family:宋体;">单例类然后跳转到对应的活动。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">3. <span style="font-family:宋体;">跳转后根据网络请求判断是否要给它过，比如日期、安卓</span>id<span style="font-family:宋体;">、包名等，还有账号和密钥。最好每个关键节点的调用都整一下。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">4. <span style="font-family:宋体;">根据不同结果返回时往</span>nfc<span style="font-family:宋体;">单例的</span>result<span style="font-family:宋体;">存内容，然后每次启动到引导活动就重置单例类，最后通过单例类获取</span>sdk<span style="font-family:宋体;">结果。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">5. <span style="font-family:宋体;">导引活动可以通过</span>style<span style="font-family:宋体;">的透明</span>theme<span style="font-family:宋体;">无感切换。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&lt;style name=&quot;Transparent&quot; parent=&quot;Theme.AppCompat.Light.NoActionBar&quot;&gt;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;item name=&quot;android:windowBackground&quot;&gt;@android:color/transparent&lt;/item&gt;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;item name=&quot;android:windowIsTranslucent&quot;&gt;true&lt;/item&gt;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;item name=&quot;android:windowNoTitle&quot;&gt;true&lt;/item&gt;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&lt;/style&gt;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&lt;activity</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; android:name=&quot;.MainActivity1&quot;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; android:theme=&quot;@style/Transparent&quot;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; android:exported=&quot;false&quot;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; android:screenOrientation=&quot;portrait&quot;&gt;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">6. <span style="font-family:宋体;">把引导活动的启动和关闭动画都取消，记得把任务栏颜色调成跟别的一致。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">overridePendingTransition(0, 0);</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">Window window = getWindow();</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; window.setStatusBarColor(ContextCompat.getColor(this, R.color.purple_700));</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="7" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">注意不同流程返回的内容格式需一致，在每个可能的地方加上返回信息，例如查看每一个活动的每一个</span>finish<span style="font-family:宋体;">，若为结果页可以把插入</span>result<span style="font-family:宋体;">放在网络调用</span>handler<span style="font-family:宋体;">或者识别结果出来的地方，这样完成或返回按钮效果都是一样的。</span>finish<span style="font-family:宋体;">分为用户主动按钮</span>finish<span style="font-family:宋体;">和机制自动</span>finish<span style="font-family:宋体;">，自动</span>finish<span style="font-family:宋体;">前加返回，主动</span>finish<span style="font-family:宋体;">需要在之前加返回。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="8" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;">FileProvider name<span style="font-family:宋体;">是</span>app<span style="font-family:宋体;">与</span>sdk<span style="font-family:宋体;">不能相同的，可以把</span>sdk<span style="font-family:宋体;">中的改掉，这样才能实现</span>app<span style="font-family:宋体;">与</span>sdk demo<span style="font-family:宋体;">同时安装。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="bottom: 10px; right: 10px; position: absolute;"><a href="https://wordtohtml.net" target="_blank" style="font-size:11px; color: #d0d0d0;">Converted to HTML with WordToHTML.net</a></p>
+            </article>
+            <!-- 更多文章-->
+        </section>
+    </main>
+
+    <footer>
+        <p>版权所有 &copy; 2024 Steven的博客</p>
+    </footer>
+
+</body>
+</html>
