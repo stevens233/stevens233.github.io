@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<!-- <style>
+    .noSelect {
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none;   /* Chrome/Safari/Opera */
+        -moz-user-select: none;      /* Firefox */
+        -ms-user-select: none;       /* Internet Explorer/Edge */
+        user-select: none;           /* Non-prefixed version, currently supported by most modern browsers */
+    }
+</style> -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steven的个人博客</title>
+    <link rel="icon" href="/resources/steven.png" type="image/png">
+    <link rel="stylesheet" href="/css/style_article.css">
+</head>
+<script src="script.js"></script>
+<body>
+    <header>
+        <h1>欢迎来到Steven的博客</h1>
+        <nav>
+            <ul>
+                <li><a href="/index.html">首页</a></li>
+                <li><a href="/pages/article.html">文章</a></li>
+                <li><a href="/pages/about_me.html">关于我</a></li>
+                <li><a href="/pages/contact_me.html">联系方式</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>NLP学习记录</h2>
+            <!-- 文章列表-->
+            <article>
+                <style type="text/css">
+                    .awlist1 {
+                        list-style: none;
+                        counter-reset: awlistcounter2_0 1
+                    }
+                
+                    .awlist1>li:before {
+                        content: counter(awlistcounter2_0) '．';
+                        counter-increment: awlistcounter2_0
+                    }
+                
+                    .awlist2 {
+                        list-style: none;
+                        counter-reset: awlistcounter6_0
+                    }
+                
+                    .awlist2>li:before {
+                        content: '('counter(awlistcounter6_0) ')';
+                        counter-increment: awlistcounter6_0
+                    }
+                
+                    .awlist3 {
+                        list-style: none;
+                        counter-reset: awlistcounter7_0
+                    }
+                
+                    .awlist3>li:before {
+                        content: '('counter(awlistcounter7_0) ')';
+                        counter-increment: awlistcounter7_0
+                    }
+                
+                    .awlist4 {
+                        list-style: none;
+                        counter-reset: awlistcounter8_0
+                    }
+                
+                    .awlist4>li:before {
+                        content: '('counter(awlistcounter8_0) ')';
+                        counter-increment: awlistcounter8_0
+                    }
+                
+                    .awlist5 {
+                        list-style: none;
+                        counter-reset: awlistcounter9_0
+                    }
+                
+                    .awlist5>li:before {
+                        content: '('counter(awlistcounter9_0) ')';
+                        counter-increment: awlistcounter9_0
+                    }
+                
+                    .awlist6 {
+                        list-style: none;
+                        counter-reset: awlistcounter10_0
+                    }
+                
+                    .awlist6>li:before {
+                        content: '('counter(awlistcounter10_0) ')';
+                        counter-increment: awlistcounter10_0
+                    }
+                
+                    .awlist7 {
+                        list-style: none;
+                        counter-reset: awlistcounter12_0 4
+                    }
+                
+                    .awlist7>li:before {
+                        content: counter(awlistcounter12_0) '．';
+                        counter-increment: awlistcounter12_0
+                    }
+                
+                    .awlist8 {
+                        list-style: none;
+                        counter-reset: awlistcounter14_0
+                    }
+                
+                    .awlist8>li:before {
+                        content: '('counter(awlistcounter14_0) ')';
+                        counter-increment: awlistcounter14_0
+                    }
+                
+                    .awlist9 {
+                        list-style: none;
+                        counter-reset: awlistcounter15_0
+                    }
+                
+                    .awlist9>li:before {
+                        content: '('counter(awlistcounter15_0) ')';
+                        counter-increment: awlistcounter15_0
+                    }
+                </style>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:22pt;"><strong>NLP</strong><strong><span style="font-family:宋体;">学习记录</span></strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:16pt;"><strong><span style="font-family:宋体;">一．文本数字化</span></strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">分词（</span>Tokenization<span style="font-family:宋体;">）：</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">文本首先被分解成更小的单元，称为</span>&ldquo;tokens&rdquo;<span style="font-family:宋体;">（可以是单词、短语或字符）。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">分词是处理自然语言文本的第一步，不同语言可能有不同的分词算法。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="2" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">文本表示（</span>Text Representation<span style="font-family:宋体;">）：</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">传统的方法，如词袋模型（</span>Bag of Words<span style="font-family:宋体;">）和</span>TF-IDF<span style="font-family:宋体;">（</span>Term Frequency-Inverse Document Frequency<span style="font-family:宋体;">），将文本转换成向量形式，但它们通常不捕捉单词之间的顺序和语义信息。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">现代方法，如</span>Word Embeddings<span style="font-family:宋体;">（如</span>Word2Vec<span style="font-family:宋体;">、</span>GloVe<span style="font-family:宋体;">），为每个词生成密集的向量表示，这些向量捕捉了词与词之间的语义关系。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">上下文化词嵌入，如</span>ELMo<span style="font-family:宋体;">、</span>BERT<span style="font-family:宋体;">和</span>GPT<span style="font-family:宋体;">，通过深度学习模型产生词的表示，能够考虑单词在特定上下文中的含义。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="3" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">上下文分析（</span>Contextual Analysis<span style="font-family:宋体;">）：</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">循环神经网络（</span>RNN<span style="font-family:宋体;">）和其变种，如长短期记忆网络（</span>LSTM<span style="font-family:宋体;">）和门控循环单元（</span>GRU<span style="font-family:宋体;">），能处理文本序列中的上下文信息，但它们在处理长距离依赖时存在一定的限制。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">Transformer<span style="font-family:宋体;">架构（如</span>BERT<span style="font-family:宋体;">、</span>GPT<span style="font-family:宋体;">）使用自注意力机制（</span>Self-Attention Mechanism<span style="font-family:宋体;">）来加权输入序列中的不同部分，有效地捕捉长距离依赖，并能并行处理序列数据，提高了模型处理长文本的能力。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="4" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">模型预训练（</span>Model Pre-training<span style="font-family:宋体;">）：</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">通过在大规模的语料库上训练，模型学习到了语言的通用表示，这包括了语法、语义以及世界知识。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">预训练模型可以在特定任务上进行微调（</span>Fine-tuning<span style="font-family:宋体;">），这是通过在特定任务的数据上继续训练模型来完成的。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="5" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">微调和下游任务（</span>Fine-tuning and Downstream Tasks<span style="font-family:宋体;">）：</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">微调是在预训练的基础上，将模型应用到具体任务（如情感分析、问答系统、文本分类）上的过程。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">在微调阶段，模型学习如何将预训练阶段获得的语言理解能力应用到特定任务的上下文分析中。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="2" type="1" class="awlist1" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:16pt; font-weight:bold; list-style-position:inside;"><span style="font-family:宋体;">深度学习自然语言处理模型的不同层</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">输入层：</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">这是模型的第一层，负责接收原始文本数据。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="2" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">嵌入层（</span>Embedding Layer<span style="font-family:宋体;">）：</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">将单词或字符的稀疏表示（通常是</span>one-hot<span style="font-family:宋体;">编码）转换成密集向量的嵌入表示。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">这些嵌入通常在训练过程中学习得到，并能够捕获单词之间的语义关系。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="3" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">卷积层（</span>Convolutional Layer<span style="font-family:宋体;">，可选）：</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">在</span>NLP<span style="font-family:宋体;">中不如在图像处理中常见，但它可以用于提取文本的局部特征，例如</span>n-gram<span style="font-family:宋体;">信息。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="4" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">循环层（</span>Recurrent Layer<span style="font-family:宋体;">，可选）：</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">循环神经网络（</span>RNN<span style="font-family:宋体;">）及其变种</span>LSTM<span style="font-family:宋体;">或</span>GRU<span style="font-family:宋体;">用于处理序列数据，能够捕获时间序列信息。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">它们可以处理不同长度的输入序列，并在序列的每个时间步保存状态信息。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="5" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">注意力层</span>/<span style="font-family:宋体;">自注意力层（</span>Attention / Self-Attention Layer<span style="font-family:宋体;">）：</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">注意力层使模型能够关注序列中不同部分的信息。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">自注意力层允许序列内的每个元素都在计算其表示时，参考序列中的所有其他元素。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="6" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">归一化层（</span>Normalization Layer<span style="font-family:宋体;">）：</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">用于稳定训练过程，常见的归一化技术有批归一化（</span>Batch Normalization<span style="font-family:宋体;">）和层归一化（</span>Layer Normalization<span style="font-family:宋体;">）。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="7" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">前馈</span>/<span style="font-family:宋体;">密集层（</span>Feedforward / Dense Layer<span style="font-family:宋体;">）：</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">全连接层接受前一层的输出，并学习非线性组合。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">在</span>Transformer<span style="font-family:宋体;">架构中，前馈网络用于在自注意力之后进一步处理信息。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="8" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">输出层：</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">最终层，用于将模型的高维表示转换为最终的输出格式，如分类问题的概率分布，或序列生成任务中的下一个词的概率。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="9" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">损失层（</span>Loss Layer<span style="font-family:宋体;">）：</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">虽不是模型的一部分，但在训练过程中非常重要，用于计算模型输出与真实值之间的差异。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">常见的损失函数包括交叉熵损失（用于分类问题）和均方误差损失（用于回归问题）。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:16pt;"><strong><span style="font-family:宋体;">三．</span></strong><strong>NLU</strong><strong><span style="font-family:宋体;">（自然语言理解）与</span></strong><strong>NLG</strong><strong><span style="font-family:宋体;">（自然语言生成）</span></strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;">NLU<span style="font-family:宋体;">任务：</span></li>
+                </ol>
+                <ol type="1" class="awlist2" style="margin:0pt; padding-left:0pt;">
+                    <li style="margin-left:21pt; list-style-position:inside;"><span style="width:2.37pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;</span><span style="font-family:宋体;">语义分析：理解单词、短语、句子和文本的含义。</span></li>
+                    <li style="margin-left:21pt; list-style-position:inside;"><span style="width:2.37pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;</span><span style="font-family:宋体;">句法分析：分析句子的结构，识别主语、宾语和其他语法成分。</span></li>
+                    <li style="margin-left:21pt; list-style-position:inside;"><span style="width:2.37pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;</span><span style="font-family:宋体;">实体识别：识别文本中的具体实体，如人名、地点、组织等。</span></li>
+                    <li style="margin-left:21pt; list-style-position:inside;"><span style="width:2.37pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;</span><span style="font-family:宋体;">情感分析：判断文本的情感倾向，如正面、负面或中性。</span></li>
+                    <li style="margin-left:21pt; list-style-position:inside;"><span style="width:2.37pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;</span><span style="font-family:宋体;">意图识别：理解用户的意图，常用于对话系统和问答系统中。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="2" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;">NLG<span style="font-family:宋体;">任务：</span></li>
+                </ol>
+                <ol type="1" class="awlist3" style="margin:0pt; padding-left:0pt;">
+                    <li style="text-indent:21pt; list-style-position:inside;"><span style="width:2.37pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;</span><span style="font-family:宋体;">数据到文本：将数据库或结构化数据转换成易读的文本形式。</span></li>
+                    <li style="text-indent:21pt; list-style-position:inside;"><span style="width:2.37pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;</span><span style="font-family:宋体;">文本摘要：从一篇或多篇文档中提取关键信息，生成摘要。</span></li>
+                    <li style="text-indent:21pt; list-style-position:inside;"><span style="width:2.37pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;</span><span style="font-family:宋体;">内容创作：生成新闻文章、报告、故事或诗歌等文本内容。</span></li>
+                    <li style="text-indent:21pt; list-style-position:inside;"><span style="width:2.37pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;</span><span style="font-family:宋体;">对话生成：在聊天机器人或对话系统中生成自然对话回复。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="3" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;">NLU<span style="font-family:宋体;">在</span>NLP<span style="font-family:宋体;">模型中的角色：</span></li>
+                </ol>
+                <ol type="1" class="awlist4" style="margin:0pt; padding-left:0pt;">
+                    <li style="margin-left:21pt; list-style-position:inside;"><span style="width:2.37pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;</span><span style="font-family:宋体;">输入解析：</span>NLU<span style="font-family:宋体;">是处理用户输入的第一步，它负责解析和理解用户的查询或命令。这包括分词、词性标注、句法分析和实体识别等任务，旨在从语言中提取结构和含义。</span></li>
+                    <li style="margin-left:21pt; list-style-position:inside;"><span style="width:2.37pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;</span><span style="font-family:宋体;">意图识别：</span>NLU<span style="font-family:宋体;">需要确定用户输入的目的或意图。在对话系统中，这涉及到判断用户是要查询信息、执行某项操作还是提出问题。</span></li>
+                    <li style="margin-left:21pt; list-style-position:inside;"><span style="width:2.37pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;</span><span style="font-family:宋体;">上下文理解：</span>NLU<span style="font-family:宋体;">组件还负责理解对话的上下文，这包括跟踪对话的历史、用户的偏好和外部知识等，以提供更加准确和个性化的响应。</span></li>
+                    <li style="margin-left:21pt; list-style-position:inside;"><span style="width:2.37pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;</span><span style="font-family:宋体;">情感分析：在一些应用中，</span>NLU<span style="font-family:宋体;">还会进行情感分析，以识别用户输入的情感倾向，这对于生成适当的响应非常重要。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="4" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;">NLG<span style="font-family:宋体;">在</span>NLP<span style="font-family:宋体;">模型中的角色：</span></li>
+                </ol>
+                <ol type="1" class="awlist5" style="margin:0pt; padding-left:0pt;">
+                    <li style="margin-left:21pt; list-style-position:inside;"><span style="width:2.37pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;</span><span style="font-family:宋体;">响应生成：在</span>NLU<span style="font-family:宋体;">处理并理解用户输入之后，</span>NLG<span style="font-family:宋体;">负责生成自然和流畅的语言响应。这包括选择合适的词汇、构造句子并确保文本的连贯性。</span></li>
+                    <li style="margin-left:21pt; list-style-position:inside;"><span style="width:2.37pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;</span><span style="font-family:宋体;">数据到文本转换：在需要将结构化数据（如数据库查询结果、天气信息或财务报告）转换为自然语言描述时，</span>NLG<span style="font-family:宋体;">发挥作用。它将数据和信息转换成易于理解的文本形式。</span></li>
+                    <li style="margin-left:21pt; list-style-position:inside;"><span style="width:2.37pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;</span><span style="font-family:宋体;">个性化和风格调整：</span>NLG<span style="font-family:宋体;">还可以根据用户的偏好或特定应用的要求调整生成文本的风格和语调，以提供更加个性化的用户体验。</span></li>
+                    <li style="margin-left:21pt; list-style-position:inside;"><span style="width:2.37pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;</span><span style="font-family:宋体;">对话管理：在对话系统中，</span>NLG<span style="font-family:宋体;">不仅要生成单个回复，还需要管理对话流程，包括引导对话、处理转折点和维持对话的自然流畅性。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="5" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">结合使用</span>NLU<span style="font-family:宋体;">和</span>NLG<span style="font-family:宋体;">：</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-indent:21pt;"><span style="font-family:宋体;">在一个完整的</span>NLP<span style="font-family:宋体;">系统中，</span>NLU<span style="font-family:宋体;">和</span>NLG<span style="font-family:宋体;">通常紧密结合，形成一个连贯的处理流程。例如，在一个聊天机器人应用中：</span></p>
+                <ol type="1" class="awlist6" style="margin:0pt; padding-left:0pt;">
+                    <li style="text-indent:21pt; list-style-position:inside;"><span style="width:2.37pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;</span>NLU<span style="font-family:宋体;">阶段：系统首先使用</span>NLU<span style="font-family:宋体;">组件理解用户的输入，包括解析查询、识别意图和提取相关信息。</span></li>
+                    <li style="text-indent:21pt; list-style-position:inside;"><span style="width:2.37pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;</span><span style="font-family:宋体;">处理逻辑：然后，系统根据</span>NLU<span style="font-family:宋体;">的输出执行必要的操作，如查询数据库、调用</span>API<span style="font-family:宋体;">或执行某个任务。</span></li>
+                    <li style="text-indent:21pt; list-style-position:inside;"><span style="width:2.37pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;</span>NLG<span style="font-family:宋体;">阶段：最后，系统使用</span>NLG<span style="font-family:宋体;">组件根据处理结果生成自然语言响应，将执行结果、答案或其他反馈以文本形式呈现给用户。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:16pt;"><strong><span style="font-family:宋体;">四．自注意力机制</span></strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">输入表示：</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">假设有一个序列的输入表示，每个输入项是词向量，这些词向量可以是嵌入层的输出，或者更高层的中间表示。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="2" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">计算查询（</span>Query<span style="font-family:宋体;">）、键（</span>Key<span style="font-family:宋体;">）、值（</span>Value<span style="font-family:宋体;">）：</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">对于序列中的每个词向量，使用三组权重矩阵（通常在模型训练过程中学习得到）分别变换成查询（</span>Q<span style="font-family:宋体;">）、键（</span>K<span style="font-family:宋体;">）和值（</span>V<span style="font-family:宋体;">）向量。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">这些矩阵是共享的，意味着序列中的每个词都使用相同的矩阵来生成它们的</span>Q<span style="font-family:宋体;">、</span>K<span style="font-family:宋体;">、</span>V<span style="font-family:宋体;">表示。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="3" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">注意力分数计算：</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">对于序列中的每一对词（</span>i<span style="font-family:宋体;">，</span>j<span style="font-family:宋体;">），计算它们之间的注意力分数。这通常是通过取词</span>i<span style="font-family:宋体;">的查询向量与词</span>j<span style="font-family:宋体;">的键向量的点积来完成的。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">注意力分数决定了在计算词</span>i<span style="font-family:宋体;">的表示时，将多少注意力（即权重）分配给序列中的每个词</span>j<span style="font-family:宋体;">。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="4" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">缩放点积注意力：</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">由于点积可能会非常大，因此分数通常会除以一个常数（比如键向量维度的平方根）来进行缩放，以便在进行下一步之前有一个更合理的数值范围。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="5" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">应用</span>softmax<span style="font-family:宋体;">：</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">使用</span>softmax<span style="font-family:宋体;">函数对每个词的注意力分数进行归一化，使得每个词对于序列中每个位置的注意力分数都在</span>0<span style="font-family:宋体;">到</span>1<span style="font-family:宋体;">之间，并且对于每个词来说，这些分数加起来等于</span>1<span style="font-family:宋体;">。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="6" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">加权值向量：</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">然后将归一化的注意力分数与对应的值（</span>V<span style="font-family:宋体;">）向量相乘，这样每个词都会根据与其他词的相关性获得一个加权的值向量。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="7" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">输出和拼接：</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">最后，对所有的加权值向量求和，得到了每个词的最终注意力输出向量。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">在多头注意力（</span>Multi-Head Attention<span style="font-family:宋体;">）的情况下，会有多组不同的权重矩阵来生成多个注意力输出向量，这些向量最后会被拼接或者平均，以生成更丰富的表示。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="5" type="1" class="awlist7" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:16pt; font-weight:bold; list-style-position:inside;"><span style="font-family:宋体;">常用的</span>NLP<span style="font-family:宋体;">模型</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;">RNN<span style="font-family:宋体;">（循环神经网络）及其变体</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol type="1" class="awlist8" style="margin:0pt; padding-left:0pt;">
+                    <li style="margin-left:21.25pt; text-indent:-21.25pt;"><span style="width:9.56pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>RNN<span style="font-family:宋体;">：能够处理序列数据，如文本或语音，通过循环连接捕获序列中的信息。</span></li>
+                    <li style="margin-left:21.25pt; text-indent:-21.25pt;"><span style="width:9.56pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>LSTM<span style="font-family:宋体;">（长短期记忆网络）：一种特殊的</span>RNN<span style="font-family:宋体;">，设计用来解决</span>RNN<span style="font-family:宋体;">训练过程中的梯度消失问题，非常适合处理和预测长序列中的事件。</span></li>
+                    <li style="margin-left:21.25pt; text-indent:-21.25pt;"><span style="width:9.56pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>GRU<span style="font-family:宋体;">（门控循环单元）：</span>LSTM<span style="font-family:宋体;">的一种变体，结构比</span>LSTM<span style="font-family:宋体;">简单，参数更少，但在很多任务中表现相似。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="2" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;">CNN<span style="font-family:宋体;">（卷积神经网络）在</span>NLP<span style="font-family:宋体;">中的应用</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">虽然</span>CNN<span style="font-family:宋体;">主要用于图像处理，但也被用于</span>NLP<span style="font-family:宋体;">任务，如文本分类和句子建模，通过学习句子或文档中的局部特征。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="3" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;">Transformer<span style="font-family:宋体;">及其基于</span>Transformer<span style="font-family:宋体;">的模型</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol type="1" class="awlist9" style="margin:0pt; padding-left:0pt;">
+                    <li style="margin-left:21.25pt; text-indent:-21.25pt;"><span style="width:9.56pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Transformer<span style="font-family:宋体;">：引入了自注意力机制，摒弃了传统的循环层结构，大大提高了处理长距离依赖的能力和训练效率。</span></li>
+                    <li style="margin-left:21.25pt; text-indent:-21.25pt;"><span style="width:9.56pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>BERT<span style="font-family:宋体;">（</span>Bidirectional Encoder Representations from Transformers<span style="font-family:宋体;">）：一个预训练的深度双向</span>Transformer<span style="font-family:宋体;">模型，通过预训练捕获广泛的语言特征，然后可以微调用于各种下游任务，如文本分类、命名实体识别等。</span></li>
+                    <li style="margin-left:21.25pt; text-indent:-21.25pt;"><span style="width:9.56pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>GPT<span style="font-family:宋体;">（</span>Generative Pre-trained Transformer<span style="font-family:宋体;">）：同样是一个预训练模型，采用</span>Transformer<span style="font-family:宋体;">架构，专注于生成任务，如文本生成、翻译和问答。</span></li>
+                    <li style="margin-left:21.25pt; text-indent:-21.25pt;"><span style="width:9.56pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>RoBERTa<span style="font-family:宋体;">（</span>Robustly optimized BERT approach<span style="font-family:宋体;">）：</span>BERT<span style="font-family:宋体;">的一个改进版本，通过修改</span>BERT<span style="font-family:宋体;">的训练方法进一步提高了性能。</span></li>
+                    <li style="margin-left:21.25pt; text-indent:-21.25pt;"><span style="width:9.56pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>T5<span style="font-family:宋体;">（</span>Text-to-Text Transfer Transformer<span style="font-family:宋体;">）：将所有</span>NLP<span style="font-family:宋体;">任务转换为文本到文本的问题，如将</span>&ldquo;<span style="font-family:宋体;">翻译英语到德语</span>&rdquo;<span style="font-family:宋体;">的任务转化为以</span>&ldquo;translate English to German:&rdquo;<span style="font-family:宋体;">为前缀的文本生成任务。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="4" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;">Seq2Seq<span style="font-family:宋体;">模型和注意力机制</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">Seq2Seq<span style="font-family:宋体;">（</span>Sequence to Sequence<span style="font-family:宋体;">）：由两部分组成，一个编码器将输入序列编码成一个固定大小的表示，一个解码器将该表示解码为输出序列。广泛用于机器翻译和文本摘要。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">注意力机制：允许模型在生成每个词时动态地</span>&ldquo;<span style="font-family:宋体;">聚焦</span>&rdquo;<span style="font-family:宋体;">于输入序列的不同部分，改进了</span>Seq2Seq<span style="font-family:宋体;">模型的性能，特别是在处理长序列时。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="5" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">领域特定的模型</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">一些模型被特别设计来解决特定领域的</span>NLP<span style="font-family:宋体;">任务，如</span>BioBERT<span style="font-family:宋体;">（针对生物医学文本的</span>BERT<span style="font-family:宋体;">模型）、</span>SciBERT<span style="font-family:宋体;">（针对科学文本的</span>BERT<span style="font-family:宋体;">模型）等。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+            </article>
+            <!-- 更多文章-->
+        </section>
+    </main>
+
+    <footer>
+        <p>版权所有 &copy; 2024 Steven的博客</p>
+    </footer>
+
+</body>
+</html>
