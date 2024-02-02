@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<!-- <style>
+    .noSelect {
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none;   /* Chrome/Safari/Opera */
+        -moz-user-select: none;      /* Firefox */
+        -ms-user-select: none;       /* Internet Explorer/Edge */
+        user-select: none;           /* Non-prefixed version, currently supported by most modern browsers */
+    }
+</style> -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steven的个人博客</title>
+    <link rel="icon" href="/resources/steven.png" type="image/png">
+    <link rel="stylesheet" href="/css/style_article.css">
+</head>
+<script src="script.js"></script>
+<body>
+    <header>
+        <h1>欢迎来到Steven的博客</h1>
+        <nav>
+            <ul>
+                <li><a href="/index.html">首页</a></li>
+                <li><a href="/pages/article.html">文章</a></li>
+                <li><a href="/pages/about_me.html">关于我</a></li>
+                <li><a href="/pages/contact_me.html">联系方式</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>linux学习随记</h2>
+            <!-- 文章列表-->
+            <article>
+                <style type="text/css">
+                    .awlist1 {
+                        list-style: none;
+                        counter-reset: awlistcounter2_0
+                    }
+                
+                    .awlist1>li:before {
+                        content: '('counter(awlistcounter2_0) ')';
+                        counter-increment: awlistcounter2_0
+                    }
+                
+                    .awlist2 {
+                        list-style: none;
+                        counter-reset: awlistcounter2_0 1
+                    }
+                
+                    .awlist2>li:before {
+                        content: '('counter(awlistcounter2_0) ')';
+                        counter-increment: awlistcounter2_0
+                    }
+                
+                    .awlist3 {
+                        list-style: none;
+                        counter-reset: awlistcounter2_0 2
+                    }
+                
+                    .awlist3>li:before {
+                        content: '('counter(awlistcounter2_0) ')';
+                        counter-increment: awlistcounter2_0
+                    }
+                
+                    .awlist4 {
+                        list-style: none;
+                        counter-reset: awlistcounter2_0 3
+                    }
+                
+                    .awlist4>li:before {
+                        content: '('counter(awlistcounter2_0) ')';
+                        counter-increment: awlistcounter2_0
+                    }
+                </style>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:18pt;"><strong>linux</strong><strong><span style="font-family:宋体;">学习随记</span></strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">终端会话的文件传输</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">rz<span style="font-family:宋体;">和</span>sz<span style="font-family:宋体;">是</span>Zmodem<span style="font-family:宋体;">协议的实现，用于在终端会话中进行文件传输，通常与</span>SSH<span style="font-family:宋体;">或</span>telnet<span style="font-family:宋体;">会话一起使用。</span>rz<span style="font-family:宋体;">代表接收文件（从本地上传到远程），而</span>sz<span style="font-family:宋体;">代表发送文件（从远程下载到本地）。要从远程系统下载文件到本地，可以在远程终端中使用</span>sz<span style="font-family:宋体;">命令后跟文件名。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="2" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">创建</span>linux<span style="font-family:宋体;">脚本</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">首先，创建一个新的&nbsp;</span>.sh <span style="font-family:宋体;">文件或编辑一个已有的文件，编写要实现的</span>bash<span style="font-family:宋体;">代码。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">接着修改</span>.sh<span style="font-family:宋体;">文件权限，使其成为可执行文件。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">chmod +x run_python.sh</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">最后通过代码运行。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">./run_python.sh</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="3" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;">nohup<span style="font-family:宋体;">执行后台进程</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">nohup <span style="font-family:宋体;">命令用于&nbsp;</span>Unix-like <span style="font-family:宋体;">系统（如&nbsp;</span>Linux<span style="font-family:宋体;">、</span>macOS<span style="font-family:宋体;">），允许命令在用户注销或终端关闭后继续运行。这通常用于在后台运行长时间执行的进程，确保进程不会因为会话结束而被终止。</span>nohup <span style="font-family:宋体;">的效果在于保证命令的持续执行，而不是提供编程逻辑或流程控制。</span>nohup <span style="font-family:宋体;">通常与&nbsp;</span>&amp; <span style="font-family:宋体;">符号结合使用，将进程放到后台运行。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">windows<span style="font-family:宋体;">中可以通过在</span>VBScript<span style="font-family:宋体;">中使用</span>CreateObject(&quot;WScript.Shell&quot;)<span style="font-family:宋体;">创建一个</span>WScript.Shell<span style="font-family:宋体;">对象，然后使用该对象的</span>Run<span style="font-family:宋体;">方法执行一个</span>BAT<span style="font-family:宋体;">文件，可以达到在</span>Windows<span style="font-family:宋体;">环境下启动并运行该</span>BAT<span style="font-family:宋体;">文件的效果。这种方式允许从</span>VBScript<span style="font-family:宋体;">脚本中调用和执行外部的批处理脚本，从而执行其中定义的一系列命令。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="4" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">结束后台进程</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">要结束一个运行中的进程（也称为&nbsp;</span>&quot;kill&quot; <span style="font-family:宋体;">进程），你可以使用&nbsp;</span>kill <span style="font-family:宋体;">命令，它是大多数&nbsp;</span>Unix-like <span style="font-family:宋体;">系统（包括&nbsp;</span>Linux <span style="font-family:宋体;">和&nbsp;</span>macOS<span style="font-family:宋体;">）的标准工具。</span>kill <span style="font-family:宋体;">命令通过发送信号到进程来结束它，最常用的信号是&nbsp;</span>SIGTERM<span style="font-family:宋体;">（信号编号</span>15<span style="font-family:宋体;">）和&nbsp;</span>SIGKILL<span style="font-family:宋体;">（信号编号</span>9<span style="font-family:宋体;">）。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol type="1" class="awlist1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="width:2.37pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;</span><span style="font-family:宋体;">找到进程的</span>PID<span style="font-family:宋体;">（进程</span>ID<span style="font-family:宋体;">）：</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">使用&nbsp;</span>ps, top, pgrep <span style="font-family:宋体;">或&nbsp;</span>jobs<span style="font-family:宋体;">（对于后台作业）等命令来找到你想要结束的进程的</span>PID<span style="font-family:宋体;">。例如，使用&nbsp;</span>ps <span style="font-family:宋体;">命令</span>:</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;ps aux | grep [p]rocess_name</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="2" type="1" class="awlist2" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="width:2.37pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;</span><span style="font-family:宋体;">使用&nbsp;</span>kill <span style="font-family:宋体;">命令发送</span>SIGTERM:</li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">默认情况下，</span>kill <span style="font-family:宋体;">命令发送</span>SIGTERM<span style="font-family:宋体;">信号，这是一个</span>&ldquo;<span style="font-family:宋体;">礼貌的</span>&rdquo;<span style="font-family:宋体;">结束进程的方式，允许进程进行清理操作：</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">kill PID</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="3" type="1" class="awlist3" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="width:2.37pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;</span><span style="font-family:宋体;">如果进程仍然没有结束，使用&nbsp;</span>kill -9:</li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">如果进程没有响应</span>SIGTERM<span style="font-family:宋体;">信号，你可以使用&nbsp;</span>kill -9 <span style="font-family:宋体;">命令发送</span>SIGKILL<span style="font-family:宋体;">信号，这是一个强制结束进程的方式，不会给进程清理自身的机会：</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">kill -9 PID</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="4" type="1" class="awlist4" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="width:2.37pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;</span><span style="font-family:宋体;">使用&nbsp;</span>pkill <span style="font-family:宋体;">或&nbsp;</span>killall<span style="font-family:宋体;">：</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">pkill <span style="font-family:宋体;">命令可以根据进程名来结束进程，这样你就不需要先找到</span>PID<span style="font-family:宋体;">了：</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">pkill process_name</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+            </article>
+            <!-- 更多文章-->
+        </section>
+    </main>
+
+    <footer>
+        <p>版权所有 &copy; 2024 Steven的博客</p>
+    </footer>
+
+</body>
+</html>
