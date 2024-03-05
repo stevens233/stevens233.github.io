@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<!-- <style>
+    .noSelect {
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none;   /* Chrome/Safari/Opera */
+        -moz-user-select: none;      /* Firefox */
+        -ms-user-select: none;       /* Internet Explorer/Edge */
+        user-select: none;           /* Non-prefixed version, currently supported by most modern browsers */
+    }
+</style> -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steven的个人博客</title>
+    <link rel="icon" href="/resources/steven.png" type="image/png">
+    <link rel="stylesheet" href="/css/style_article.css">
+</head>
+<script src="script.js"></script>
+<body>
+    <header>
+        <h1>欢迎来到Steven的博客</h1>
+        <nav>
+            <ul>
+                <li><a href="/index.html">首页</a></li>
+                <li><a href="/pages/article.html">文章</a></li>
+                <li><a href="/pages/about_me.html">关于我</a></li>
+                <li><a href="/pages/contact_me.html">联系方式</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>机器学习随记</h2>
+            <!-- 文章列表-->
+            <article>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:14pt;"><strong>1.&nbsp;</strong><strong><span style="font-family:宋体;">支持向量机（</span></strong><strong>SVM</strong><strong><span style="font-family:宋体;">）</span></strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">应用领域：文本分类、图像识别、生物信息学。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">特点：特别适合高维数据的分类问题，也可以通过核技巧处理非线性问题。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">SVM<span style="font-family:宋体;">通过寻找最优的超平面来分隔不同类别的数据，目标是最大化不同类别数据之间的间隔。它也可以通过核技巧处理非线性可分问题。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:14pt;"><strong>2.&nbsp;</strong><strong><span style="font-family:宋体;">决策树（</span></strong><strong>Decision Trees</strong><strong><span style="font-family:宋体;">）</span></strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">应用领域：客户分层、故障诊断、药物研究。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">特点：易于理解和解释，可以可视化，适用于分类和回归任务。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">决策树通过递归地将数据集分割成越来越小的子集来工作，同时构建一个决策树。每个节点代表一个属性上的决策点，叶节点代表决策结果。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:14pt;"><strong>3.&nbsp;</strong><strong><span style="font-family:宋体;">随机森林（</span></strong><strong>Random Forests</strong><strong><span style="font-family:宋体;">）</span></strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">应用领域：金融风险评估、医学诊断、股票市场分析。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">特点：处理非线性数据效果好，具有很强的泛化能力，能有效避免过拟合。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">随机森林是一种集成学习算法，它构建多个决策树并将它们的预测结果进行汇总来提高整体的预测准确率。随机森林对于防止过拟合具有很好的效果。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:14pt;"><strong>4.&nbsp;</strong><strong><span style="font-family:宋体;">梯度提升树（</span></strong><strong>Gradient Boosting Trees</strong><strong><span style="font-family:宋体;">）</span></strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">应用领域：搜索引擎（如</span>Ranking<span style="font-family:宋体;">问题）、生态环境建模、预测建模。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">特点：提供高精度的解决方案，灵活性高，可以优化各种损失函数。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">梯度提升树是另一种集成学习方法，它通过顺序地添加决策树，每一棵树都尝试纠正前一棵树的错误，通过梯度下降算法优化损失函数。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:14pt;"><strong>5. K</strong><strong><span style="font-family:宋体;">最近邻（</span></strong><strong>K-Nearest Neighbors, KNN</strong><strong><span style="font-family:宋体;">）</span></strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">应用领域：推荐系统、图像分类、基因数据分类。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">特点：简单直观，但计算成本高，特别是在处理大数据集时。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">KNN<span style="font-family:宋体;">算法通过查找测试数据点的</span>K<span style="font-family:宋体;">个最近邻居来进行分类或回归预测。它是一种简单但效果显著的非参数算法。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:14pt;"><strong>6.&nbsp;</strong><strong><span style="font-family:宋体;">逻辑回归（</span></strong><strong>Logistic Regression</strong><strong><span style="font-family:宋体;">）</span></strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">应用领域：电子邮件垃圾分类、信用评分、医学（疾病预测）。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">特点：输出可解释为概率，适用于二分类问题，也可以扩展到多分类。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">尽管名为回归，逻辑回归实际上是用于分类任务的线性模型。它通过使用逻辑函数预测概率分布，广泛应用于二分类问题。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:14pt;"><strong>7.&nbsp;</strong><strong><span style="font-family:宋体;">朴素贝叶斯（</span></strong><strong>Naive Bayes</strong><strong><span style="font-family:宋体;">）</span></strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">应用领域：文本分类（如垃圾邮件识别）、情感分析、文档分类。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">特点：在数据集较小、特征之间相互独立的情况下表现良好，训练和预测速度快。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">朴素贝叶斯基于贝叶斯定理，假设特征之间相互独立。尽管这是一个简化的假设，朴素贝叶斯在许多实际应用中表现出色，特别是在文本分类和垃圾邮件检测中。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:14pt;"><strong>8.&nbsp;</strong><strong><span style="font-family:宋体;">神经网络（</span></strong><strong>Neural Networks</strong><strong><span style="font-family:宋体;">）</span></strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">应用领域：语音识别、视觉对象识别、自然语言处理。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">特点：非常灵活，能够学习复杂的数据表示，但需要大量数据和计算资源。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">神经网络受人脑结构的启发，由多层的节点（或称为</span>&ldquo;<span style="font-family:宋体;">神经元</span>&rdquo;<span style="font-family:宋体;">）组成。深度神经网络，特别是深度学习，已经在图像和语音识别、自然语言处理等领域取得了重大进展。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:14pt;"><strong>9.&nbsp;</strong><strong><span style="font-family:宋体;">主成分分析（</span></strong><strong>Principal Component Analysis, PCA</strong><strong><span style="font-family:宋体;">）</span></strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">应用领域：数据可视化、噪声数据过滤、特征提取和数据压缩。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">特点：能够减少数据集的维度，同时尽可能保留原始数据的变异性。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">虽然主要用于数据降维，</span>PCA<span style="font-family:宋体;">也可以看作是一种学习算法。它通过提取数据的主要成分来简化数据，保留最重要的信息。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:14pt;"><strong>10.&nbsp;</strong><strong><span style="font-family:宋体;">线性回归（</span></strong><strong>Linear Regression</strong><strong><span style="font-family:宋体;">）</span></strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">应用领域：销售预测、房价预测、股票价格分析。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">特点：基础的回归算法，模型简单、易于实现，适用于预测连续值。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">线性回归是一种基本的回归算法，用于预测连续的数值。它尝试找到特征和输出之间的线性关系。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+            </article>
+            <!-- 更多文章-->
+        </section>
+    </main>
+
+    <footer>
+        <p>版权所有 &copy; 2024 Steven的博客</p>
+    </footer>
+
+</body>
+</html>
