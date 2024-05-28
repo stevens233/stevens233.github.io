@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<!-- <style>
+    .noSelect {
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none;   /* Chrome/Safari/Opera */
+        -moz-user-select: none;      /* Firefox */
+        -ms-user-select: none;       /* Internet Explorer/Edge */
+        user-select: none;           /* Non-prefixed version, currently supported by most modern browsers */
+    }
+</style> -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steven的个人博客</title>
+    <link rel="icon" href="/resources/steven.png" type="image/png">
+    <link rel="stylesheet" href="/css/style_article.css">
+</head>
+<script src="script.js"></script>
+<body>
+    <header>
+        <h1>欢迎来到Steven的博客</h1>
+        <nav>
+            <ul>
+                <li><a href="/index.html">首页</a></li>
+                <li><a href="/pages/article.html">文章</a></li>
+                <li><a href="/pages/about_me.html">关于我</a></li>
+                <li><a href="/pages/contact_me.html">联系方式</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>线性代数学习笔记</h2>
+            <!-- 文章列表-->
+            <article>
+                <style type="text/css">
+                    .awlist1 {
+                        list-style: none;
+                        counter-reset: awlistcounter1_0
+                    }
+                
+                    .awlist1>li:before {
+                        content: counter(awlistcounter1_0) '．';
+                        counter-increment: awlistcounter1_0
+                    }
+                
+                    .awlist2 {
+                        list-style: none;
+                        counter-reset: awlistcounter3_0
+                    }
+                
+                    .awlist2>li:before {
+                        content: '('counter(awlistcounter3_0) ')';
+                        counter-increment: awlistcounter3_0
+                    }
+                
+                    .awlist3 {
+                        list-style: none;
+                        counter-reset: awlistcounter4_0
+                    }
+                
+                    .awlist3>li:before {
+                        content: '('counter(awlistcounter4_0) ')';
+                        counter-increment: awlistcounter4_0
+                    }
+                
+                    .awlist4 {
+                        list-style: none;
+                        counter-reset: awlistcounter5_0
+                    }
+                
+                    .awlist4>li:before {
+                        content: '（'counter(awlistcounter5_0) '）';
+                        counter-increment: awlistcounter5_0
+                    }
+                
+                    .awlist5 {
+                        list-style: none;
+                        counter-reset: awlistcounter6_0
+                    }
+                
+                    .awlist5>li:before {
+                        content: '（'counter(awlistcounter6_0) '）';
+                        counter-increment: awlistcounter6_0
+                    }
+                
+                    .awlist6 {
+                        list-style: none;
+                        counter-reset: awlistcounter7_0
+                    }
+                
+                    .awlist6>li:before {
+                        content: '（'counter(awlistcounter7_0) '）';
+                        counter-increment: awlistcounter7_0
+                    }
+                
+                    .awlist7 {
+                        list-style: none;
+                        counter-reset: awlistcounter8_0
+                    }
+                
+                    .awlist7>li:before {
+                        content: '（'counter(awlistcounter8_0) '）';
+                        counter-increment: awlistcounter8_0
+                    }
+                
+                    .awlist8 {
+                        list-style: none;
+                        counter-reset: awlistcounter9_0
+                    }
+                
+                    .awlist8>li:before {
+                        content: '（'counter(awlistcounter9_0) '）';
+                        counter-increment: awlistcounter9_0
+                    }
+                
+                    .awlist9 {
+                        list-style: none;
+                        counter-reset: awlistcounter10_0
+                    }
+                
+                    .awlist9>li:before {
+                        content: '（'counter(awlistcounter10_0) '）';
+                        counter-increment: awlistcounter10_0
+                    }
+                
+                    .awlist10 {
+                        list-style: none;
+                        counter-reset: awlistcounter11_0
+                    }
+                
+                    .awlist10>li:before {
+                        content: '（'counter(awlistcounter11_0) '）';
+                        counter-increment: awlistcounter11_0
+                    }
+                
+                    .awlist11 {
+                        list-style: none;
+                        counter-reset: awlistcounter12_0
+                    }
+                
+                    .awlist11>li:before {
+                        content: '（'counter(awlistcounter12_0) '）';
+                        counter-increment: awlistcounter12_0
+                    }
+                
+                    .awlist12 {
+                        list-style: none;
+                        counter-reset: awlistcounter13_0
+                    }
+                
+                    .awlist12>li:before {
+                        content: '（'counter(awlistcounter13_0) '）';
+                        counter-increment: awlistcounter13_0
+                    }
+                
+                    .awlist13 {
+                        list-style: none;
+                        counter-reset: awlistcounter14_0
+                    }
+                
+                    .awlist13>li:before {
+                        content: '（'counter(awlistcounter14_0) '）';
+                        counter-increment: awlistcounter14_0
+                    }
+                
+                    .awlist14 {
+                        list-style: none;
+                        counter-reset: awlistcounter15_0
+                    }
+                
+                    .awlist14>li:before {
+                        content: '（'counter(awlistcounter15_0) '）';
+                        counter-increment: awlistcounter15_0
+                    }
+                
+                    .awlist15 {
+                        list-style: none;
+                        counter-reset: awlistcounter16_0
+                    }
+                
+                    .awlist15>li:before {
+                        content: '（'counter(awlistcounter16_0) '）';
+                        counter-increment: awlistcounter16_0
+                    }
+                
+                    .awlist16 {
+                        list-style: none;
+                        counter-reset: awlistcounter17_0
+                    }
+                
+                    .awlist16>li:before {
+                        content: '（'counter(awlistcounter17_0) '）';
+                        counter-increment: awlistcounter17_0
+                    }
+                
+                    .awlist17 {
+                        list-style: none;
+                        counter-reset: awlistcounter18_0
+                    }
+                
+                    .awlist17>li:before {
+                        content: '（'counter(awlistcounter18_0) '）';
+                        counter-increment: awlistcounter18_0
+                    }
+                
+                    .awlist18 {
+                        list-style: none;
+                        counter-reset: awlistcounter19_0
+                    }
+                
+                    .awlist18>li:before {
+                        content: '（'counter(awlistcounter19_0) '）';
+                        counter-increment: awlistcounter19_0
+                    }
+                
+                    .awlist19 {
+                        list-style: none;
+                        counter-reset: awlistcounter20_0
+                    }
+                
+                    .awlist19>li:before {
+                        content: '（'counter(awlistcounter20_0) '）';
+                        counter-increment: awlistcounter20_0
+                    }
+                
+                    .awlist20 {
+                        list-style: none;
+                        counter-reset: awlistcounter21_0
+                    }
+                
+                    .awlist20>li:before {
+                        content: '（'counter(awlistcounter21_0) '）';
+                        counter-increment: awlistcounter21_0
+                    }
+                
+                    .awlist21 {
+                        list-style: none;
+                        counter-reset: awlistcounter22_0
+                    }
+                
+                    .awlist21>li:before {
+                        content: '（'counter(awlistcounter22_0) '）';
+                        counter-increment: awlistcounter22_0
+                    }
+                
+                    .awlist22 {
+                        list-style: none;
+                        counter-reset: awlistcounter23_0
+                    }
+                
+                    .awlist22>li:before {
+                        content: '（'counter(awlistcounter23_0) '）';
+                        counter-increment: awlistcounter23_0
+                    }
+                
+                    .awlist23 {
+                        list-style: none;
+                        counter-reset: awlistcounter24_0
+                    }
+                
+                    .awlist23>li:before {
+                        content: '（'counter(awlistcounter24_0, lower-latin) '，';
+                        counter-increment: awlistcounter24_0
+                    }
+                
+                    .awlist24 {
+                        list-style: none;
+                        counter-reset: awlistcounter25_0
+                    }
+                
+                    .awlist24>li:before {
+                        content: '（'counter(awlistcounter25_0) '）';
+                        counter-increment: awlistcounter25_0
+                    }
+                </style>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:26pt;"><strong><span style="font-family:宋体;">线性代数</span></strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">向量是描述用某基向量进行线性表达的矢量，有</span>a<span style="font-family:宋体;">个</span>i<span style="font-family:宋体;">与</span>b<span style="font-family:宋体;">个</span>j<span style="font-family:宋体;">以及更多参数组成，当</span>i<span style="font-family:宋体;">与</span>j<span style="font-family:宋体;">发生变化则向量会跟着发生变化。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><strong><span style="font-family:宋体;">线性变换：</span></strong><span style="font-family:宋体;">坐标系不变（</span>xyz<span style="font-family:宋体;">轴不变），只是改变此坐标系的基向量</span>ij<span style="font-family:宋体;">（基向量</span>ij<span style="font-family:宋体;">意义一致，都在我坐标系下但值不同），从而导致变换前后的两个向量对于同一坐标系来说变成了不同的向量，值不同。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">矩阵乘以向量：用目标基向量组成的矩阵乘以向量</span>a<span style="font-family:宋体;">，得到同一坐标系下描述的向量</span>b<span style="font-family:宋体;">。（此矩阵运算改变基向量）</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><strong><span style="font-family:宋体;">基变换：</span></strong><span style="font-family:宋体;">坐标系变化（导致基向量</span>ij<span style="font-family:宋体;">值可能一致但意义不同，在不同坐标系下不再是熟悉的</span>xyz<span style="font-family:宋体;">轴） ，同一个向量用不同的坐标系进行描述所以值不同。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">矩阵乘以向量（原坐标系）：用我坐标系中对方坐标系的基向量</span>ij<span style="font-family:宋体;">组成的矩阵乘以对方坐标系中的向量</span>a<span style="font-family:宋体;">，得到向量</span>a<span style="font-family:宋体;">在我坐标系中的表达。（此矩阵运算改变坐标系）若再发生线性变换则可再通过逆矩阵运算变回原坐标系的表达，记作：</span>A<span style="font-size:7pt;"><sup>-1</sup></span>MAa = b<span style="font-family:宋体;">（</span>a<span style="font-family:宋体;">与</span>b<span style="font-family:宋体;">为原坐标系中线性变换前后的向量）</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-indent:21pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">矩阵运算无非是改变基向量或坐标系，分别叫做线性变换和基变换，根本在于替换</span>ai<span style="font-family:宋体;">与</span>bj<span style="font-family:宋体;">中的</span>i<span style="font-family:宋体;">和</span>j<span style="font-family:宋体;">，一个用不同基向量来替换，一个用不同坐标系的基向量在本坐标系中的基向量表达替换。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:15pt;"><strong>&nbsp;</strong></p>
+                <ol type="1" class="awlist1" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:15pt; font-weight:bold; list-style-position:inside;"><span style="font-family:宋体;">行列式</span></li>
+                </ol>
+                <ol type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:12pt; font-weight:bold; list-style-position:inside;"><span style="font-family:宋体;">排列</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">排列：又</span>1,2,3,...,n<span style="font-family:宋体;">组成的一个有序数组，叫</span>n<span style="font-family:宋体;">级排列</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">逆序：大数排在小数的前面，例如</span>321</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">逆序数：排列中逆序的总数，例如</span>4231<span style="font-family:宋体;">的逆序数为：</span>4<span style="font-family:宋体;">后有</span>3<span style="font-family:宋体;">个数比他小，</span>2<span style="font-family:宋体;">后有</span>1<span style="font-family:宋体;">个数比他小，</span>3<span style="font-family:宋体;">后有</span>1<span style="font-family:宋体;">个数比他小，</span>N(4231)=3+1+1=5<span style="font-family:宋体;">，</span>N(n(n-1)...321)=n(n-1)/2</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">偶排列、奇排列：逆序数为偶数则为偶排列，为奇数则为奇排列</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">对换：排列交换其中两个数的位置，</span><strong><span style="font-family:宋体;">每一次对换</span></strong><span style="font-family:宋体;">都会改变排列的奇偶性</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">n<span style="font-family:宋体;">级排列中，奇排列与偶排列各占</span>n!/2</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="2" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:12pt; font-weight:bold; list-style-position:inside;">n<span style="font-family:宋体;">阶行列式（行列式的值是原</span>ij<span style="font-family:宋体;">坐标系在新矩阵坐标系的同样向量组成四点或</span>n<span style="font-family:宋体;">点图像的区域大小倍数）</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">n<span style="font-family:宋体;">阶行列式计算中根据行列标不重复有</span>n!<span style="font-family:宋体;">个排列，可按行或列顺序展开，若按行展开前面的符号由列标排列的奇偶性决定，例如</span>a12a21a34a43<span style="font-family:宋体;">的正负号为</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEcAAAAUCAYAAADfqiBGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPwSURBVFhH7ZhJKL1vFMcvkiwokbJRhrJCFhZEIYqFoWSFkqWFsrIgNkQZShk2MiciUTKUIbFggVAuJXPmMs/c8+t77vO8972Tf7j6X+VTb845973ve97vc8553ktDf1hEp9Np/8Sxwq8R5+3tTVg/g6Xr/+/inJ6eUn19Pe3t7bH/+PjI/tLSEvtgcHCQSkpK2N7c3KT+/n5qaWmh8/NzjkkODg5oY2NDeAbu7++poaFBeERHR0c0PDxMXV1dtLa2xrHKyko+5/39nX1gF5UTERFBkZGRbCM5Hx8ftkFfXx81NTUJjygtLY3POTk5IVdXV469vr5SZ2cn+fn5UXd3N8fUpKamkpOTk/CIQkNDWbC7uztyd3enw8NDjmu1WiosLGQbWBXn7OxMWN/n4eGBH8AajY2N5OHhgWS4cpKSkjj+/PxMUVFRbFtCioPrX19fU1FRkZk4HR0dtL29bSSO5PLyksLCwlgoSVBQkNJiZuKgbBMTE2lgYEBEPg9aYH9/X3j6ck9JSaG2tjYRMTA3N0erq6tUUFBA09PTtLu7y38BSj4jI4NtU1BBKysrwtNjKg4WuKysjG1TcUpLSykwMJAmJydFRE91dTUtLi6ybSTO8fEx+fr60u3trYh8jtHRUYqLiyONRmPW+1iN7Oxsam5uFhE9mZmZvIKoGG9vb6qrq1OqbHZ2lvLz89lWk5ubS/Pz88IzYCpOeHg4ra+vK5WD1lNzdXVF/v7+tLOzIyJEra2tnANQxEFJo2dnZmb4g8/y9PTE4mAeeHp6WhyMEMHNzc2ojGNiYvjewNHRkZOVQBwIoaa8vJwWFhbYVl8HmIqDypIHxEElIj91VcfHxxsJDXHkAirioGe9vLw4+F2siQPS09M5AbC8vEwBAQE8WwB2j9jYWLYBdhUkL0GOzs7O/B20hDpfXAODNy8vT0QMIBfZVhDUxcWFxsbGqKenh7+j3sazsrL4PkARZ2pqim9oCz4Sp7a2lnJycthGoihtuX2igtBeajD/sKuAl5cXPl8eqocwipuOBZyHuBQBbYvYzc2NUrUSuTEARZyKigoKDg7moBoHB4cPj5GREXGmgY/EQdUkJCQI779BK0ZHR5s9xE+ARcOGIFHEqaqqsijOV7ClOJL29nZh/QzIC3NTjSIOhh962RZ8JE5NTY3ZkLVXFHHQk3io74A3zfHxcd7Ki4uLaWtrS3xiIDk5mQfvb0ARBz0dEhLCU/yr4IVuYmLC6FBzcXHBC2A6dO0VRRyAN0r8rkEV2RrsEPhZ0NvbKyL2j5E4AK2A0rf0qv9VcE0M4aGhIRH5HZiJI8EWaiuwC1j6f4m9Y1WcPyCOTvsPIzjAjSq/i/sAAAAASUVORK5CYII=" width="71" height="20" alt="">=+1<span style="font-family:宋体;">，行列式的性质对行与列一致。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">n<span style="font-family:宋体;">阶行列式&nbsp;</span>= <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQEAAAAXCAYAAAALFPrPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAA3rSURBVHhe7dtVkB1FFAbgwBvwADxAQVEU7u7uXkABwZ3g7u7uTnB3t+Du7u7u7i5NfSfTl9mbK5vNTTYL81dN7czcmZ7unnP+85/Ts/1ShQoV/rfoB8V+hQoV/oeoSKBChf85/pMk8Oeff6bff/+9OOo9/PXXX+m3334rjjqLP/74I7bexvAcY4URgz5FAh9//HE65ZRT0uOPPx7HP/30UzrttNPSPffcE8fw6aefpuOPPz69+eab6amnnkoPP/xw8UsKYnjsscfSt99+W5xJ6fzzz0/fffddGPNLL72Urr766nTppZemd955p7iiObR3+umnF0dD4vvvv08nnnhievLJJ4sz7fH++++ngQMHpmeffTaO9fXUU09NDz30UBzDRx99lI499ti41viMM4NDPvLII+nHH38szqR0xhlnpF9//TXI8fnnn09XXXVVuuyyy9IHH3xQXNEcP/zwQzr33HOLoyFh7o455pj0wgsvFGcq9DUECTzxxBPpiCOOCGO78MILaxsHOfroo2N/ZImsK664YppuuunCOB1vscUW6Zlnnonfndtxxx3TG2+8EcePPvpouu+++2L/s88+SwcffHCadtpp07vvvhvnAIlwtK+++iqtsMIK6b333ks33HBDmnPOOcNxWoHDIZxWcM0mm2wSpFQPJHHHHXcUR4NhTIsuumiaa665guQ47oYbbpheeeWV+J3Tbb311kEAcO+998Y4AUnutddeaeaZZ479jBNOOCH98ssvcW7llVeOey+++OK0+OKLt32v+sguWuHnn39OG220UZd5rdB3ECTw4YcfpgkmmCAttdRS6ZNPPgmHsIk4G2ywQZp33nnDIFvh77//LvaGHdpq1t4ee+wRhr7ffvvFNfazg4lwoihw4LPOOqtGAi+//HJE9+WXX75mrK+//nqQHxLgfIwZEME000zTJZo2gih83HHHxb233nprOvPMMyMinnPOOTWnBQpjwIABxdG/MO/bbLNNcfQvdtppp7TzzjsHARvjLrvsUnN6bSNn0F/jzSTw4osvBgEaYyYB5w477LAgAYTiL1AEc8wxR+24ETz77rvvDvXl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" width="257" height="23" alt=""></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">上三角、下三角、对角形行列式：主对角线则</span>=<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFMAAAAVCAYAAAA6s9JxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATMSURBVFhH7ZdbKGZdGMelXEk5DCVSEgmFSBjjUKQkF+ZCKUkMuRoXLoTIhJFDcriZUAhJ45QYx3HhVAYzI2fNIHI+NM7nZ/o/317vt73fDPpmf76b91dv+1lr7/2u5/mv9TxrbS3SoBgaMRVEI6aCaMRUEI2YCqIRU0E0YiqIRkwFUYk5MTFBaWlplJ2dTZeXl1KvsoyMjFBqaioVFhbS1dWV1Pu0jI2NcZw5OTmKx8li6unpUU1NDV1cXFBubi4FBwfzTaU4OzsjXV1dam9v5zFevXpF8fHx0t2n4ebmhuOsr69nHzIyMujly5fSXWVgMcfHx7kBBgYGyMrKSmopAwL58uWL1CKqra0lZ2dnqfV0IPsEvb29ZGNjI7WUgcVEsN++faOCggLy8fG5I2ZWVhZf8czi4iKVlpayGJhd8PnzZ+rv72f7+PiYPn78SCUlJTQ6Osp9AqTU9PQ05eXlkZOT0x0xxRjX19f8DMZobGxUpWF3dzdNTU2xfXR0RB8+fKDi4mKanJzkvseC/0cM+fn55OXldUdM4cPvQDyDg4NS69ewmObm5uwgUF+ZDQ0NfJ2dnaWqqiq2e3p6yMXFhe3v37+rgoqIiKDNzU22jYyMaGdnh+3z83MyNTVVOaO+MsUYcLitrY3tiooKCgsLYxsTtrKywra3tzeXDaClpUXr6+tsY9y1tTW2V1dXaWtri234t7+/T7e3t2RmZsYTA9RXpvDhdywsLNDMzIzU+jUsJuoZwIApKSkqMSFaXFwc23K+fv1KAQEBvDrfvHlDLS0t0p2/MTY2VgUHISwtLdnGCo+MjFSJ2dTU9I8x8Aw2wrKyMjo5OWGf1Fc6BDU0NJRaRFFRUeTr68u2p6cnxcbGsv3s2TPOOEyovr4+9yHOxMRElZidnZ0qH7B3wB4aGqL09HSam5vjd1FjOzo66PDwkJKSkrhkvH//nn0TsJgIDI7AAQiIGRfOY0XJQarY2dlxuoHy8nJKTk5mW/Dp06c7xR3pb2tryxOAzae1tZXHEDMtJhNgBYSHh1N0dDSdnp5yX0JCAtXV1bENUEbgF0qBAFmwsbHBNq4iK7BKDw4O2G9HR0fy8/PjOLu6utgHsV+YmJjwFaAfLC8vk7u7O9tFRUWUmZnJ9tu3b3kRgZCQEC6RgN/CTAlHcGRB6uzu7nJbXUzUGjgnUBcTQsbExPDqkoO2KAFY0RhD/I9cTEFlZSWFhoayrS6mAOVpfn5eaj2MPE7UY/iwt7fH7V+JiXuurq5sq4s5PDzM9rt371Qb219v3YNcTAj548cPtrGCgFxMOPf69WteBQAz+xiEmEtLS3wFyAx/f3+25WLKN4GgoCCufUrwn4uJeqGjo8MioXAbGBiQg4MD2dvbc6oDuZgvXrwga2trfgZp/dDuB3CI1tbW5rJRXV3NG0xzczN5eHhwbQZyMS0sLDjNsUG5ublx35+CEwTixKYFnyEmanJfXx+PB9/kYgYGBnLMWOk4mYj47xUTxXZ7e5v/WNjihx0SQEwEB1Aa5M885gsDqY5nxVEL9VX9XYgpThsA9RDPKIU8ThEDyp3wDRsQxMSGCNCHH8TEVdTnB9P8PnDseP78+aNE+7cg3fFF9n99fgLUZZy/H4rzj8TUIIfoJ2IUYSML2NVkAAAAAElFTkSuQmCC" width="83" height="21" alt=""> <span style="font-family:宋体;">，次对角线则需考虑符号</span><img src="data:image/png;base64,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" width="184" height="22" alt=""><span style="font-family:宋体;">&nbsp;，其区别为顺序排列与逆序排列。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="3" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:12pt; font-weight:bold; list-style-position:inside;"><span style="font-family:宋体;">行列式性质</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">转置（</span>transform<span style="font-family:宋体;">）：</span><img src="data:image/png;base64,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" width="153" height="20" alt=""><span style="font-family:宋体;">，以主对角线为轴对调两边内容，使行变为列，列变为行，</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAUCAYAAAAZb7T/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIOSURBVEhL7ZU/qHFhHICVSUpGgyySzWCRZJAMNhspJmK0KEWKAZuFwaQkJd1SZGC0CIWibCQjJeVv8ft6z/n13avj8p5773f7bt2nTuf3vAyPk/c9AvhhXK/Xl9/oe5zPZ9jv95zro3xLtN/vB7fbDXq9HqxWK3i9XtBoNPgpf3hHH49HnOhpNBrM3eFwQK/XY+ZSqcTc7zGZTHC6D6/odDoN0WgU7ZXZbAaDweDvtV6v8ZNbZDIZ7HY7tPep1WoPw6mjE4kEJJNJtFv6/T4IBAKoVqvQ6XTA6XQyT/Uty+USTCYT2nO0Wi1OXKijc7kcTlzIkyXR2+0WVwCUSiXY7XY0gHK5DJFIBO05LpcLxuMx2i1U0TqdDg6HAxoX8oTVajUaSzabBYVCgcZuxmazifYcEt1qtdBuoY5+hMfjgXA4jMZSqVRALpcz83Q6BYvFAsFgkHEa/nm0wWCAer2OxhIIBEClUqHxRyQS4cTl09Gn04n5P8/nc1xhIWvFYhGNH6FQCAqFAhoX6o04HA5xuqXb7YJQKERjIceeRCJB4wd5U4rFYrT7UEebzWYYjUZor8RiMbDZbGgAi8UCpFLph17Tm80GUqkU2vtQRxPIZmq322gAq9UKjEYjc7RlMhnmbPb5fHC5XPAbdJAfmM/nIR6P48pjeEUT3p7FXwXZtHzgHf0/8Bv9XfzQ6OvLH/laYv57w2mzAAAAAElFTkSuQmCC" width="45" height="20" alt=""><span style="font-size:7pt;"><sup>T</sup></span><span style="font-family:宋体;">与</span>D<span style="font-family:宋体;">一致。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">性质</span>1:&nbsp; <strong>D</strong><strong><span style="font-size:7pt;"><sup>T</sup></span></strong><strong>&nbsp;= D</strong><strong><span style="font-family:宋体;">，行列式转置但值不变</span></strong><span style="font-family:宋体;">，因为两个行列式分别根据行和列展开，每个元素都相等。</span><strong><span style="font-family:宋体;">所以对行有效的性质对列同样成立</span></strong><span style="font-family:宋体;">。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">性质</span>2:&nbsp; <strong><span style="font-family:宋体;">行列式</span></strong><strong>D</strong><strong><span style="font-family:宋体;">的某两行或列互换，行列式的值要改变符号</span></strong><span style="font-family:宋体;">，因为按行展开后，由于每个元素都是由不同行列标的数组成，每个元素的列标会发生一次对换，排列奇偶变换导致每个元素的符号都发生变化。推论：</span>D<span style="font-family:宋体;">中两行或两列相等，但互换后值不变，所以</span>D=0<span style="font-family:宋体;">。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">性质</span>3:<strong>&nbsp;D</strong><strong><span style="font-family:宋体;">中两行或两列相等，</span></strong><strong>D=0</strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><strong>&nbsp;</strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">性质</span>4: <strong>D</strong><strong><span style="font-family:宋体;">的某一行或列都乘以</span></strong><strong>k</strong><strong><span style="font-family:宋体;">，等同于</span></strong><strong>k</strong><strong><span style="font-family:宋体;">乘以</span></strong><strong>D</strong><span style="font-family:宋体;">，因为行列式展开的每个元素都一定有某一行或某一列的某个值，若这一行或列乘以</span>k<span style="font-family:宋体;">，则每个元素必定会乘以一次</span>k<span style="font-family:宋体;">。推论：</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><strong><span style="font-family:宋体;">行列式某一行或列有公因子</span></strong><strong>k</strong><strong><span style="font-family:宋体;">，可提取到行列式外，若每个元素均有公因子</span></strong><strong>k</strong><strong><span style="font-family:宋体;">，则外提</span></strong><strong>n</strong><strong><span style="font-family:宋体;">次</span></strong><span style="font-family:宋体;">。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">性质</span>5: <strong>D</strong><strong><span style="font-family:宋体;">的两行成比例，则</span></strong><strong>D=0</strong><strong><span style="font-family:宋体;">，推论：若</span></strong><strong>D</strong><strong><span style="font-family:宋体;">某行或列都为</span></strong><strong>0</strong><strong><span style="font-family:宋体;">，则</span></strong><strong>D=0</strong><strong><span style="font-family:宋体;">，</span></strong><span style="font-family:宋体;">因为</span>0<span style="font-family:宋体;">乘以任何数字都为</span>0</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">性质</span>6: <strong><span style="font-family:宋体;">行列式</span></strong><strong>D</strong><strong><span style="font-size:7pt;"><sub>1</sub></span></strong><strong><span style="font-family:宋体;">与</span></strong><strong>D</strong><strong><span style="font-size:7pt;"><sub>2</sub></span></strong><strong><span style="font-family:宋体;">只有一行或一列不同，则</span></strong><strong>D</strong><strong><span style="font-size:7pt;"><sub>1</sub></span></strong><strong>+D</strong><strong><span style="font-size:7pt;"><sub>2</sub></span></strong><strong>=D</strong><strong><span style="font-family:宋体;">为这两个行列式相同的部分不变，不同的行或列的值分别相加。</span></strong><span style="font-family:宋体;">因为每个元素都可以拆成两个值相加乘以其他值。和那一行分开，其余不变。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">性质</span>7: <strong>D</strong><strong><span style="font-family:宋体;">某一行或列乘以一个数，加到另一行或列上去，行列式值不变</span></strong><span style="font-family:宋体;">。因为拆成两个行列式后，会变成</span>D+D<span style="font-size:7pt;"><sub>1</sub></span><span style="font-family:宋体;">，而</span>D<span style="font-size:7pt;"><sub>1</sub></span><span style="font-family:宋体;">的某行或列与另一行或列成比例</span>=0<span style="font-family:宋体;">。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><strong>&nbsp;</strong></p>
+                <ol start="4" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:12pt; font-weight:bold; list-style-position:inside;"><span style="font-family:宋体;">行列式按行展开</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">余子式：行列式的某个元素的去除此元素行列的行列式。写作</span>M<span style="font-size:7pt;"><sub>ij</sub></span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-size:7pt;"><sub>&nbsp;</sub></span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">代数余子式：余子式前加符号，由元素的行列标号决定。</span>A<span style="font-size:7pt;"><sub>ij</sub></span>=(-1)<span style="font-size:7pt;"><sup>i+j</sup></span>M<span style="font-size:7pt;"><sub>ij</sub></span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><strong>&nbsp;</strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">行列式按行展开：</span>D = ai1Ai1 + ai2Ai2 + ... + ainAin <span style="font-family:宋体;">，元素乘以对应的代数余子式</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">定理</span>1: <strong><span style="font-family:宋体;">（异乘变零）某行元素与另一行元素的代数余子式乘积之和为</span></strong><strong>0</strong><span style="font-family:宋体;">，因为假设第四行元素用第一行代数余子式相乘，可以看做把第一行元素换成第</span>4<span style="font-family:宋体;">行的元素，而当一个行列式中两行元素相同则为</span>0<span style="font-family:宋体;">。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><strong><span style="font-family:宋体;">拉普拉斯定理</span></strong><span style="font-family:宋体;">：&nbsp;</span><strong><span style="font-family:宋体;">取定</span></strong><strong>k</strong><strong><span style="font-family:宋体;">行，由</span></strong><strong>k</strong><strong><span style="font-family:宋体;">行元素组成的所有</span></strong><strong>k</strong><strong><span style="font-family:宋体;">阶子式与代数余子式的乘积之和</span></strong><strong>=D</strong><span style="font-family:宋体;">，对于某些分块全为</span>0<span style="font-family:宋体;">的行列式很好用。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-indent:21pt;">k<span style="font-family:宋体;">阶子式</span>:<br><span style="width:21pt; text-indent:0pt; display:inline-block;">&nbsp;</span><span style="font-family:宋体;">｜</span>1 2 3 4<span style="font-family:宋体;">｜</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-indent:21pt;"><span style="font-family:宋体;">｜</span>1 1 2 5<span style="font-family:宋体;">｜</span><span style="font-family:宋体;">&nbsp;&nbsp;&nbsp;&nbsp;</span>2<span style="font-family:宋体;">阶子式：｜</span>1 2<span style="font-family:宋体;">｜</span><span style="font-family:宋体;">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">余子式：｜</span>0 8 <span style="font-family:宋体;">｜</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-indent:21pt;"><span style="font-family:宋体;">｜</span>1 1 0 8<span style="font-family:宋体;">｜</span><span style="width:5.25pt; text-indent:0pt; display:inline-block;">&nbsp;</span><span style="width:21pt; text-indent:0pt; display:inline-block;">&nbsp;</span><span style="width:21pt; text-indent:0pt; display:inline-block;">&nbsp;</span><span style="width:21pt; text-indent:0pt; display:inline-block;">&nbsp;</span><span style="font-family:宋体;">｜</span>1 1<span style="font-family:宋体;">｜</span><span style="width:5.25pt; text-indent:0pt; display:inline-block;">&nbsp;</span><span style="width:21pt; text-indent:0pt; display:inline-block;">&nbsp;</span><span style="width:21pt; text-indent:0pt; display:inline-block;">&nbsp;</span><span style="font-family:宋体;">&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">｜</span>9 10<span style="font-family:宋体;">｜</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-indent:21pt;"><span style="font-family:宋体;">｜</span>9 9 9 10<span style="font-family:宋体;">｜</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-indent:21pt;"><span style="font-family:宋体;">代数余子式：</span>A=(-1)<span style="font-size:7pt;"><sup>i1+i2+j1+j2</sup></span>M</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="5" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><strong><span style="font-family:宋体; font-size:12pt;">行列式的计算</span></strong></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><strong><span style="font-family:宋体;">行列式相乘</span></strong><span style="font-family:宋体;">：</span>D<span style="font-size:7pt;"><sub>1</sub></span><span style="font-family:宋体;">的</span>i<span style="font-family:宋体;">行元素依次与</span>D<span style="font-size:7pt;"><sub>2</sub></span><span style="font-family:宋体;">的</span>j<span style="font-family:宋体;">列元素相乘后求和得到</span>D<span style="font-size:7pt;"><sub>3ij</sub></span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">将余子式或代数余子式构造为行列式：求</span>D<span style="font-family:宋体;">的</span>M<span style="font-size:7pt;"><sub>41</sub></span>+M<span style="font-size:7pt;"><sub>42</sub></span>+M<span style="font-size:7pt;"><sub>43</sub></span>+M<span style="font-size:7pt;"><sub>44</sub></span><span style="font-family:宋体;">：原式</span>=-A<span style="font-size:7pt;"><sub>41</sub></span>+A<span style="font-size:7pt;"><sub>42</sub></span>-A<span style="font-size:7pt;"><sub>43</sub></span>+A<span style="font-size:7pt;"><sub>44</sub></span>=<span style="font-family:宋体;">（</span>-1<span style="font-family:宋体;">）&nbsp;</span>* A<span style="font-size:7pt;"><sub>41</sub></span>+1*A<span style="font-size:7pt;"><sub>42</sub></span>+<span style="font-family:宋体;">（</span>-1<span style="font-family:宋体;">）</span>*A<span style="font-size:7pt;"><sub>43</sub></span>+1*A<span style="font-size:7pt;"><sub>44</sub></span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">根据上面的式子将</span>D<span style="font-family:宋体;">第四行的元素替换为</span>-1<span style="font-family:宋体;">、</span>1<span style="font-family:宋体;">、</span>-1<span style="font-family:宋体;">、</span>1<span style="font-family:宋体;">，计算新行列式的值即为答案。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">加边法：在原行列式</span>D<span style="font-family:宋体;">的第一行和第一列前再加一行和一列，要求其中某行或列第一个元素为</span>1<span style="font-family:宋体;">，其余为</span>0<span style="font-family:宋体;">，相当元素</span>1<span style="font-family:宋体;">的代数余子式为</span>D<span style="font-family:宋体;">，保证加边后两行列式相等。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">三叉型行列式：只有第一行、第一列、主对角线有非零元素，从第一列按照对角线元素逐行相加对角线元素分之一，将第一列除第一个元素化为</span>0<span style="font-family:宋体;">，得到上三角行列式。（行列式计算一定要注意元素是否为零，不然不能放在分母上。）</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">范德蒙德行列式：</span>n<span style="font-family:宋体;">阶行列式</span>D<span style="font-family:宋体;">每行元素为</span>x<span style="font-size:7pt;"><sub>j</sub></span><span style="font-family:宋体;">的（行数</span>-1<span style="font-family:宋体;">）次方，例如</span>1 1 1 1<span style="font-family:宋体;">、</span>x<span style="font-size:7pt;"><sub>1</sub></span> x<span style="font-size:7pt;"><sub>2</sub></span> x<span style="font-size:7pt;"><sub>3</sub></span> x<span style="font-size:7pt;"><sub>4</sub></span><span style="font-family:宋体;">、</span>x<span style="font-size:7pt;"><sub>1</sub></span><span style="font-size:7pt;"><sup>2</sup></span> x<span style="font-size:7pt;"><sub>2</sub></span><span style="font-size:7pt;"><sup>2</sup></span> x<span style="font-size:7pt;"><sub>3</sub></span><span style="font-size:7pt;"><sup>2</sup></span> x<span style="font-size:7pt;"><sub>4</sub></span><span style="font-size:7pt;"><sup>2</sup></span><span style="font-family:宋体;">、</span>... D = <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHcAAAAXCAYAAAAxzdDQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUISURBVGhD7ZhbKN5/HMeZORQ1uSBSymrbBXGDC4pCQy4cRnJj0S5p5cIxhRspSlGjUJMwMotiOYaSw8phtMwpp40ctjGbw3z+vT++P/s9R49nbDz/51W/fD/f3+P5Ht6fw/f7mJARg8UorgFjFNeAMYprwBjFNWBY3JKSEp2e09NT/icjtwMW9+PHj2RiYkJpaWm0t7en8ISHh/O7T58+8T8YuT2wuAcHByxgTk4Od8qJiIjgd/9X+vv7KTAwUFg3k6WlJYqOjqafP3+KnjOM4mrB29ub6urqhHXzcXJyovX1dWEZxdXIq1evKDQ0VFi/OTo6Ujh7HB4eitb1II9GjHvReBYWFvTr1y9u6yUuBtjZ2RHWn4Pvwqbpwo8fP2h3d1dY14c6h+7s7CRra2vKzMxku6Kigu7cucNzug6SkpLI1NSUtre36eTkhJ3N09NTvFVPWFgYzwvoJW5bWxt1dHQISxUc0L5//y6si4mPj9co2PHxMfX09AiLqLm5mbq7u4WlCtLShw8fhKUfX79+VVkz5gFRBwcHyd7enlpbW6m4uJja29uv5RYxPz9PY2NjFBMTQ8+fP6enT5/SzMwMtbS0iE+o5927dxy94NLirq6u0vDwsLB+s7GxQYWFhZSbm8seruuC379/T0NDQyqfx8IyMjL4O+fm5rhvZWWFP4uNloPIqaqq4rEbGxt1SpVIXePj45z2vnz5QhMTE+INsfMoiyuB77aysqLU1FTRczGJiYlaH8xDE5gX5qJuzzVx9+5d/ntpcTc3N8nOzo7bSKXl5eUceZWVlbxJcmZnZ6m2tlblgddLTE1NkZeXF7cRvSkpKXwlwwYjFcnZ2toiGxubc/EQxUhVRUVFKlc12OrGbmho4PcjIyP04sULSk5OZofx9/c/j3isRZO44NGjRxyxyjx+/Jj29/eF9RucuLU9WJcm4Hya5oLMAWdWRm9xIaizszO3cQ+OiorilIG6oA9v377lqAMQ2sPDg6qrq9lWBqIGBwcLi+jZs2csyuLioui5HHl5eVRWVsbtgIAAzkpgdHRU44bC8fDZ9PR0tuUZR52wf8r9+/e57mJu0kFJAsIrBwC0NDc35/alxe3t7aX6+nphnYH6Cg/E1QHRJIF+1EDlB9EvERISwvc0CWwWIri0tJR8fHxoYWFBvCF6/fo11dTUCOsMLBARByfDr2gS6Fc3tjzC4RhSrYe3S0Lhr7K4+fn5lJWVxZGPsmNpacnjoTYC1EJXV1duXwWos+7u7lz/cUjCXJ88eXI+x8nJSXJ0dOS2nKamJnr48CG3eQXwOCwmOzubO+UEBQXxOykVQmx4y/T0NNvqwN1Q11+0Hjx4oNXj4SAJCQncjoyM5Bot1WB1wMmkTKANZB2kV7C8vMxj4DAiRQfEXltb4zZAxMoPdohcOLoEsgcc8qqIjY2lb9++CYsoLi5O4ZCK8wfEVubevXt8oAUsrp+fH7m4uPDT19fHLwDqqdSPugqvwaZoOylfBkwe4uoKvPiqTqcYW77WN2/eKDgZNtLW1lYlFWoCJUJb7bxqEEAFBQXCOgPnCPyQIaGYe/4inz9/5nucPBpuGl1dXeTm5qbT1crMzIwzGkrc3wDOhNQMcA56+fIl+fr6KtTgfyYuTqjy2ntTwbVrYGBAWJqBo+LU/jeAgA4ODsI6yzLqyuQ/E9eI/qCcwJkuwijuLQP3f9RbXX6uNYprsBD9B9GCmqRtDKpuAAAAAElFTkSuQmCC" width="119" height="23" alt=""></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">对称行列式：主对角线元素没有要求，上下对应相等（</span>a<span style="font-size:7pt;"><sub>ij</sub></span> = a<span style="font-size:7pt;"><sub>ji</sub></span><span style="font-family:宋体;">）</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">反对称行列式：主对角线全为</span>0<span style="font-family:宋体;">，上下位置对应成相反数（</span>a<span style="font-size:7pt;"><sub>ij</sub></span> = -a<span style="font-size:7pt;"><sub>ji</sub></span><span style="font-family:宋体;">），奇数阶</span>D = 0<span style="font-family:宋体;">（逐行乘以</span>-1<span style="font-family:宋体;">，直到变为</span>D<span style="font-size:7pt;"><sup>T</sup></span><span style="font-family:宋体;">，一共有奇数个</span>-1<span style="font-family:宋体;">相乘，</span>D=D<span style="font-size:7pt;"><sup>T</sup></span>=0<span style="font-family:宋体;">）</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">克莱姆法则：</span>n<span style="font-family:宋体;">个方程</span>n<span style="font-family:宋体;">个未知量，</span>D != 0<span style="font-family:宋体;">，</span>x<span style="font-size:7pt;"><sub>j</sub></span> = D<span style="font-size:7pt;"><sub>j</sub></span> / D<span style="font-family:宋体;">（用方程的</span>y<span style="font-family:宋体;">组成的列分别替换</span>D<span style="font-family:宋体;">的第</span>j<span style="font-family:宋体;">列）。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">定理</span>1: <span style="font-family:宋体;">齐次方程（</span>y<span style="font-family:宋体;">都等于</span>0<span style="font-family:宋体;">）至少有零解，若</span>D != 0<span style="font-family:宋体;">则只有零解（因为每个</span>D<span style="font-size:7pt;"><sub>j</sub></span> <span style="font-family:宋体;">都</span>=0<span style="font-family:宋体;">）。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">定理</span>2: <span style="font-family:宋体;">齐次方程（方程数</span>=<span style="font-family:宋体;">未知数个数）有非零解&nbsp;</span>=<span style="font-family:宋体;">（充要条件）&nbsp;</span>D=0</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="6" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:12pt; font-weight:bold; list-style-position:inside;"><span style="font-family:宋体;">矩阵概念</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">矩阵是数表，行列式本质是个数字</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">负矩阵：所有元素都为原矩阵负数</span>-A</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">n<span style="font-family:宋体;">阶方阵：行数</span>=<span style="font-family:宋体;">列数，</span>A<span style="font-size:7pt;"><sub>n</sub></span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">单位阵：只有对角线有元素，其余都为</span>0<span style="font-family:宋体;">的方阵，计作</span>E<span style="font-size:7pt;"><sub>n</sub></span><span style="font-family:宋体;">或</span>I<span style="font-size:7pt;"><sub>n</sub></span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">行列数一致的矩阵称为同型矩阵</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="7" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:12pt; font-weight:bold; list-style-position:inside;"><span style="font-family:宋体;">矩阵运算：</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">加法：同型矩阵可相加，对应元素相加。</span>A+B=B+A<span style="font-family:宋体;">，</span>A+(B+C)=(A+B)+C<span style="font-family:宋体;">，</span>A+0=A</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">减法：同型矩阵可相减，对应元素相减。</span>A+(-A)=0<span style="font-family:宋体;">，</span>A+B=C &amp; C-A=B</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">数乘：一个数</span>k<span style="font-family:宋体;">乘以矩阵，将矩阵的所有元素乘以</span>k<span style="font-family:宋体;">。矩阵所有元素有公因子，公因子外提一次。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">矩阵相乘：</span>A<span style="font-size:7pt;"><sub>1</sub></span><span style="font-family:宋体;">的</span>i<span style="font-family:宋体;">行元素依次与</span>A<span style="font-size:7pt;"><sub>2</sub></span><span style="font-family:宋体;">的</span>j<span style="font-family:宋体;">列元素相乘后求和得到</span>A<span style="font-size:7pt;"><sub>3ij</sub></span><span style="font-family:宋体;">。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">第一个矩阵的列数</span>=<span style="font-family:宋体;">第二个矩阵的行数。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">结果矩阵的行数</span>=<span style="font-family:宋体;">第一个矩阵的行数，结果矩阵的列数</span>=<span style="font-family:宋体;">第二个矩阵的列数。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">A<span style="font-size:7pt;"><sub>3*4</sub></span> B<span style="font-size:7pt;"><sub>4*5</sub></span><strong><span style="font-family:宋体;">中间相等取两头</span></strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">矩阵乘法不满足：</span></p>
+                <ol type="1" class="awlist2" style="margin:0pt; padding-left:0pt;">
+                    <li style="margin-left:21.25pt; text-indent:-21.25pt;"><span style="width:9.56pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>AB != BA <span style="font-family:宋体;">，</span>AB<span style="font-family:宋体;">有意义，</span>BA<span style="font-family:宋体;">不一定。若</span>AB=BA<span style="font-family:宋体;">则称</span>A<span style="font-family:宋体;">、</span>B<span style="font-family:宋体;">为可交换的，必须都为方阵。</span></li>
+                    <li style="margin-left:21.25pt; text-indent:-21.25pt;"><span style="width:9.56pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>AB=0<span style="font-family:宋体;">，不代表</span>A=0<span style="font-family:宋体;">或</span>B=0</li>
+                    <li style="margin-left:21.25pt; text-indent:-21.25pt;"><span style="width:9.56pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>AB=AC<span style="font-family:宋体;">且</span>A!=0<span style="font-family:宋体;">，不代表</span>B=C<span style="font-family:宋体;">（例如</span>AB=0<span style="font-family:宋体;">，</span>C=0<span style="font-family:宋体;">）</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">矩阵相乘定律：</span></p>
+                <ol type="1" class="awlist3" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="width:2.37pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;</span><span style="font-family:宋体;">结合律：</span>(AB)C = A(BC)</li>
+                    <li style="list-style-position:inside;"><span style="width:2.37pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;</span><span style="font-family:宋体;">分配律：</span>(A+B)C = AC+AB<span style="font-family:宋体;">，</span>C(A+B) = CA+CB</li>
+                    <li style="list-style-position:inside;"><span style="width:2.37pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;</span>k(AB) = (kA)B = A(kB)</li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">矩阵</span>A<span style="font-family:宋体;">与单位阵</span>E<span style="font-family:宋体;">相乘，</span>AE=A<span style="font-family:宋体;">，</span>EA=A</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">矩阵有幂次方必须为方阵。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">一般</span>(AB)<span style="font-size:7pt;"><sup>k</sup></span> != A<span style="font-size:7pt;"><sup>k</sup></span>B<span style="font-size:7pt;"><sup>k</sup></span><span style="font-family:宋体;">，</span>(A+B)<span style="font-size:7pt;"><sup>2</sup></span> != A<span style="font-size:7pt;"><sup>2</sup></span>+2AB+B<span style="font-size:7pt;"><sup>2</sup></span><span style="font-family:宋体;">，因为</span>AB!=BA</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">矩阵转置：</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">(A<span style="font-size:7pt;"><sup>T</sup></span>)<span style="font-size:7pt;"><sup>T</sup></span>=A</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">(A+B)<span style="font-size:7pt;"><sup>T</sup></span>=A<span style="font-size:7pt;"><sup>T</sup></span>+B<span style="font-size:7pt;"><sup>T</sup></span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">(kA)<span style="font-size:7pt;"><sup>T</sup></span>=kA<span style="font-size:7pt;"><sup>T</sup></span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">(AB)<span style="font-size:7pt;"><sup>T</sup></span>=B<span style="font-size:7pt;"><sup>T</sup></span>A<span style="font-size:7pt;"><sup>T</sup></span>, (ABCD)<span style="font-size:7pt;"><sup>T</sup></span>=D<span style="font-size:7pt;"><sup>T</sup></span>C<span style="font-size:7pt;"><sup>T</sup></span>B<span style="font-size:7pt;"><sup>T</sup></span>A<span style="font-size:7pt;"><sup>T</sup></span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">特殊矩阵：</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">对角形矩阵：</span>diag(a<span style="font-size:7pt;"><sub>1</sub></span>,a<span style="font-size:7pt;"><sub>2</sub></span>,a<span style="font-size:7pt;"><sub>3</sub></span>,...,a<span style="font-size:7pt;"><sub>n</sub></span>)</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">对称矩阵：</span>A<span style="font-size:7pt;"><sup>T</sup></span>=A<span style="font-family:宋体;">，</span>(AB)<span style="font-size:7pt;"><sup>T</sup></span>=B<span style="font-size:7pt;"><sup>T</sup></span>A<span style="font-size:7pt;"><sup>T</sup></span>=BA</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">定理：</span>A<span style="font-family:宋体;">，</span>B<span style="font-family:宋体;">为对称矩阵，则</span>AB<span style="font-family:宋体;">对称&nbsp;</span>&lt;=&gt; AB<span style="font-family:宋体;">可交换</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">反对称矩阵：主对角线全为</span>0<span style="font-family:宋体;">，元素根据主对角线对称互为负数，</span>a<span style="font-size:7pt;"><sub>ij</sub></span> = -a<span style="font-size:7pt;"><sub>ji</sub></span><span style="font-family:宋体;">，</span>A<span style="font-size:7pt;"><sup>T</sup></span>=-A</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="8" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:12pt; font-weight:bold; list-style-position:inside;"><span style="font-family:宋体;">逆矩阵</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><strong><span style="font-family:宋体;">矩阵不能放在分母上</span></strong><span style="font-family:宋体;">。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">A<span style="font-family:宋体;">为方阵，｜</span>A<span style="font-family:宋体;">｜为方阵的行列式</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">性质</span>1: <span style="font-family:宋体;">｜</span>A<span style="font-size:7pt;"><sup>T</sup></span><span style="font-family:宋体;">｜&nbsp;</span>= <span style="font-family:宋体;">｜</span>A<span style="font-family:宋体;">｜</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">性质</span>2: <span style="font-family:宋体;">｜</span>kA<span style="font-family:宋体;">｜&nbsp;</span>= k<span style="font-size:7pt;"><sup>n</sup></span><span style="font-family:宋体;">｜</span>A<span style="font-family:宋体;">｜</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">性质</span>3: <span style="font-family:宋体;">｜</span>AB<span style="font-family:宋体;">｜&nbsp;</span>= <span style="font-family:宋体;">｜</span>A<span style="font-family:宋体;">｜</span>*<span style="font-family:宋体;">｜</span>B<span style="font-family:宋体;">｜</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><strong><span style="font-family:宋体;">伴随矩阵</span></strong><span style="font-family:宋体;">：方阵才有伴随矩阵且任意方阵都有伴随矩阵，记作</span>A*</p>
+                <ol type="1" class="awlist4" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="width:2.37pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;</span><span style="font-family:宋体;">求所有元素的代数余子式。</span></li>
+                    <li style="list-style-position:inside;"><span style="width:2.37pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;</span><span style="font-family:宋体;">按行求的代数余子式按列放，构成矩阵。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><strong><span style="font-family:宋体;">按行求，按列放</span></strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">定理</span>1:&nbsp; AA* = A*A = <span style="font-family:宋体;">｜</span>A<span style="font-family:宋体;">｜</span>E<span style="font-family:宋体;">， 一行元素与自己的代数余子式相乘为行列式的值，与别的行的代数余子式相乘为</span>0<span style="font-family:宋体;">（异乘变零）</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">定理</span>2: <span style="font-family:宋体;">｜</span>A*<span style="font-family:宋体;">｜&nbsp;</span>= <span style="font-family:宋体;">｜</span>A<span style="font-family:宋体;">｜</span><span style="font-size:7pt;"><sup>n-1</sup></span><span style="font-family:宋体;">，因为｜</span>AA*<span style="font-family:宋体;">｜</span>=<span style="font-family:宋体;">｜｜</span>A<span style="font-family:宋体;">｜</span>E<span style="font-family:宋体;">｜</span>=<span style="font-family:宋体;">｜</span>A<span style="font-family:宋体;">｜｜</span>A*<span style="font-family:宋体;">｜</span>=<span style="font-family:宋体;">｜</span>A<span style="font-family:宋体;">｜</span><span style="font-size:7pt;"><sup>n</sup></span><span style="font-family:宋体;">（行列式中提取矩阵</span>E<span style="font-family:宋体;">的｜</span>A<span style="font-family:宋体;">｜则需要提取</span>n<span style="font-family:宋体;">阶次｜</span>A<span style="font-family:宋体;">｜）</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><strong><span style="font-family:宋体;">逆矩阵</span></strong><span style="font-family:宋体;">：</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">A<span style="font-family:宋体;">与</span>B<span style="font-family:宋体;">皆为</span>n<span style="font-family:宋体;">阶方阵，</span>AB=BA=E<span style="font-family:宋体;">，</span>A<span style="font-size:7pt;"><sup>-1</sup></span>=B<span style="font-family:宋体;">，</span>A<span style="font-family:宋体;">的逆矩阵为</span>B<span style="font-family:宋体;">，计算前一定要先判断是否可逆</span></p>
+                <ol type="1" class="awlist5" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">未必所有方阵均可逆，例如</span>0<span style="font-family:宋体;">方阵</span></li>
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">若方阵可逆，则逆矩阵唯一</span></li>
+                    <li style="list-style-position:inside;">A<span style="font-family:宋体;">可逆，</span>A<span style="font-size:7pt;"><sup>-1</sup></span><span style="font-family:宋体;">可逆，（</span>A<span style="font-size:7pt;"><sup>-1</sup></span><span style="font-family:宋体;">）</span><span style="font-size:7pt;"><sup>-1</sup></span>=A</li>
+                    <li style="list-style-position:inside;">A<span style="font-family:宋体;">，</span>B<span style="font-family:宋体;">均可逆，</span>AB<span style="font-family:宋体;">可逆，（</span>AB<span style="font-family:宋体;">）</span><span style="font-size:7pt;"><sup>-1</sup></span>=B<span style="font-size:7pt;"><sup>-1</sup></span>A<span style="font-size:7pt;"><sup>-1</sup></span><span style="font-family:宋体;">，（</span>AB<span style="font-family:宋体;">）</span><span style="font-size:7pt;"><sup>T</sup></span>=B<span style="font-size:7pt;"><sup>T</sup></span>A<span style="font-size:7pt;"><sup>T</sup></span></li>
+                    <li style="list-style-position:inside;">A<span style="font-family:宋体;">可逆，</span>A<span style="font-size:7pt;"><sup>T</sup></span><span style="font-family:宋体;">可逆，（</span>A<span style="font-size:7pt;"><sup>T</sup></span><span style="font-family:宋体;">）</span><span style="font-size:7pt;"><sup>-1</sup></span>=<span style="font-family:宋体;">（</span>A<span style="font-size:7pt;"><sup>-1</sup></span><span style="font-family:宋体;">）</span><span style="font-size:7pt;"><sup>T</sup></span><span style="font-family:宋体;">；</span>k<span style="font-family:宋体;">！</span>=0<span style="font-family:宋体;">，（</span>kA<span style="font-family:宋体;">）</span><span style="font-size:7pt;"><sup>-1</sup></span> = <span style="font-family:宋体;">（</span>1/k<span style="font-family:宋体;">）</span>A<span style="font-size:7pt;"><sup>-1</sup></span></li>
+                    <li style="list-style-position:inside;">A<span style="font-family:宋体;">可逆，｜</span>A<span style="font-size:7pt;"><sup>-1</sup></span><span style="font-family:宋体;">｜</span>=<span style="font-family:宋体;">｜</span>A<span style="font-family:宋体;">｜</span><span style="font-size:7pt;"><sup>-1</sup></span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><strong><span style="font-family:宋体;">伴随矩阵法</span></strong><span style="font-family:宋体;">：</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">定理：</span>A<span style="font-family:宋体;">可逆的充要条件是｜</span>A<span style="font-family:宋体;">｜！</span>= 0<span style="font-family:宋体;">，</span>A<span style="font-size:7pt;"><sup>-1</sup></span>=<span style="font-family:宋体;">（</span>1/<span style="font-family:宋体;">｜</span>A<span style="font-family:宋体;">｜）</span>A*</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">因为</span>AA* = A*A = <span style="font-family:宋体;">｜</span>A<span style="font-family:宋体;">｜</span>E<span style="font-family:宋体;">，每个项都除以｜</span>A<span style="font-family:宋体;">｜，</span>A[<span style="font-family:宋体;">（</span>1/<span style="font-family:宋体;">｜</span>A<span style="font-family:宋体;">｜）</span>A*] = E<span style="font-family:宋体;">，所以</span>A<span style="font-size:7pt;"><sup>-1</sup></span>=<span style="font-family:宋体;">（</span>1/<span style="font-family:宋体;">｜</span>A<span style="font-family:宋体;">｜）</span>A*</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><strong><span style="font-family:宋体;">初等变换法</span></strong><span style="font-family:宋体;">：矩阵之间用箭头联系，并不相等，本质是对矩阵的一种变化</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">行变换：</span></p>
+                <ol type="1" class="awlist6" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">交换两行</span></li>
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">用</span>k<span style="font-family:宋体;">（</span>k<span style="font-family:宋体;">！</span>=0<span style="font-family:宋体;">）乘以某行</span></li>
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">某一行的</span>l<span style="font-family:宋体;">倍加到另一行上去</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="9" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:12pt; font-weight:bold; list-style-position:inside;"><span style="font-family:宋体;">初等变换</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">（</span>1<span style="font-family:宋体;">）交换两行</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">（</span>2<span style="font-family:宋体;">）用</span>k<span style="font-family:宋体;">（</span>k<span style="font-family:宋体;">！</span>=0<span style="font-family:宋体;">）乘以某行</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">（</span>3<span style="font-family:宋体;">）某一行的</span>l<span style="font-family:宋体;">倍加到另一行上去</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;"><strong>&nbsp;</strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;"><strong>&nbsp;</strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><strong><span style="font-family:宋体;">标准型</span></strong><span style="font-family:宋体;">：从左上角开始主对角线一串</span>1<span style="font-family:宋体;">（个数可以为</span>0<span style="font-family:宋体;">，不能断），剩下为一串</span>0<span style="font-family:宋体;">（个数可以为</span>0<span style="font-family:宋体;">），其余位置皆为</span>0</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">定理：任何矩阵都能通过初等变换为标准型</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><strong><span style="font-family:宋体;">等价</span></strong><span style="font-family:宋体;">：</span>A<span style="font-family:宋体;">经过初等变换得到</span>B</p>
+                <ol type="1" class="awlist7" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><strong><span style="font-family:宋体;">反身性</span></strong><span style="font-family:宋体;">：</span>A<span style="font-family:宋体;">经过初等变换可以变回自己</span></li>
+                    <li style="list-style-position:inside;"><strong><span style="font-family:宋体;">对称性</span></strong><span style="font-family:宋体;">：</span>A<span style="font-family:宋体;">可以变换为</span>B<span style="font-family:宋体;">，则</span>B<span style="font-family:宋体;">也可以变换为</span>A</li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><strong><span style="font-family:宋体;">初等方阵</span></strong><span style="font-family:宋体;">：对</span>E<span style="font-family:宋体;">做一次初等变换得到的矩阵</span></p>
+                <ol type="1" class="awlist8" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">初等方阵均可逆，其逆矩阵也是初等方阵</span></li>
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">初等方阵的转置矩阵也为初等方阵</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">初等方阵</span>E<span style="font-family:宋体;">（</span>2<span style="font-family:宋体;">，</span>3<span style="font-family:宋体;">）：将单位阵的第二行与第三行互换</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">E<span style="font-family:宋体;">（</span>1<span style="font-family:宋体;">（</span>3<span style="font-family:宋体;">））：将单位阵的第一行乘以</span>3</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">性质：用初等方阵左乘</span>A<span style="font-family:宋体;">，相当于对</span>A<span style="font-family:宋体;">实施初等行变换</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">用初等方阵右乘</span>A<span style="font-family:宋体;">，相当于对</span>A<span style="font-family:宋体;">实施初等列变换</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">所以初等变换最好写成初等方阵的左乘与右乘</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">推论</span>1<span style="font-family:宋体;">：</span>A<span style="font-family:宋体;">与</span>B<span style="font-family:宋体;">等价&nbsp;</span>&lt;=&gt; <span style="font-family:宋体;">有可逆矩阵</span>P<span style="font-family:宋体;">和</span>Q<span style="font-family:宋体;">，使</span>PAQ=B<span style="font-family:宋体;">（因为可以对</span>A<span style="font-family:宋体;">进行初等行变换与列变换得到</span>B<span style="font-family:宋体;">，等价为左乘</span>P<span style="font-family:宋体;">与右乘</span>Q<span style="font-family:宋体;">）</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">定理：</span>A<span style="font-family:宋体;">可逆&nbsp;</span>&lt;=&gt; A<span style="font-family:宋体;">的标准型为</span>E<span style="font-family:宋体;">（满秩）</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">定理：</span>A<span style="font-family:宋体;">可逆&nbsp;</span>&lt;=&gt; A = P1 ... E ... P5<span style="font-family:宋体;">（初等方阵的乘积）</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">初等行变换求逆矩阵：</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">E<span style="font-family:宋体;">与</span>A<span style="font-family:宋体;">都为满秩矩阵（</span>A<span style="font-family:宋体;">可逆），由同秩矩阵可经过初等变换得：</span>E = Q<span style="font-size:7pt;"><sub>1</sub></span>Q<span style="font-size:7pt;"><sub>2</sub></span>...Q<span style="font-size:7pt;"><sub>t</sub></span>A --&gt; A<span style="font-size:7pt;"><sup>-1</sup></span> = Q<span style="font-size:7pt;"><sub>1</sub></span>Q<span style="font-size:7pt;"><sub>2</sub></span>...Q<span style="font-size:7pt;"><sub>t</sub></span>E</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">所以：当</span>A<span style="font-family:宋体;">通过初等行变换为</span>E<span style="font-family:宋体;">时，经过同样初等行变换的</span>E<span style="font-family:宋体;">也变为</span>A<span style="font-size:7pt;"><sup>-1</sup></span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">初等变换法：（</span>A<span style="font-family:宋体;">，</span>E<span style="font-family:宋体;">）&nbsp;</span>-<span style="font-family:宋体;">行</span>-&gt; <span style="font-family:宋体;">（</span>E<span style="font-family:宋体;">，</span>A<span style="font-size:7pt;"><sup>-1</sup></span><span style="font-family:宋体;">）</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="10" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:12pt; font-weight:bold; list-style-position:inside;"><span style="font-family:宋体;">矩阵的秩</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">n<span style="font-family:宋体;">阶子式：任选</span>n<span style="font-family:宋体;">行</span>n<span style="font-family:宋体;">列组成的行列式，可以有多种选择</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><strong><span style="font-family:宋体;">矩阵的秩：</span></strong><span style="font-family:宋体;">矩阵非零子式的最高阶数，相当于矩阵所代表的线性变换的维度，例如</span>3<span style="font-family:宋体;">阶矩阵秩为</span>2<span style="font-family:宋体;">则意味着从三维降到二维的一个线性变换，两基向量必定与剩下一条基向量线性相关。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol type="1" class="awlist9" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;">m*n<span style="font-family:宋体;">阶矩阵的秩一定小于等于</span>n<span style="font-family:宋体;">与</span>m<span style="font-family:宋体;">的最小值，若</span>r<span style="font-family:宋体;">（</span>A<span style="font-family:宋体;">）</span>=m<span style="font-family:宋体;">为行满秩矩阵，</span>r<span style="font-family:宋体;">（</span>A<span style="font-family:宋体;">）</span>=n<span style="font-family:宋体;">为列满秩矩阵，若</span>r<span style="font-family:宋体;">（</span>A<span style="font-family:宋体;">）</span>=m=n<span style="font-family:宋体;">为满秩矩阵。</span></li>
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">若</span>r<span style="font-family:宋体;">（</span>A<span style="font-family:宋体;">）小于</span>m<span style="font-family:宋体;">或</span>n<span style="font-family:宋体;">称为降秩矩阵。若</span>A<span style="font-family:宋体;">为满秩方阵，则</span>A<span style="font-family:宋体;">可逆，｜</span>A<span style="font-family:宋体;">｜！</span>=0<span style="font-family:宋体;">。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><strong><span style="font-family:宋体;">阶梯型矩阵</span></strong><span style="font-family:宋体;">：</span></p>
+                <ol type="1" class="awlist10" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">若有零行，则在非零行下面</span></li>
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">左起首非零元素左边零的个数随行数严格增加</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><strong>*&nbsp;</strong><strong><span style="font-family:宋体;">行简化阶梯型：</span></strong></p>
+                <ol type="1" class="awlist11" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">非零行的首非零元是</span>1</li>
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">首非零元所在列的其余元素为</span>0</li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><strong><span style="font-family:宋体;">定义：</span></strong><strong>r</strong><strong><span style="font-family:宋体;">（</span></strong><strong>A</strong><strong><span style="font-family:宋体;">）</span></strong><strong>=</strong><strong><span style="font-family:宋体;">非零行的行数，初等变换不改变矩阵的秩</span></strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">性质</span>1: r<span style="font-family:宋体;">（</span>A<span style="font-family:宋体;">）</span>=r<span style="font-family:宋体;">（</span>A<span style="font-size:7pt;"><sup>T</sup></span><span style="font-family:宋体;">）</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">性质</span>2:<span style="font-family:宋体;">矩阵乘以可逆矩阵，秩不变。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">性质</span>3:A<span style="font-size:7pt;"><sub>m*n</sub></span><span style="font-family:宋体;">，</span>P<span style="font-family:宋体;">为</span>m<span style="font-family:宋体;">阶可逆方阵，</span>Q<span style="font-family:宋体;">为</span>n<span style="font-family:宋体;">阶可逆方阵，</span>r<span style="font-family:宋体;">（</span>A<span style="font-family:宋体;">）</span>=r<span style="font-family:宋体;">（</span>PA<span style="font-family:宋体;">）</span>=r<span style="font-family:宋体;">（</span>AQ<span style="font-family:宋体;">）</span>=r<span style="font-family:宋体;">（</span>PAQ<span style="font-family:宋体;">）</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="11" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:12pt; font-weight:bold; list-style-position:inside;"><span style="font-family:宋体;">向量</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><strong><span style="font-family:宋体;">线性组合</span></strong><span style="font-family:宋体;">：若</span>a<span style="font-family:宋体;">、</span>b<span style="font-family:宋体;">、</span>c<span style="font-family:宋体;">等都为</span>n<span style="font-family:宋体;">维向量，若</span>kb+k2c+<span style="font-family:宋体;">。。。</span>=a<span style="font-family:宋体;">，称为</span>a<span style="font-family:宋体;">的线性组合。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><strong><span style="font-family:宋体;">线性相关</span></strong><span style="font-family:宋体;">：存在一组不全为</span>0<span style="font-family:宋体;">的系数使向量组合等于</span>0<span style="font-family:宋体;">，则为线性相关。（至少有一个向量可以表示为其他向量的线性组合）</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><strong><span style="font-family:宋体;">线性无关</span></strong><span style="font-family:宋体;">：不存在一组不全为</span>0<span style="font-family:宋体;">的系数使向量组合等于</span>0<span style="font-family:宋体;">，则为线性无关。（任何向量都不能通过组合集合中的其他向量来表达）</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><strong><span style="font-family:宋体;">等价</span></strong><span style="font-family:宋体;">：设有两个向量组</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">(<span style="font-family:宋体;">Ⅰ</span>)<span style="font-family:宋体;">：&alpha;</span>1<span style="font-family:宋体;">，&alpha;</span>2<span style="font-family:宋体;">，&hellip;&hellip;，&alpha;</span>m<span style="font-family:宋体;">；</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">(<span style="font-family:宋体;">Ⅱ</span>)<span style="font-family:宋体;">：&beta;</span>1<span style="font-family:宋体;">，&beta;</span>2<span style="font-family:宋体;">，&hellip;&hellip;，&beta;</span>m<span style="font-family:宋体;">；</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">如果</span>(<span style="font-family:宋体;">Ⅰ</span>)<span style="font-family:宋体;">中每个向量都可以由向量组</span>(<span style="font-family:宋体;">Ⅱ</span>)<a href="https://baike.baidu.com/item/线性/5450468?fromModule=lemma_inlink" target="/Users/StevenShi/Documents\x/_blank" style="text-decoration:none;"><span style="font-family:宋体; color:#000000;">线性</span></a><span style="font-family:宋体;">表示，则称</span>(<span style="font-family:宋体;">Ⅰ</span>)<span style="font-family:宋体;">可由</span>(<span style="font-family:宋体;">Ⅱ</span>)<span style="font-family:宋体;">线性表示；如果</span>(<span style="font-family:宋体;">Ⅰ</span>)<span style="font-family:宋体;">与</span>(<span style="font-family:宋体;">Ⅱ</span>)<span style="font-family:宋体;">可以相互线性表示，则称</span>(<span style="font-family:宋体;">Ⅰ</span>)<span style="font-family:宋体;">与</span>(<span style="font-family:宋体;">Ⅱ</span>)<span style="font-family:宋体;">等价，记为</span>(<span style="font-family:宋体;">Ⅰ</span>)<span style="font-family:宋体;">≌</span>(<span style="font-family:宋体;">Ⅱ</span>)<span style="font-family:宋体;">。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">性质：</span></p>
+                <ol type="1" class="awlist12" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">若向量组中两向量成比例，则线性相关。</span></li>
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">含零向量的向量组必线性相关。</span></li>
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">只有一个零向量必线性相关。</span></li>
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">任意一个非零向量必线性无关。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">部分组线性相关则整体线性相关，整体组线性无关则部分组线性无关。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">无关的向量组，接长向量组也无关（升维）</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">相关的向量组，截短向量组也线性相关</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">n<span style="font-family:宋体;">个</span>n<span style="font-family:宋体;">维向量，</span>D<span style="font-family:宋体;">！</span>=0<span style="font-family:宋体;">，则线性无关，</span>D=0<span style="font-family:宋体;">则线性相关</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">定理：</span></p>
+                <ol type="1" class="awlist13" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">线性相关</span>&lt;=&gt;<span style="font-family:宋体;">至少一个向量可以用别的向量组合表示</span></li>
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">若</span>a<span style="font-size:7pt;"><sub>1</sub></span><span style="font-family:宋体;">到</span>a<span style="font-size:7pt;"><sub>s</sub></span><span style="font-family:宋体;">线性无关，加上</span>b<span style="font-family:宋体;">后线性相关，则</span>a<span style="font-size:7pt;"><sub>1</sub></span><span style="font-family:宋体;">到</span>a<span style="font-size:7pt;"><sub>s</sub></span><span style="font-family:宋体;">可唯一线性组合为</span>b</li>
+                    <li style="list-style-position:inside;">a<span style="font-size:7pt;"><sub>1</sub></span><span style="font-family:宋体;">到</span>a<span style="font-size:7pt;"><sub>s</sub></span><span style="font-family:宋体;">线性无关，但可由</span>b<span style="font-size:7pt;"><sub>1</sub></span><span style="font-family:宋体;">到</span>b<span style="font-size:7pt;"><sub>t</sub></span><span style="font-family:宋体;">线性表示，则</span>s&lt;=t</li>
+                    <li style="list-style-position:inside;">m&gt;n,m<span style="font-family:宋体;">个</span>n<span style="font-family:宋体;">维向量线性相关</span></li>
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">等价的线性无关的向量组个数一定想同</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="12" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:12pt; font-weight:bold; list-style-position:inside;"><span style="font-family:宋体;">向量组的秩</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><strong><span style="font-family:宋体;">极大无关组</span></strong><span style="font-family:宋体;">：向量组</span>a1<span style="font-family:宋体;">到</span>as<span style="font-family:宋体;">中有部分组</span>a<span style="font-size:7pt;"><sub>1</sub></span><span style="font-family:宋体;">、</span>a<span style="font-size:7pt;"><sub>2</sub></span></p>
+                <ol type="1" class="awlist14" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;">a<span style="font-size:7pt;"><sub>1</sub></span><span style="font-family:宋体;">、</span>a<span style="font-size:7pt;"><sub>2</sub></span><span style="font-family:宋体;">无关</span></li>
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">每个向量都可由</span>a<span style="font-size:7pt;"><sub>1</sub></span><span style="font-family:宋体;">、</span>a<span style="font-size:7pt;"><sub>2</sub></span><span style="font-family:宋体;">表示</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">则</span>a<span style="font-size:7pt;"><sub>1</sub></span><span style="font-family:宋体;">、</span>a<span style="font-size:7pt;"><sub>2</sub></span><span style="font-family:宋体;">为原向量组的极大无关组（相当于能线性组合成所有向量的维度数量）</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">极大：找无关向量组的向量个数最大（类似最大公约数概念）</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">性质：</span></p>
+                <ol type="1" class="awlist15" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">全是</span>0<span style="font-family:宋体;">的向量组没有极大无关组</span></li>
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">一个线性无关的向量组极大无关组是其本身</span></li>
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">任何极大无关组与原向量组等价</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><strong><span style="font-family:宋体;">向量组的秩</span></strong><span style="font-family:宋体;">：极大无关组含向量的个数，记作</span>r<span style="font-family:宋体;">（</span>a<span style="font-size:7pt;"><sub>1</sub></span><span style="font-family:宋体;">、</span>a<span style="font-size:7pt;"><sub>2</sub></span><span style="font-family:宋体;">、。。。）</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">定理：</span></p>
+                <ol type="1" class="awlist16" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">若向量组</span>a<span style="font-family:宋体;">可由向量组</span>b<span style="font-family:宋体;">表示，则</span>r<span style="font-family:宋体;">（</span>a<span style="font-family:宋体;">）</span>&lt;=r<span style="font-family:宋体;">（</span>b<span style="font-family:宋体;">）</span></li>
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">等价向量组有相同的秩，相同的秩不代表等价</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">行秩：行向量组的秩</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">列秩：列向量组的秩</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><strong><span style="font-family:宋体;">行秩</span></strong><strong>=</strong><strong><span style="font-family:宋体;">列秩</span></strong><strong>=</strong><strong><span style="font-family:宋体;">矩阵的秩</span></strong><strong>r</strong><strong><span style="font-family:宋体;">（</span></strong><strong>A</strong><strong><span style="font-family:宋体;">）</span></strong><span style="font-family:宋体;">，非零子式一定为方阵，且最大非零子式可以表达所有维度。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">定义：</span><strong><span style="font-family:宋体;">初等行变换不改变矩阵列向量的线性关系</span></strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><strong><span style="font-family:宋体;">求极大线性无关组与其组成其余向量的参数：</span></strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">按列摆放矩阵，求行简化阶梯型，其排除所有头部为</span>1<span style="font-family:宋体;">其余为</span>0<span style="font-family:宋体;">的极大线性无关列与全</span>0<span style="font-family:宋体;">行，剩下的部分按列分别为参数。（相当于后续列都由前几列线性组合表达，而前几列组成的矩阵为单位矩阵，后面部分可以看做是前面不同列向量的倍数的组合）</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="13" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:12pt; font-weight:bold; list-style-position:inside;"><span style="font-family:宋体;">线性方程组</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><strong><span style="font-family:宋体;">线性方程组有解判定</span></strong><span style="font-family:宋体;">：</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">（</span><u>A</u><span style="font-family:宋体;">上划线是增广矩阵）</span></p>
+                <ol type="1" class="awlist17" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">当</span>r<span style="font-family:宋体;">（</span>A<span style="font-family:宋体;">）</span>=r<span style="font-family:宋体;">（</span><u>A</u><span style="font-family:宋体;">），且都</span>=n<span style="font-family:宋体;">（未知量个数，</span>A<span style="font-family:宋体;">列数）有唯一解，都</span>&lt;n<span style="font-family:宋体;">有</span><span style="width:19.93pt; display:inline-block;">&nbsp;</span><span style="font-family:宋体;">无穷多解。</span></li>
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">当</span>r<span style="font-family:宋体;">（</span>A<span style="font-family:宋体;">）！</span>=r<span style="font-family:宋体;">（</span><u>A</u><span style="font-family:宋体;">），无解（因为</span>0<span style="font-family:宋体;">不等于任何非零的数字）。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">当有无穷多解时：将行简化阶梯型的非线性部分移到等式左边，只有线性部分解，称为一般解。例如</span>x<span style="font-size:7pt;"><sub>1</sub></span> = 5 - 3x<span style="font-size:7pt;"><sub>3</sub></span> - 2x<span style="font-size:7pt;"><sub>4</sub></span><span style="font-family:宋体;">，</span>x<span style="font-size:7pt;"><sub>2</sub></span> = 3 - 2x<span style="font-size:7pt;"><sub>3</sub></span> - x<span style="font-size:7pt;"><sub>4</sub></span><span style="font-family:宋体;">，</span>x<span style="font-size:7pt;"><sub>3</sub></span> - x<span style="font-size:7pt;"><sub>4</sub></span><span style="font-family:宋体;">为自由未知量。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><strong><span style="font-family:宋体;">齐次方程组的解</span></strong><span style="font-family:宋体;">：</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">齐次方程一定有解，至少有零解。</span></p>
+                <ol type="1" class="awlist18" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;">r<span style="font-family:宋体;">（</span>A<span style="font-family:宋体;">）</span>=r<span style="font-family:宋体;">（</span><u>A</u><span style="font-family:宋体;">）</span>=n<span style="font-family:宋体;">，有唯一零解</span></li>
+                    <li style="list-style-position:inside;">r<span style="font-family:宋体;">（</span>A<span style="font-family:宋体;">）</span>&lt;n &lt;=&gt; <span style="font-family:宋体;">有非零解（无穷多个）</span></li>
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">齐次方程的方程个数少于未知数个数，有非零解（无穷多个）</span></li>
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">方程个数</span>=<span style="font-family:宋体;">未知数个数，有非零解&nbsp;</span>&lt;=&gt; <span style="width:16.31pt; display:inline-block;">&nbsp;</span><span style="font-family:宋体;">｜</span>A<span style="font-family:宋体;">｜</span>=0<span style="font-family:宋体;">，</span>A<span style="font-family:宋体;">可不可逆</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">齐次线性方程组</span>Ax=0<span style="font-family:宋体;">：</span></p>
+                <ol type="1" class="awlist19" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">两解相加还是解，</span>0+0=0</li>
+                    <li style="list-style-position:inside;">k<span style="font-family:宋体;">倍解还是解，</span>k*0=0</li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><strong><span style="font-family:宋体;">齐次方程组的基础解系</span></strong><span style="font-family:宋体;">：</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">使自由未知量取</span>100<span style="font-family:宋体;">，</span>010<span style="font-family:宋体;">，</span>001<span style="font-family:宋体;">，得出加上最大线性无关未知量的向量，将</span>x1<span style="font-family:宋体;">与</span>x2<span style="font-family:宋体;">倒过来用自由未知量表示，自由未知量有多少解就有几个，</span>=n-r<span style="font-family:宋体;">（</span>A<span style="font-family:宋体;">）。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">定理：</span>A<span style="font-family:宋体;">为</span>m*n<span style="font-family:宋体;">，</span>B<span style="font-family:宋体;">为</span>m*s<span style="font-family:宋体;">，若</span>AB=0<span style="font-family:宋体;">，则</span>r<span style="font-family:宋体;">（</span>A<span style="font-family:宋体;">）</span>+r<span style="font-family:宋体;">（</span>B<span style="font-family:宋体;">）</span>&lt;=n</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><strong><span style="font-family:宋体;">非齐次线性方程组的解</span></strong><span style="font-family:宋体;">：</span></p>
+                <ol type="1" class="awlist20" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">两个解相减为导出组解</span></li>
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">非齐次方程组的解和导出组的一个解相加以后仍是非其次线性方程组的一个解</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">非齐次方程方程组的解为：一个特解加上齐次方程的基础解系，特解</span>+c<span style="font-size:7pt;"><sub>1</sub></span><span style="font-family:宋体;">解系</span><span style="font-size:7pt;"><sub>1</sub></span>+c<span style="font-size:7pt;"><sub>2</sub></span><span style="font-family:宋体;">解系</span><span style="font-size:7pt;"><sub>2</sub></span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">特解：取未知自由量皆为</span>0<span style="font-family:宋体;">，得一个特解</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="14" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:12pt; font-weight:bold; list-style-position:inside;"><span style="font-family:宋体;">矩阵的特征值与特征向量：</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">（只有方阵才能求特征值与特征向量）</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">A<span style="font-family:宋体;">为</span>n<span style="font-family:宋体;">阶方阵，对于一个数</span>k<span style="font-family:宋体;">（可以为</span>0<span style="font-family:宋体;">），若存在非零列向量</span>a<span style="font-family:宋体;">，使</span>Aa=ka<span style="font-family:宋体;">，则：</span>k<span style="font-family:宋体;">为一个特征值，</span>a<span style="font-family:宋体;">为对应</span>k<span style="font-family:宋体;">的特征向量。（说明经过矩阵</span>A<span style="font-family:宋体;">的线性变换后特征向量的线性关系不变，特征值和特征向量揭示了矩阵的变换在某些方向上作用的&ldquo;强度&rdquo;和&ldquo;方向&rdquo;，意味着只要在原基向量基础上对特征向量方向的特征值力度进行拉伸即为新的基坐标。）</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">可得：（</span>kE - A<span style="font-family:宋体;">）</span>a = 0<span style="font-family:宋体;">，</span>a<span style="font-family:宋体;">有非零解&nbsp;</span>&lt;=&gt; <span style="font-family:宋体;">｜</span>kE - A<span style="font-family:宋体;">｜</span>=0<span style="font-family:宋体;">（称为特征方程）</span></p>
+                <ol type="1" class="awlist21" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;">k<span style="font-family:宋体;">是</span>A<span style="font-family:宋体;">的特征值，</span>a<span style="font-family:宋体;">是</span>k<span style="font-family:宋体;">对应的特征向量，只要常数</span>c<span style="font-family:宋体;">！</span>=0<span style="font-family:宋体;">，</span>ca<span style="font-family:宋体;">也是</span>k<span style="font-family:宋体;">的特征向量。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">性质：</span></p>
+                <ol type="1" class="awlist22" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">转置矩阵与原矩阵有相同的特征值</span></li>
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">矩阵</span>a<span style="font-family:宋体;">的每行与每列元素绝对值之和小于</span>1<span style="font-family:宋体;">，特征值的模小于</span>1</li>
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">矩阵</span>a<span style="font-family:宋体;">有</span>n<span style="font-family:宋体;">个特征值，所有特征值之和为对角线元素之和，所有特征值相乘为</span>a<span style="font-family:宋体;">的行列式</span></li>
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">特征值互不相同，对应的特征向量线性无关</span></li>
+                    <li style="list-style-position:inside;"><span style="font-family:宋体;">特征值互不相同，特征值对应的线性无关的特征向量组合起来还是线性无关</span></li>
+                    <li style="list-style-position:inside;">k<span style="font-family:宋体;">重特征根，对应的线性无关的特征向量的个数</span>&lt;=k</li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">其他性质：</span>3k<span style="font-family:宋体;">是</span>3A<span style="font-family:宋体;">的特征值，</span>k<span style="font-size:7pt;"><sup>2</sup></span><span style="font-family:宋体;">是</span>A<span style="font-size:7pt;"><sup>2</sup></span><span style="font-family:宋体;">的特征值，</span>1/k<span style="font-family:宋体;">是逆矩阵的特征值，｜</span>A<span style="font-family:宋体;">｜</span>/k<span style="font-family:宋体;">是伴随矩阵的特征值。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="15" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:12pt; font-weight:bold; list-style-position:inside;"><span style="font-family:宋体;">相似矩阵、可对角化矩阵</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">相似：</span>A<span style="font-family:宋体;">与</span>B<span style="font-family:宋体;">为</span>n<span style="font-family:宋体;">阶方阵，有</span>n<span style="font-family:宋体;">阶可逆矩阵</span>P<span style="font-family:宋体;">，使</span>P<span style="font-size:7pt;"><sup>-1</sup></span>AP=B<span style="font-family:宋体;">，</span>A<span style="font-family:宋体;">～</span>B</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">相似矩阵的概念是通过基变换来实现的，体现了同一个线性变换在不同基下的表示形式。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">反身性：</span>A<span style="font-family:宋体;">～</span>A</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">对称性：</span>A<span style="font-family:宋体;">～</span>B<span style="font-family:宋体;">，得出</span>B<span style="font-family:宋体;">～</span>A</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">A<span style="font-family:宋体;">～</span>B<span style="font-family:宋体;">，</span>B<span style="font-family:宋体;">～</span>C<span style="font-family:宋体;">，得出</span>A<span style="font-family:宋体;">～</span>C</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">性质</span>1: A<span style="font-family:宋体;">～</span>B<span style="font-family:宋体;">，</span>A<span style="font-family:宋体;">与</span>B<span style="font-family:宋体;">有相同的特征值，</span>r<span style="font-family:宋体;">（</span>A<span style="font-family:宋体;">）</span>=r<span style="font-family:宋体;">（</span>B<span style="font-family:宋体;">）</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">性质</span>2: A<span style="font-family:宋体;">～</span>B<span style="font-family:宋体;">，｜</span>A<span style="font-family:宋体;">｜</span>=<span style="font-family:宋体;">｜</span>B<span style="font-family:宋体;">｜</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">性质</span>3: A<span style="font-family:宋体;">～</span>B<span style="font-family:宋体;">，</span>A<span style="font-size:7pt;"><sup>m</sup></span><span style="font-family:宋体;">～</span>B<span style="font-size:7pt;"><sup>m</sup></span><span style="font-family:宋体;">，</span>A<span style="font-size:7pt;"><sup>-1</sup></span><span style="font-family:宋体;">～</span>B<span style="font-size:7pt;"><sup>-1</sup></span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">定理：</span>A<span style="font-family:宋体;">相似于对角矩阵</span>B<span style="font-family:宋体;">，则</span>A<span style="font-family:宋体;">有</span>n<span style="font-family:宋体;">个线性无关的特征向量</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">若特征根都为单根，则一定相似于对角形</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">重根对应的线性无关特征向量个数</span>=<span style="font-family:宋体;">重根的重数，相似于对角形</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">定理：</span>A<span style="font-family:宋体;">相似与对角形，</span>r<span style="font-family:宋体;">的</span>i<span style="font-family:宋体;">重特征根，基础解系有重数个解</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">所有实对称矩阵都能对角化。</span><strong><span style="font-family:宋体;">一个矩阵&nbsp;</span></strong><strong>AA&nbsp;</strong><strong><span style="font-family:宋体;">能够对角化，当且仅当它有足够的线性无关的特征向量来形成一个基，从而可以写作&nbsp;</span></strong><strong>A=PDP</strong><strong><span style="font-family:宋体; font-size:7pt;"><sup>&minus;</sup></span></strong><strong><span style="font-size:7pt;"><sup>1</sup></span></strong><strong>A=PDP</strong><strong><span style="font-family:宋体; font-size:7pt;"><sup>&minus;</sup></span></strong><strong><span style="font-size:7pt;"><sup>1</sup></span></strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="16" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:12pt; font-weight:bold; list-style-position:inside;"><span style="font-family:宋体;">内积、正交</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><strong><span style="font-family:宋体;">内积</span></strong><span style="font-family:宋体;">（点积）：（</span>a<span style="font-family:宋体;">，</span>a<span style="font-family:宋体;">）向量元素相乘后相加，是一个数字</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">长度（范数，模）：｜｜</span>a<span style="font-family:宋体;">｜｜&nbsp;</span>= <span style="font-family:宋体;">根号下（</span>a<span style="font-family:宋体;">，</span>a<span style="font-family:宋体;">），</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol type="a" class="awlist23" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;">b<span style="font-family:宋体;">）&nbsp;</span>&lt;= <span style="font-family:宋体;">（</span>a<span style="font-family:宋体;">，</span>a<span style="font-family:宋体;">）&middot; （</span>b<span style="font-family:宋体;">，</span>b<span style="font-family:宋体;">），因为</span>ab<span style="font-family:宋体;">角度大于等于</span>0</li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">｜｜</span>a+b<span style="font-family:宋体;">｜｜</span><span style="width:5.25pt; display:inline-block;">&nbsp;</span><span style="font-family:宋体;">&nbsp;</span>&lt;= <span style="font-family:宋体;">（</span>a<span style="font-family:宋体;">，</span>a<span style="font-family:宋体;">）</span>+ <span style="font-family:宋体;">（</span>b<span style="font-family:宋体;">，</span>b<span style="font-family:宋体;">），因为三角第三边长度小于另外两边长度</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><strong><span style="font-family:宋体;">正交</span></strong><span style="font-family:宋体;">（垂直）：内积</span>=0<span style="font-family:宋体;">的向量组称为正交，因为角度为</span>90<span style="font-family:宋体;">，</span>cos90<span style="font-family:宋体;">为</span>0</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">标准正交向量组：内积都为</span>1<span style="font-family:宋体;">的正交向量组。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><strong><span style="font-family:宋体;">施密特正交</span></strong><span style="font-family:宋体;">：</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">给一组线性无关的</span>a1<span style="font-family:宋体;">到</span>as<span style="font-family:宋体;">，求一组正交的</span>b1<span style="font-family:宋体;">到</span>bs<span style="font-family:宋体;">，使其与原来的向量组等价</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">b1 = a1<span style="font-family:宋体;">，</span>bn = an -<span style="font-family:宋体;">（</span>an<span style="font-family:宋体;">，</span>b1<span style="font-family:宋体;">）</span>/<span style="font-family:宋体;">（</span>b1<span style="font-family:宋体;">，</span>b1<span style="font-family:宋体;">）</span>b1 - <span style="font-family:宋体;">。。。</span>kbn<span style="font-family:宋体;">，每个</span>k<span style="font-family:宋体;">由</span>an<span style="font-family:宋体;">与</span>bt<span style="font-family:宋体;">组成，</span>bt<span style="font-family:宋体;">为</span>b1<span style="font-family:宋体;">到</span>bn</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="17" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:12pt; font-weight:bold; list-style-position:inside;"><span style="font-family:宋体;">正交矩阵</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">正交矩阵：</span>A<span style="font-family:宋体;">为</span>n<span style="font-family:宋体;">阶方阵，</span>A<span style="font-size:7pt;"><sup>T</sup></span>A=E</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">性质</span>1<span style="font-family:宋体;">：</span>A<span style="font-family:宋体;">不变，｜</span>A<span style="font-family:宋体;">｜&nbsp;</span>= 1 <span style="font-family:宋体;">， ｜</span>A<span style="font-size:7pt;"><sup>T</sup></span>A<span style="font-family:宋体;">｜</span>=1</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">性质</span>2<span style="font-family:宋体;">：</span>A<span style="font-family:宋体;">不变，</span>A<span style="font-size:7pt;"><sup>-1</sup></span>=A<span style="font-size:7pt;"><sup>T</sup></span><span style="font-family:宋体;">，</span>A<span style="font-size:7pt;"><sup>-1</sup></span><span style="font-family:宋体;">和</span>A<span style="font-size:7pt;"><sup>T</sup></span><span style="font-family:宋体;">均为正交矩阵</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">性质</span>3<span style="font-family:宋体;">：</span>A<span style="font-family:宋体;">，</span>B<span style="font-family:宋体;">为正交矩阵，</span>AB<span style="font-family:宋体;">也正交矩阵</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">性质</span>4<span style="font-family:宋体;">：</span>A<span style="font-family:宋体;">，</span>B<span style="font-family:宋体;">为正交矩阵，（</span>Aa<span style="font-family:宋体;">，</span>Bb<span style="font-family:宋体;">）</span>=<span style="font-family:宋体;">（</span>a<span style="font-family:宋体;">，</span>b<span style="font-family:宋体;">）</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">定理：</span>A<span style="font-family:宋体;">为正交矩阵，则列向量组或行向量组为正交单位向量</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">定理：实对称矩阵</span>A<span style="font-family:宋体;">的不同特征值的特征向量正交</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="18" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:12pt; font-weight:bold; list-style-position:inside;"><span style="font-family:宋体;">二次型</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">二次型：所有项都为二次未知数（</span>x<span style="font-size:7pt;"><sup>2</sup></span>y<span style="font-family:宋体;">视为三次），是矩阵的表达式，一定对称，</span>A<span style="font-size:7pt;"><sup>T</sup></span>=A</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">平方向放对角线，其余除以二放在行列对称处</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">等价（只有秩相同）&ndash;</span>&gt;<span style="font-family:宋体;">合同（秩和正负惯性指数相同）&ndash;</span>&gt;<span style="font-family:宋体;">相似（秩，正负惯性指数，特征值均相同），矩阵亲密关系的一步步深化。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">合同：</span>A<span style="font-family:宋体;">、</span>B<span style="font-family:宋体;">为</span>n<span style="font-family:宋体;">阶方阵，有可逆</span>C<span style="font-family:宋体;">，使</span>C<span style="font-size:7pt;"><sup>T</sup></span>AC=B</p>
+                <ol type="1" class="awlist24" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;">A<span style="font-family:宋体;">与自身合同，因为</span>E<span style="font-size:7pt;"><sup>T</sup></span>AE=A</li>
+                    <li style="list-style-position:inside;">A<span style="font-family:宋体;">与</span>B<span style="font-family:宋体;">合同，</span>B<span style="font-family:宋体;">也与</span>A<span style="font-family:宋体;">合同</span></li>
+                    <li style="list-style-position:inside;">A<span style="font-family:宋体;">与</span>B<span style="font-family:宋体;">合同，</span>B<span style="font-family:宋体;">与</span>C<span style="font-family:宋体;">合同，</span>A<span style="font-family:宋体;">也与</span>C<span style="font-family:宋体;">合同</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+            </article>
+            <!-- 更多文章-->
+        </section>
+    </main>
+
+    <footer>
+        <p>版权所有 &copy; 2024 Steven的博客</p>
+    </footer>
+
+</body>
+</html>
