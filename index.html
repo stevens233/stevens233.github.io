@@ -100,11 +100,25 @@
           w.RocketChat = function(c) { w.RocketChat._.push(c) }; w.RocketChat._ = [];
           w.RocketChat.url = u;
           var h = d.getElementsByTagName(s)[0], j = d.createElement(s);
-          j.async = true; j.src = 'http://192.168.1.124:3000/livechat/rocketchat-livechat.min.js?_=201903270000';
+          j.async = true; j.src = 'http://192.168.1.118:3000/livechat/rocketchat-livechat.min.js?_=201903270000';
           h.parentNode.insertBefore(j, h);
-        })(window, document, 'script', 'http://192.168.1.124:3000/livechat');
+        })(window, document, 'script', 'http://192.168.1.118:3000/livechat');
 
-        
+        // 检查 LiveChat 小部件加载状态并自动打开
+        function openLiveChatWidget() {
+          if (window.RocketChat && window.RocketChat.livechat && window.RocketChat.livechat.maximizeWidget) {
+            window.RocketChat.livechat.maximizeWidget();
+          } else {
+            // 如果 LiveChat 小部件尚未加载，稍后再试
+            setTimeout(openLiveChatWidget, 500);
+          }
+        }
+    
+        // 等待页面加载完成后执行
+        window.addEventListener('load', function() {
+          // 延迟1秒后尝试打开 LiveChat 小部件
+          setTimeout(openLiveChatWidget, 1000);
+        });
 
     </script> 
 
