@@ -136,6 +136,39 @@
                 <p style="margin-top:0pt; margin-bottom:0pt;">pkill <span style="font-family:宋体;">命令可以根据进程名来结束进程，这样你就不需要先找到</span>PID<span style="font-family:宋体;">了：</span></p>
                 <p style="margin-top:0pt; margin-bottom:0pt;">pkill process_name</p>
                 <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="5" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;">wsl2<span style="font-family:宋体;">配置</span>windows<span style="font-family:宋体;">代理</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">参考</span>1<span style="font-family:宋体;">：</span><a href="https://zhuanlan.zhihu.com/p/153124468" style="text-decoration:none;"><u><span style="color:#0000ff;">https://zhuanlan.zhihu.com/p/153124468</span></u></a></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">参考</span>2<span style="font-family:宋体;">：</span><a href="https://www.zhihu.com/question/435906813" style="text-decoration:none;"><u><span style="color:#0000ff;">https://www.zhihu.com/question/435906813</span></u></a></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">先打开</span>Clash<span style="font-family:宋体;">的</span>LAN<span style="font-family:宋体;">选项</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">使用下面的命令编辑环境变量：</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">vim .bashrc</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">然后将下面的代码插到最后：</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">hostip=$(cat /etc/resolv.conf |grep -oP &apos;(?&lt;=nameserver\ ).*&apos;)</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">export https_proxy=&quot;http://${hostip}:7890&quot;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">export http_proxy=&quot;http://${hostip}:7890&quot;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">export all_proxy=&quot;socks5://${hostip}:7890&quot;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">此处需要注意的是，</span>7890<span style="font-family:宋体;">是你设置的</span><a href="https://www.zhihu.com/search?q=%25E7%25AB%25AF%25E5%258F%25A3%25E5%258F%25B7&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B" target="/Users/StevenShi/Documents\x/_blank" style="text-decoration:none;"><span style="font-family:宋体; color:#000000;">端口号</span></a><span style="font-family:宋体;">，可以在</span>clash<span style="font-family:宋体;">的</span>port<span style="font-family:宋体;">中设置，注意不要与服务端口冲突，</span>clash<span style="font-family:宋体;">安装时已配置</span>windows<span style="font-family:宋体;">防火墙，也不需要端口转发。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">最后执行一下：</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">source .bashrc</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="6" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="list-style-position:inside;">windows<span style="font-family:宋体;">与</span>wsl2<span style="font-family:宋体;">的</span>linux<span style="font-family:宋体;">系统间的端口映射</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">由于</span>wsl2<span style="font-family:宋体;">是一个额外的系统，也拥有独立的</span>ip<span style="font-family:宋体;">地址，所以需要把</span>windows ip<span style="font-family:宋体;">收到的请求转发到</span>linux ip<span style="font-family:宋体;">。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">配置端口映射</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">netsh interface portproxy add v4tov4 listenport=7001 listenaddress=0.0.0.0 connectport=7001 connectaddress=172.25.76.137<span style="font-family:宋体;">（</span>linux ip<span style="font-family:宋体;">）</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">查看所有端口映射：</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">netsh interface portproxy show all</p>
             </article>
             <!-- 更多文章-->
         </section>
