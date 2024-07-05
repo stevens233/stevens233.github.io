@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<!-- <style>
+    .noSelect {
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none;   /* Chrome/Safari/Opera */
+        -moz-user-select: none;      /* Firefox */
+        -ms-user-select: none;       /* Internet Explorer/Edge */
+        user-select: none;           /* Non-prefixed version, currently supported by most modern browsers */
+    }
+</style> -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steven的个人博客</title>
+    <link rel="icon" href="/resources/steven.png" type="image/png">
+    <link rel="stylesheet" href="/css/style_article.css">
+</head>
+<script src="script.js"></script>
+<body>
+    <header>
+        <h1>欢迎来到Steven的博客</h1>
+        <nav>
+            <ul>
+                <li><a href="/index.html">首页</a></li>
+                <li><a href="/pages/article.html">文章</a></li>
+                <li><a href="/pages/about_me.html">关于我</a></li>
+                <li><a href="/pages/contact_me.html">联系方式</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>RAG技术笔记</h2>
+            <!-- 文章列表-->
+            <article>
+                <style type="text/css">
+                    .awlist1 {
+                        list-style: none;
+                        counter-reset: awlistcounter2_0
+                    }
+                
+                    .awlist1>li:before {
+                        content: '('counter(awlistcounter2_0) ')';
+                        counter-increment: awlistcounter2_0
+                    }
+                
+                    .awlist2 {
+                        list-style: none;
+                        counter-reset: awlistcounter2_0 1
+                    }
+                
+                    .awlist2>li:before {
+                        content: '('counter(awlistcounter2_0) ')';
+                        counter-increment: awlistcounter2_0
+                    }
+                
+                    .awlist3 {
+                        list-style: none;
+                        counter-reset: awlistcounter2_0 2
+                    }
+                
+                    .awlist3>li:before {
+                        content: '('counter(awlistcounter2_0) ')';
+                        counter-increment: awlistcounter2_0
+                    }
+                
+                    .awlist4 {
+                        list-style: none;
+                        counter-reset: awlistcounter2_0 3
+                    }
+                
+                    .awlist4>li:before {
+                        content: '('counter(awlistcounter2_0) ')';
+                        counter-increment: awlistcounter2_0
+                    }
+                
+                    .awlist5 {
+                        list-style: none;
+                        counter-reset: awlistcounter3_0
+                    }
+                
+                    .awlist5>li:before {
+                        content: '('counter(awlistcounter3_0) ')';
+                        counter-increment: awlistcounter3_0
+                    }
+                
+                    .awlist6 {
+                        list-style: none;
+                        counter-reset: awlistcounter3_0 1
+                    }
+                
+                    .awlist6>li:before {
+                        content: '('counter(awlistcounter3_0) ')';
+                        counter-increment: awlistcounter3_0
+                    }
+                
+                    .awlist7 {
+                        list-style: none;
+                        counter-reset: awlistcounter3_0 2
+                    }
+                
+                    .awlist7>li:before {
+                        content: '('counter(awlistcounter3_0) ')';
+                        counter-increment: awlistcounter3_0
+                    }
+                
+                    .awlist8 {
+                        list-style: none;
+                        counter-reset: awlistcounter3_0 3
+                    }
+                
+                    .awlist8>li:before {
+                        content: '('counter(awlistcounter3_0) ')';
+                        counter-increment: awlistcounter3_0
+                    }
+                
+                    .awlist9 {
+                        list-style: none;
+                        counter-reset: awlistcounter4_0
+                    }
+                
+                    .awlist9>li:before {
+                        content: counter(awlistcounter4_0) ')';
+                        counter-increment: awlistcounter4_0
+                    }
+                
+                    .awlist10 {
+                        list-style: none;
+                        counter-reset: awlistcounter5_0
+                    }
+                
+                    .awlist10>li:before {
+                        content: '('counter(awlistcounter5_0) ')';
+                        counter-increment: awlistcounter5_0
+                    }
+                
+                    .awlist11 {
+                        list-style: none;
+                        counter-reset: awlistcounter6_0
+                    }
+                
+                    .awlist11>li:before {
+                        content: '('counter(awlistcounter6_0) ')';
+                        counter-increment: awlistcounter6_0
+                    }
+                
+                    .awlist12 {
+                        list-style: none;
+                        counter-reset: awlistcounter7_0
+                    }
+                
+                    .awlist12>li:before {
+                        content: '('counter(awlistcounter7_0) ')';
+                        counter-increment: awlistcounter7_0
+                    }
+                
+                    .awlist13 {
+                        list-style: none;
+                        counter-reset: awlistcounter8_0
+                    }
+                
+                    .awlist13>li:before {
+                        content: '('counter(awlistcounter8_0) ')';
+                        counter-increment: awlistcounter8_0
+                    }
+                </style>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:15pt;"><strong>RAG</strong><strong><span style="font-family:宋体;">技术笔记</span></strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:15pt;"><strong>&nbsp;</strong></p>
+                <ol type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:12pt; font-weight:bold; list-style-position:inside;">embedding</li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">嵌入模型本质上可以看作是一个查找表，它将离散的输入（如单词索引）映射到连续的嵌入向量。这个查找表的权重矩阵是根据训练数据优化的。严格来说，嵌入层并不是神经网络中的典型</span>&ldquo;<span style="font-family:宋体;">层</span>&rdquo;<span style="font-family:宋体;">，因为它没有激活函数和非线性操作，但它确实具有参数（权重），这些参数通过训练进行优化。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">详细步骤：</span></p>
+                <ol type="1" class="awlist1" style="margin:0pt; padding-left:0pt;">
+                    <li style="margin-left:21.25pt; text-indent:-21.25pt; font-weight:bold;"><span style="width:9.39pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">文本预处理</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">首先，将输入句子分成单词或子词。这里以单词为例：</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2; font-size:12pt;"><span style="font-family:宋体;">sentence = &quot;I like deep learning&quot;</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2; font-size:12pt;"><span style="font-family:宋体;">words = sentence.split()</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2; font-size:12pt;"><span style="font-family:宋体;">得到的 words 是 [&apos;I&apos;, &apos;like&apos;, &apos;deep&apos;, &apos;learning&apos;]。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2; font-size:12pt;"><span style="font-family:宋体;">&nbsp;</span></p>
+                <ol start="2" type="1" class="awlist2" style="margin:0pt; padding-left:0pt;">
+                    <li style="margin-left:21.25pt; text-indent:-21.25pt; font-weight:bold;"><span style="width:9.39pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">索引化</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">然后，将这些单词转换为词汇表中的索引。假设词汇表如下：</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">vocab = {&apos;I&apos;: 0, &apos;like&apos;: 1, &apos;deep&apos;: 2, &apos;learning&apos;: 3}</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">word_indices = [vocab[word] for word in words]</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">得到的&nbsp;</span>word_indices <span style="font-family:宋体;">是&nbsp;</span>[0, 1, 2, 3]<span style="font-family:宋体;">。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="3" type="1" class="awlist3" style="margin:0pt; padding-left:0pt;">
+                    <li style="margin-left:21.25pt; text-indent:-21.25pt; font-weight:bold;"><span style="width:9.39pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">嵌入层处理</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">接下来，将这些索引输入嵌入层，生成对应的嵌入向量。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="4" type="1" class="awlist4" style="margin:0pt; padding-left:0pt;">
+                    <li style="margin-left:21.25pt; text-indent:-21.25pt; font-weight:bold;"><span style="width:9.39pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">聚合操作（可选）</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">在某些任务中，可能需要将生成的嵌入向量聚合成一个句子的表示。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"># <span style="font-family:宋体;">平均池化</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">sentence_embedding = embeddings.mean(dim=0)</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">print(sentence_embedding)</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="2" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:12pt; font-weight:bold; list-style-position:inside;">chunk<span style="font-family:宋体;">、</span>node<span style="font-family:宋体;">、</span>index</li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol type="1" class="awlist5" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-weight:bold; list-style-position:inside;"><span style="width:2.37pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;</span>Chunk<span style="font-family:宋体;">（块）</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">Chunk <span style="font-family:宋体;">是指将文档拆分成更小的、可管理的部分。每个块包含一定数量的文本，例如一个段落或几句话。这些块是文档在处理过程中的基本单元，便于系统在检索时快速定位相关信息。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="2" type="1" class="awlist6" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-weight:bold; list-style-position:inside;"><span style="width:2.37pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;</span>Node<span style="font-family:宋体;">（节点）</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">Node <span style="font-family:宋体;">是文档的逻辑单元，可以视为文档结构中的一个节点。在分层文档结构中，节点可能代表不同层级的内容，例如章节、节或段落。每个节点包含一个或多个块，并且节点之间可能存在父子关系或相邻关系。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="3" type="1" class="awlist7" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-weight:bold; list-style-position:inside;"><span style="width:2.37pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;</span>Index<span style="font-family:宋体;">（索引）</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">Index <span style="font-family:宋体;">是对文档内容进行组织和加速检索的结构。索引可以包含每个块的元数据、关键词、主题等信息，使得系统在检索时能够快速找到包含相关信息的块。常见的索引技术包括倒排索引和基于向量的索引。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="4" type="1" class="awlist8" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-weight:bold; list-style-position:inside;"><span style="width:2.37pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;</span>(4)Split Strategy<span style="font-family:宋体;">（拆分策略）</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">Split Strategy <span style="font-family:宋体;">是指将文档拆分成块的具体方法和规则。拆分策略会影响文档块的大小和数量，常见的拆分策略包括：</span></p>
+                <ol type="1" class="awlist9" style="margin:0pt; padding-left:0pt;">
+                    <li style="margin-left:21.25pt; text-indent:-21.25pt;"><span style="width:12.74pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">固定长度拆分：将文档按固定的字数或句子数进行拆分。例如，每</span>200<span style="font-family:宋体;">个字或每</span>5<span style="font-family:宋体;">句话作为一个块。</span></li>
+                    <li style="margin-left:21.25pt; text-indent:-21.25pt;"><span style="width:12.74pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">基于段落拆分：按照自然段落进行拆分，每个段落作为一个块。</span></li>
+                    <li style="margin-left:21.25pt; text-indent:-21.25pt;"><span style="width:12.74pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">基于语义拆分：利用自然语言处理技术，根据语义边界（如句子之间的逻辑关系或主题变化）进行拆分，确保每个块在语义上尽量独立和完整。</span></li>
+                    <li style="margin-left:21.25pt; text-indent:-21.25pt;"><span style="width:12.74pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">混合策略：结合上述方法，根据具体需求和文档特征进行混合拆分。例如，先按段落拆分，再对过长的段落进行进一步拆分。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="3" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:12pt; font-weight:bold; list-style-position:inside;">retriever<span style="font-family:宋体;">、</span>query</li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><strong>Retriever</strong><strong><span style="font-family:宋体;">（检索器）</span></strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">Retriever <span style="font-family:宋体;">是</span>RAG<span style="font-family:宋体;">系统中的核心组件之一，负责从大型文档库或知识库中检索与输入查询相关的文档片段（</span>chunks<span style="font-family:宋体;">）。</span>Retriever<span style="font-family:宋体;">的性能和准确性直接影响到系统的整体效果。常见的</span>retriever<span style="font-family:宋体;">类型包括：</span></p>
+                <ol type="1" class="awlist10" style="margin:0pt; padding-left:0pt;">
+                    <li style="margin-left:21.25pt; text-indent:-21.25pt;"><span style="width:9.56pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">稀疏向量检索器：如</span>BM25<span style="font-family:宋体;">，基于词频</span>-<span style="font-family:宋体;">逆文档频率（</span>TF-IDF<span style="font-family:宋体;">）和词条匹配来检索相关文档。适用于需要高效率且对文本长度不敏感的场景。</span></li>
+                    <li style="margin-left:21.25pt; text-indent:-21.25pt;"><span style="width:9.56pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">密集向量检索器：如</span>DPR<span style="font-family:宋体;">（</span>Dense Passage Retrieval<span style="font-family:宋体;">），使用神经网络将文档和查询编码为向量，通过向量相似性（如内积）进行检索。适用于语义匹配和处理大规模文档库。</span></li>
+                    <li style="margin-left:21.25pt; text-indent:-21.25pt;"><span style="width:9.56pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">混合检索器：结合稀疏和密集向量检索的优势，通过综合两种方法的结果来提高检索准确性。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><strong>Query</strong><strong><span style="font-family:宋体;">（查询）</span></strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">Query <span style="font-family:宋体;">是用户输入的查询字符串，描述了用户想要获取的信息。在</span>RAG<span style="font-family:宋体;">系统中，</span>query<span style="font-family:宋体;">通常是自然语言文本。</span>query<span style="font-family:宋体;">的处理和优化对于检索结果的质量至关重要。以下是</span>query<span style="font-family:宋体;">在</span>RAG<span style="font-family:宋体;">系统中的处理过程：</span></p>
+                <ol type="1" class="awlist11" style="margin:0pt; padding-left:0pt;">
+                    <li style="margin-left:21.25pt; text-indent:-21.25pt;"><span style="width:9.56pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">预处理：对输入的</span>query<span style="font-family:宋体;">进行基本的预处理，包括分词、去停用词、词干提取等，以提升检索器的效率和准确性。</span></li>
+                    <li style="margin-left:21.25pt; text-indent:-21.25pt;"><span style="width:9.56pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">查询扩展：通过添加同义词、相关词或上下文信息来扩展</span>query<span style="font-family:宋体;">，以捕捉更多潜在的相关文档片段。</span></li>
+                    <li style="margin-left:21.25pt; text-indent:-21.25pt;"><span style="width:9.56pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">向量化：在使用密集向量检索器时，将</span>query<span style="font-family:宋体;">转换为向量表示，以便与文档片段的向量进行相似性计算。</span></li>
+                    <li style="margin-left:21.25pt; text-indent:-21.25pt;"><span style="width:9.56pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">检索和排序：使用</span>retriever<span style="font-family:宋体;">从文档库中检索出与</span>query<span style="font-family:宋体;">相关的文档片段，并根据相关性进行排序，返回最相关的片段供生成器使用。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="4" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:12pt; font-weight:bold; list-style-position:inside;">llm<span style="font-family:宋体;">、</span>prompt</li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><strong>LLM</strong><strong><span style="font-family:宋体;">（大语言模型）</span></strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">LLM<span style="font-family:宋体;">，即大语言模型，是</span>RAG<span style="font-family:宋体;">系统中的生成组件，负责根据检索到的文档片段生成最终的回答。大语言模型通常是基于深度学习的神经网络模型，如</span>GPT-3<span style="font-family:宋体;">、</span>GPT-4<span style="font-family:宋体;">、</span>BERT<span style="font-family:宋体;">等。这些模型经过大规模文本数据的训练，具有强大的自然语言理解和生成能力。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">在</span>RAG<span style="font-family:宋体;">系统中，</span>LLM<span style="font-family:宋体;">的作用包括：</span></p>
+                <ol type="1" class="awlist12" style="margin:0pt; padding-left:0pt;">
+                    <li style="margin-left:21.25pt; text-indent:-21.25pt;"><span style="width:9.56pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">回答生成：根据用户的查询和检索到的相关文档片段，生成连贯且准确的回答。</span></li>
+                    <li style="margin-left:21.25pt; text-indent:-21.25pt;"><span style="width:9.56pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">上下文理解：能够理解用户查询的上下文，结合文档片段的信息，生成符合语境的回答。</span></li>
+                    <li style="margin-left:21.25pt; text-indent:-21.25pt;"><span style="width:9.56pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">信息整合：将多个文档片段中的信息整合起来，提供全面且有逻辑的回答。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><strong>Prompt</strong><strong><span style="font-family:宋体;">（提示）</span></strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">Prompt <span style="font-family:宋体;">是输入到</span>LLM<span style="font-family:宋体;">的文本，包含用户的查询和检索到的文档片段。</span>prompt<span style="font-family:宋体;">在</span>RAG<span style="font-family:宋体;">系统中起到引导</span>LLM<span style="font-family:宋体;">生成回答的作用。设计有效的</span>prompt<span style="font-family:宋体;">对生成高质量的回答至关重要。</span>prompt<span style="font-family:宋体;">环节的主要步骤包括：</span></p>
+                <ol type="1" class="awlist13" style="margin:0pt; padding-left:0pt;">
+                    <li style="margin-left:21.25pt; text-indent:-21.25pt;"><span style="width:9.56pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">构建</span>prompt<span style="font-family:宋体;">：将用户的查询和检索到的文档片段组合成一个完整的文本输入。这通常包括将查询放在开头，后面附上相关文档片段。</span></li>
+                    <li style="margin-left:21.25pt; text-indent:-21.25pt;"><span style="width:9.56pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">提示优化：为了提高生成质量，可以对</span>prompt<span style="font-family:宋体;">进行优化，包括调整文档片段的顺序、添加引导性的文本等。</span></li>
+                    <li style="margin-left:21.25pt; text-indent:-21.25pt;"><span style="width:9.56pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">输入</span>LLM<span style="font-family:宋体;">：将构建好的</span>prompt<span style="font-family:宋体;">输入到</span>LLM<span style="font-family:宋体;">，等待模型生成回答。</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAikAAAEMCAYAAAABGiYGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAE+dSURBVHhe7Z0JvJXT+seVebpCJFMSF02KSpopFSUV0kShqKQJGZrnGZWKCoWi3FAqlUwZG6QMTbpdkiFcXMOd713///exV3d37FPn7PY+e73n/L6fz/s5Z7/7fd+99zus9VvP86zn2c8JIYQQQgSIRIoQQgghgkQiRQghhBBBIpEihBBCiCCRSBFCCCFEkEikCCGEECJIJFKEEEIIESQSKUIIIYQIEokUIYQQQgSJRIoQQgghgkQiRQghhBBBIpEihBBCiCCRSBFCCCFEkEikCCGEECJIJFKEECIf8N///td9//33buPGjW7JkiVu4sSJbuDAge722293vXr1cv369XNjx4518+bNc+vXr3dfffWV+/e//x3bW4gwkUgRQoiIgjDZuXOnmzFjhrvmmmtc3bp1XfPmzV2PHj3c5MmT3dy5c93ixYvd0qVLTZxMnz7d9enTx7atX7++a9SokQmXTZs22bGECA2JFCGEiBj/+Mc/3LvvvutuuOEGV716dde/f3+3Zs0a95e//CVH1hEEyc8//+w+/vhjs7g0aNDANWnSxM2fP9/98ssvsa2EyDwSKUIIEREQF+vWrXOtWrVyjRs3dgsXLnR///vfY+8mD8ddvXq169ChgwkWxMq//vWv2LtCZA6JFCGEiAA//vijGzBggKtdu7a5cFIhTrLyn//8x0RQixYtXJs2bdynn34qN5DIKBIpQggRMIiEDz/80DVs2NBEyl//+tfYO+mDz5wzZ465kp577jkTL0JkAokUIYQIFMTByy+/7C688EILfs1rscBMIcTRhAkT3D//+c/YWiHyDokUIYQIEAJgn3nmGVejRg23YcOG2Nq8BzdTy5Yt3T333GMBu0LkJRIpQggRGFhMXnjhBVerVi23ffv22NrMwUygdu3auREjRsiiIvIUiRQhhAgIBAozbYgHwd0SCsTCXHHFFW7q1Kma+SPyDIkUIYQIBAJWyQR70UUXuTfeeCO2Nhy+/PJLs+688847CqYVeYJEihBCBMLf/vY3d8stt7hx48bF1oQH4qlOnTru66+/jq0RIn1IpAghRAAQKEscCplf05EDJZUM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EsNREJI0/FFCIiU6SKQUbCRSokGQIoUvQqp1GvlBgwbl++XGG2+0CsHJXoD8BnlGKIpI+n6KJJLHgI4/CkikRAeJlIKNREo0CE6kkFjpxx9/tAaeKrwFASoL4+bgdyux1O7Qidx2223uoosucvfff7+l5Q8ZiZToIJFSsJFIiQbBiRSStZC0hfiEgiRSqBBMdj3VXPgtNCbMkR8+fLirVq2aVV5GrLA+NCRSooNESmJIcDZ16lT33XffxdbkTyRSokGQIoVid9dcc02BEilXXnmlpTLG1SGyB2sTGSKpUdGjRw/34YcfBmV9kkiJDhIpidmxY4dVt/7oo49ia/InEinRQCIlACRScs8PP/zgnnzySavYjKuMaswhIJESHTIpUrBWzJs3z6pHz549240aNcotXbp0VyNMWzB//nyzKk+bNs298cYbdm9Rxfy+++4zoc7kAg+1oojjoi0ZM2aMZTzmd73zzjv2evr06dbYA9XN+Wx++5QpU9yECROsgi7wuQ888ICJlNGjR7v169fb+kQwA2/t2rWRdVFLpEQDiZQAkEhJHm7aZcuWWUXbq666yr344osZHRlLpESHTIoUsmcWK1bMlnLlyrm6deu6IkWKuDZt2lgbuHjxYnf88cdbdV62Qajcfffd7sgjj7T4LNazPUHlwGy4UqVKWdFEhPvhhx9urlF+I8/Gcccd5+rXr2/ty9y5c90BBxzgTjrpJKswy7GOOOII9+ijj7q3337bVaxY0URK2bJl3aRJk+z4iaDTKFmypAmuKCKREg0kUgJAImXf4b4hv8p1113nLrvsMpvWnYlcKxIp0SHTIgURcsUVV1gnz33zhz/8wcQFQhuRUqhQIYtVIx5r1apVJlAQDdzrfOebb77ZlShRwhpxREqZMmWsDcGywYzBY445xn4fIHIQIuyHSClcuLAForMt0/y7du1qggPLTU7dPXQap556qkSKSCsSKQEgkZI6uH+IU6HRrV27tnv44YetiFheIZESHUIQKbh0PDz7FD0cOHCgiRREhXdj4t753e9+t1veIITLUUcdZS4gRErnzp1j7zg3ePBga9g9WBsPOuggq9CNSMEKEx8Yi7uHz+NYexIpPF9Llixxzz77rHvooYfcsccea25XXvMZUUIiJRpIpASAREp64Ka+5557XJ06dcwv//nnn8feSR8SKdEhBJGyfPny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" width="553" height="268" alt="basic_rag"></p>
+            </article>
+            <!-- 更多文章-->
+        </section>
+    </main>
+
+    <footer>
+        <p>版权所有 &copy; 2024 Steven的博客</p>
+    </footer>
+
+</body>
+</html>
