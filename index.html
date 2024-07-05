@@ -1,16 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 
-<!-- <style>
-    .noSelect {
-        -webkit-touch-callout: none; /* iOS Safari */
-        -webkit-user-select: none;   /* Chrome/Safari/Opera */
-        -moz-user-select: none;      /* Firefox */
-        -ms-user-select: none;       /* Internet Explorer/Edge */
-        user-select: none;           /* Non-prefixed version, currently supported by most modern browsers */
-    }
-</style> -->
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,66 +24,67 @@
     </header>
 
     <main>
-        <section>
+        <section id="article-list">
             <h2>最新文章</h2>
-            <!-- 文章列表-->
-            <article>
-                <h3>RAG技术笔记</h3>
-                <p>RAG技术集成了嵌入模型、文档块拆分、节点索引、检索器、查询优化和大语言模型。通过将用户查询转换为向量，检索相关文档片段，并生成连贯的回答，RAG系统实现了高效的信息检索和生成，适用于多种应用场景，提升了系统的智能化水平和用户体验。</p>
-                <a href="/pages/articles/article11.html">阅读更多</a>
-            </article>
-            <article>
-                <h3>线性代数学习笔记</h3>
-                <p>线性代数课程学习笔记，包括行列式、矩阵、线性关系、线性方程组、向量、特征值与特征向量、等价相似合同等知识点，以及矩阵在线性变换以及基变换的意义。</p>
-                <a href="/pages/articles/article10.html">阅读更多</a>
-            </article>
-            <article>
-                <h3>基于llama_index的rag开发笔记</h3>
-                <p>介绍llama_index框架的应用，rag技术的实现原理，检索策略与功能实现，高级rag等。</p>
-                <a href="/pages/articles/article9.html">阅读更多</a>
-            </article>
-            <article>
-                <h3>IOS 一体式framework打包指北</h3>
-                <p>ios app如何打包为framework，多语言桥接、第三方依赖设置、framework导入设置、storyboard集成导入等。</p>
-                <a href="/pages/articles/article8.html">阅读更多</a>
-            </article>
-            <article>
-                <h3>机器学习随记</h3>
-                <p>机器学习随记，会根据学习到的新内容不断更新，包括十种机器学习算法、特点与应用场景。</p>
-                <a href="/pages/articles/article7.html">阅读更多</a>
-            </article>
-            <article>
-                <h3>linux学习随记</h3>
-                <p>linux系统的学习随记，会根据学习到的新内容不断更新，linux系统主要通过windows的wsl部署。</p>
-                <a href="/pages/articles/article6.html">阅读更多</a>
-            </article>
-            <article>
-                <h3>NLP学习记录</h3>
-                <p>文本数字化、深度学习自然语言处理模型的不同层、NLU（自然语言理解）与NLG（自然语言生成）、自注意力机制、常用的NLP模型。</p>
-                <a href="/pages/articles/article5.html">阅读更多</a>
-            </article>
-            <article>
-                <h3>Android sdk开发记录</h3>
-                <p>app打包为sdk、fat-arr对依赖lib嵌套打包、so库打包、重复资源删除、控制访问权限、设计返回方式、返回内容与状态码控制、引导活动的无缝切换、sdk与app同时安装等。</p>
-                <a href="/pages/articles/article4.html">阅读更多</a>
-            </article>
-            <article>
-                <h3>网络通信学习记录</h3>
-                <p>网络OSI七层结构、TCP/IP、HTTP、IPv6、MAC地址、交换机与路由器、ARP、CGNAT、NAT、网络穿透等。</p>
-                <a href="/pages/articles/article3.html">阅读更多</a>
-            </article>
-            <article>
-                <h3>卷积神经网络学习总结</h3>
-                <p>卷积、池化、展平、层层神经元加权求和并激活函数、得到输出、得到损失函数、损失函数对每层神经元权重求偏导、通过梯度更改每层神经元权重、循环往复，这就是卷积神经网络。</p>
-                <a href="/pages/articles/article2.html">阅读更多</a>
-            </article>
-            <article>
-                <h3>视频音频相关AI技术调研报告</h3>
-                <p>根据需求与heygen相关技术的研究与分析，在各大论坛与平台寻找总体解决方案与技术路径，通过阅读大量文献、技术分享以及说明文档一步一步推进项目的调研与实现，并追求各个不同技术之间的配合，实现更大的成果。</p>
-                <a href="/pages/articles/article1.html">阅读更多</a>
-            </article>
-            
-            <!-- 更多文章-->
+            <div id="articles-container">
+                <article>
+                    <h3>RAG技术笔记</h3>
+                    <p>RAG技术集成了嵌入模型、文档块拆分、节点索引、检索器、查询优化和大语言模型。通过将用户查询转换为向量，检索相关文档片段，并生成连贯的回答，RAG系统实现了高效的信息检索和生成，适用于多种应用场景，提升了系统的智能化水平和用户体验。</p>
+                    <a href="/pages/articles/article11.html">阅读更多</a>
+                </article>
+                <!-- 更多文章 -->
+                <article>
+                    <h3>线性代数学习笔记</h3>
+                    <p>线性代数课程学习笔记，包括行列式、矩阵、线性关系、线性方程组、向量、特征值与特征向量、等价相似合同等知识点，以及矩阵在线性变换以及基变换的意义。</p>
+                    <a href="/pages/articles/article10.html">阅读更多</a>
+                </article>
+                <article>
+                    <h3>基于llama_index的rag开发笔记</h3>
+                    <p>介绍llama_index框架的应用，rag技术的实现原理，检索策略与功能实现，高级rag等。</p>
+                    <a href="/pages/articles/article9.html">阅读更多</a>
+                </article>
+                <article>
+                    <h3>IOS 一体式framework打包指北</h3>
+                    <p>ios app如何打包为framework，多语言桥接、第三方依赖设置、framework导入设置、storyboard集成导入等。</p>
+                    <a href="/pages/articles/article8.html">阅读更多</a>
+                </article>
+                <article>
+                    <h3>机器学习随记</h3>
+                    <p>机器学习随记，会根据学习到的新内容不断更新，包括十种机器学习算法、特点与应用场景。</p>
+                    <a href="/pages/articles/article7.html">阅读更多</a>
+                </article>
+                <article>
+                    <h3>linux学习随记</h3>
+                    <p>linux系统的学习随记，会根据学习到的新内容不断更新，linux系统主要通过windows的wsl部署。</p>
+                    <a href="/pages/articles/article6.html">阅读更多</a>
+                </article>
+                <article>
+                    <h3>NLP学习记录</h3>
+                    <p>文本数字化、深度学习自然语言处理模型的不同层、NLU（自然语言理解）与NLG（自然语言生成）、自注意力机制、常用的NLP模型。</p>
+                    <a href="/pages/articles/article5.html">阅读更多</a>
+                </article>
+                <article>
+                    <h3>Android sdk开发记录</h3>
+                    <p>app打包为sdk、fat-arr对依赖lib嵌套打包、so库打包、重复资源删除、控制访问权限、设计返回方式、返回内容与状态码控制、引导活动的无缝切换、sdk与app同时安装等。</p>
+                    <a href="/pages/articles/article4.html">阅读更多</a>
+                </article>
+                <article>
+                    <h3>网络通信学习记录</h3>
+                    <p>网络OSI七层结构、TCP/IP、HTTP、IPv6、MAC地址、交换机与路由器、ARP、CGNAT、NAT、网络穿透等。</p>
+                    <a href="/pages/articles/article3.html">阅读更多</a>
+                </article>
+                <article>
+                    <h3>卷积神经网络学习总结</h3>
+                    <p>卷积、池化、展平、层层神经元加权求和并激活函数、得到输出、得到损失函数、损失函数对每层神经元权重求偏导、通过梯度更改每层神经元权重、循环往复，这就是卷积神经网络。</p>
+                    <a href="/pages/articles/article2.html">阅读更多</a>
+                </article>
+                <article>
+                    <h3>视频音频相关AI技术调研报告</h3>
+                    <p>根据需求与heygen相关技术的研究与分析，在各大论坛与平台寻找总体解决方案与技术路径，通过阅读大量文献、技术分享以及说明文档一步一步推进项目的调研与实现，并追求各个不同技术之间的配合，实现更大的成果。</p>
+                    <a href="/pages/articles/article1.html">阅读更多</a>
+                </article>
+            </div>
+            <div id="pagination"></div>
         </section>
     </main>
 
@@ -101,32 +92,64 @@
         <p>版权所有 &copy; 2024 Steven的博客</p>
     </footer>
 
-    <script type="text/javascript">
-        (function(w, d, s, u) {
-          w.RocketChat = function(c) { w.RocketChat._.push(c) }; w.RocketChat._ = [];
-          w.RocketChat.url = u;
-          var h = d.getElementsByTagName(s)[0], j = d.createElement(s);
-          j.async = true; j.src = 'http://192.168.1.118:3000/livechat/rocketchat-livechat.min.js?_=201903270000';
-          h.parentNode.insertBefore(j, h);
-        })(window, document, 'script', 'http://192.168.1.118:3000/livechat');
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const articlesPerPage = 10;
+            const articlesContainer = document.getElementById('articles-container');
+            const articles = Array.from(articlesContainer.getElementsByTagName('article'));
+            const pagination = document.getElementById('pagination');
 
-        // 检查 LiveChat 小部件加载状态并自动打开
-        function openLiveChatWidget() {
-          if (window.RocketChat && window.RocketChat.livechat && window.RocketChat.livechat.maximizeWidget) {
-            window.RocketChat.livechat.maximizeWidget();
-          } else {
-            // 如果 LiveChat 小部件尚未加载，稍后再试
-            setTimeout(openLiveChatWidget, 500);
-          }
-        }
-    
-        // 等待页面加载完成后执行
-        window.addEventListener('load', function() {
-          // 延迟1秒后尝试打开 LiveChat 小部件
-          setTimeout(openLiveChatWidget, 1000);
+            function showPage(page) {
+                const start = (page - 1) * articlesPerPage;
+                const end = start + articlesPerPage;
+                articles.forEach((article, index) => {
+                    if (index >= start && index < end) {
+                        article.style.display = 'block';
+                    } else {
+                        article.style.display = 'none';
+                    }
+                });
+                // 滚动到页面顶部
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }
+
+            function createPagination(totalPages) {
+                pagination.innerHTML = '';
+
+                for (let i = 1; i <= totalPages; i++) {
+                    const pageLink = document.createElement('a');
+                    pageLink.href = '#';
+                    pageLink.innerText = i;
+                    pageLink.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        showPage(i);
+                        setActivePage(i);
+                    });
+                    pagination.appendChild(pageLink);
+                }
+            }
+
+            function setActivePage(activePage) {
+                const pageLinks = Array.from(pagination.getElementsByTagName('a'));
+                pageLinks.forEach((link, index) => {
+                    if (index + 1 === activePage) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+            }
+
+            const totalPages = Math.ceil(articles.length / articlesPerPage);
+            createPagination(totalPages);
+            showPage(1); // 默认显示第一页
+            setActivePage(1);
         });
-
-    </script> 
+    </script>
 
 </body>
+
 </html>
