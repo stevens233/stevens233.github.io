@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<!-- <style>
+    .noSelect {
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none;   /* Chrome/Safari/Opera */
+        -moz-user-select: none;      /* Firefox */
+        -ms-user-select: none;       /* Internet Explorer/Edge */
+        user-select: none;           /* Non-prefixed version, currently supported by most modern browsers */
+    }
+</style> -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steven的个人博客</title>
+    <link rel="icon" href="/resources/steven.png" type="image/png">
+    <link rel="stylesheet" href="/css/style_article.css">
+</head>
+<script src="script.js"></script>
+<body>
+    <header>
+        <h1>欢迎来到Steven的博客</h1>
+        <nav>
+            <ul>
+                <li><a href="/index.html">首页</a></li>
+                <li><a href="/pages/article.html">文章</a></li>
+                <li><a href="/pages/about_me.html">关于我</a></li>
+                <li><a href="/pages/contact_me.html">联系方式</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Docker学习笔记</h2>
+            <!-- 文章列表-->
+            <article>
+                <style type="text/css">
+                    .awlist1 {
+                        list-style: none;
+                        counter-reset: awlistcounter1_0
+                    }
+                
+                    .awlist1>li:before {
+                        content: counter(awlistcounter1_0) '．';
+                        counter-increment: awlistcounter1_0
+                    }
+                
+                    .awlist2 {
+                        list-style: none;
+                        counter-reset: awlistcounter3_0
+                    }
+                
+                    .awlist2>li:before {
+                        content: '('counter(awlistcounter3_0) ')';
+                        counter-increment: awlistcounter3_0
+                    }
+                
+                    .awlist3 {
+                        list-style: none;
+                        counter-reset: awlistcounter3_0 1
+                    }
+                
+                    .awlist3>li:before {
+                        content: '('counter(awlistcounter3_0) ')';
+                        counter-increment: awlistcounter3_0
+                    }
+                
+                    .awlist4 {
+                        list-style: none;
+                        counter-reset: awlistcounter3_0 2
+                    }
+                
+                    .awlist4>li:before {
+                        content: '('counter(awlistcounter3_0) ')';
+                        counter-increment: awlistcounter3_0
+                    }
+                
+                    .awlist5 {
+                        list-style: none;
+                        counter-reset: awlistcounter3_0 3
+                    }
+                
+                    .awlist5>li:before {
+                        content: '('counter(awlistcounter3_0) ')';
+                        counter-increment: awlistcounter3_0
+                    }
+                
+                    .awlist6 {
+                        list-style: none;
+                        counter-reset: awlistcounter3_0 4
+                    }
+                
+                    .awlist6>li:before {
+                        content: '('counter(awlistcounter3_0) ')';
+                        counter-increment: awlistcounter3_0
+                    }
+                
+                    .awlist7 {
+                        list-style: none;
+                        counter-reset: awlistcounter3_0 5
+                    }
+                
+                    .awlist7>li:before {
+                        content: '('counter(awlistcounter3_0) ')';
+                        counter-increment: awlistcounter3_0
+                    }
+                
+                    .awlist8 {
+                        list-style: none;
+                        counter-reset: awlistcounter3_0 6
+                    }
+                
+                    .awlist8>li:before {
+                        content: '('counter(awlistcounter3_0) ')';
+                        counter-increment: awlistcounter3_0
+                    }
+                
+                    .awlist9 {
+                        list-style: none;
+                        counter-reset: awlistcounter3_0 7
+                    }
+                
+                    .awlist9>li:before {
+                        content: '('counter(awlistcounter3_0) ')';
+                        counter-increment: awlistcounter3_0
+                    }
+                
+                    .awlist10 {
+                        list-style: none;
+                        counter-reset: awlistcounter1_0 1
+                    }
+                
+                    .awlist10>li:before {
+                        content: counter(awlistcounter1_0) '．';
+                        counter-increment: awlistcounter1_0
+                    }
+                </style>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:22pt;"><strong>Docker</strong><strong><span style="font-family:宋体;">学习笔记</span></strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol type="1" class="awlist1" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:16pt; font-weight:bold; list-style-position:inside;"><span style="width:3.62pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;</span>Docker<span style="font-family:宋体;">介绍：</span></li>
+                </ol>
+                <ol type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:12pt; font-weight:bold; list-style-position:inside;">Docker <span style="font-family:宋体;">镜像&nbsp;</span>(Image)</li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">Docker <span style="font-family:宋体;">镜像 是一个只读的模板，用来创建&nbsp;</span>Docker <span style="font-family:宋体;">容器。镜像包含了运行应用程序所需的所有内容，包括操作系统、应用程序代码、运行时、库、环境变量和配置文件。镜像是分层的，每一层都基于前一层，并且每一层都代表一次文件系统的变更。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">特点：</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">不可变：镜像是只读的，一旦创建就不能修改。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">分层存储：每个镜像由多个层组成，使用联合文件系统（如&nbsp;</span>AUFS<span style="font-family:宋体;">、</span>OverlayFS<span style="font-family:宋体;">）进行管理。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">共享与复用：相同的镜像层可以在多个镜像间共享，节省存储空间。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">常用操作：</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;"><strong><span style="font-family:宋体;">拉取镜像：</span></strong><span style="font-family:宋体; font-size:10.5pt;">从镜像仓库（如&nbsp;</span><span style="font-size:10.5pt;">Docker Hub</span><span style="font-family:宋体; font-size:10.5pt;">）下载镜像。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2; font-size:12pt;"><span style="font-family:宋体;">docker pull ubuntu:latest</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2; font-size:12pt;"><strong><span style="font-family:宋体;">列出镜像</span></strong><span style="font-family:宋体;">：查看本地存储的所有镜像。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2; font-size:12pt;"><span style="font-family:宋体;">docker images</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2; font-size:12pt;"><strong><span style="font-family:宋体;">删除镜像</span></strong><span style="font-family:宋体;">：删除本地存储的镜像。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2; font-size:12pt;"><span style="font-family:宋体;">docker rmi ubuntu:latest</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2; font-size:12pt;"><strong><span style="font-family:宋体;">构建镜像</span></strong><span style="font-family:宋体;">：使用 Dockerfile 构建新的镜像。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2; font-size:12pt;"><span style="font-family:宋体;">docker build -t myapp:latest .</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="2" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:12pt; font-weight:bold; list-style-position:inside;">Docker <span style="font-family:宋体;">容器&nbsp;</span>(Container)</li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">Docker <span style="font-family:宋体;">容器 是基于镜像创建的可运行实例。容器包含了应用程序及其依赖项，并且在隔离的环境中运行。容器利用了操作系统级的虚拟化技术，通过共享主机的操作系统内核实现轻量级的隔离。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">特点：</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">轻量级：容器共享主机操作系统内核，启动和运行非常高效。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">可移植：容器可以在任何支持&nbsp;</span>Docker <span style="font-family:宋体;">的环境中运行，实现跨平台的一致性。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">独立性：每个容器运行在其独立的环境中，互不干扰。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">常用操作：</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">运行容器：基于镜像创建并启动一个容器。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2; font-size:12pt;"><span style="font-family:宋体;">docker run -d -p 80:80 nginx:latest</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2; font-size:12pt;"><strong><span style="font-family:宋体;">列出运行中的容器</span></strong><span style="font-family:宋体;">：查看当前正在运行的容器。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2; font-size:12pt;"><span style="font-family:宋体;">docker ps</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2; font-size:12pt;"><strong><span style="font-family:宋体;">停止容器</span></strong><span style="font-family:宋体;">：停止一个运行中的容器。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2; font-size:12pt;"><span style="font-family:宋体;">docker stop &lt;container_id&gt;</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2; font-size:12pt;"><strong><span style="font-family:宋体;">删除容器</span></strong><span style="font-family:宋体;">：删除一个已经停止的容器。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2; font-size:12pt;"><span style="font-family:宋体;">docker rm &lt;container_id&gt;</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="3" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:12pt; font-weight:bold; list-style-position:inside;">Docker<span style="font-family:宋体;">的优势</span></li>
+                </ol>
+                <ol type="1" class="awlist2" style="margin:0pt; padding-left:0pt;">
+                    <li style="margin-left:21.25pt; text-indent:-21.25pt; font-weight:bold;"><span style="width:9.39pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">一致性和可移植性</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">环境一致性：</span>Docker <span style="font-family:宋体;">容器包含了应用程序及其所有依赖项，因此无论在开发、测试还是生产环境中，应用程序的运行环境都是一致的。这消除了&ldquo;在我机器上能跑&rdquo;的问题。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">跨平台可移植性：</span>Docker <span style="font-family:宋体;">容器可以在任何支持&nbsp;</span>Docker <span style="font-family:宋体;">的平台上运行，包括本地开发环境、测试服务器和云平台，确保应用程序在不同环境中的行为一致。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="2" type="1" class="awlist3" style="margin:0pt; padding-left:0pt;">
+                    <li style="margin-left:21.25pt; text-indent:-21.25pt; font-weight:bold;"><span style="width:9.39pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">资源效率和性能</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">轻量级：与虚拟机相比，</span>Docker <span style="font-family:宋体;">容器共享主机操作系统内核，启动速度更快，资源开销更小。因此，单台物理机可以运行更多的容器实例。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">高效利用资源：</span>Docker <span style="font-family:宋体;">容器的资源利用率高，启动和停止容器非常快速，这使得在资源受限的环境中也能高效运行。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="3" type="1" class="awlist4" style="margin:0pt; padding-left:0pt;">
+                    <li style="margin-left:21.25pt; text-indent:-21.25pt; font-weight:bold;"><span style="width:9.39pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">简化的依赖管理</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">依赖打包：</span>Docker <span style="font-family:宋体;">镜像包含了应用程序运行所需的所有依赖，包括库和配置文件。这意味着你只需要一次性打包所有依赖，然后可以在任何地方运行。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">版本控制：</span>Docker <span style="font-family:宋体;">镜像可以版本化，每次构建新的镜像时都可以生成唯一的版本标签，从而确保依赖和应用程序版本的一致性和可追溯性。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="4" type="1" class="awlist5" style="margin:0pt; padding-left:0pt;">
+                    <li style="margin-left:21.25pt; text-indent:-21.25pt; font-weight:bold;"><span style="width:9.39pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">隔离性和安全性</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">进程隔离：每个容器在一个独立的进程空间中运行，不会影响其他容器。这种隔离性确保了不同应用程序之间的互不干扰。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">安全性：</span>Docker <span style="font-family:宋体;">利用&nbsp;</span>Linux <span style="font-family:宋体;">内核的命名空间和控制组技术提供隔离性，确保容器之间和容器与主机之间的隔离。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="5" type="1" class="awlist6" style="margin:0pt; padding-left:0pt;">
+                    <li style="margin-left:21.25pt; text-indent:-21.25pt; font-weight:bold;"><span style="width:9.39pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">持续集成和持续部署（</span>CI/CD<span style="font-family:宋体;">）</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">简化&nbsp;</span>CI/CD <span style="font-family:宋体;">流程：</span>Docker <span style="font-family:宋体;">容器易于集成到持续集成和持续部署流水线中，可以自动化构建、测试和部署流程。容器的一致性和可移植性使得在不同阶段使用相同的镜像成为可能。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">快速回滚：由于&nbsp;</span>Docker <span style="font-family:宋体;">镜像是版本化的，可以轻松回滚到之前的版本，确保在出现问题时快速恢复。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="6" type="1" class="awlist7" style="margin:0pt; padding-left:0pt;">
+                    <li style="margin-left:21.25pt; text-indent:-21.25pt; font-weight:bold;"><span style="width:9.39pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">微服务架构支持</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">微服务部署：</span>Docker <span style="font-family:宋体;">非常适合微服务架构，每个服务可以独立打包成一个容器，从而实现独立部署、扩展和管理。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">容器编排：借助&nbsp;</span>Kubernetes<span style="font-family:宋体;">、</span>Docker Swarm <span style="font-family:宋体;">等容器编排工具，可以轻松管理大规模分布式应用，实现服务发现、负载均衡、自动伸缩等功能。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="7" type="1" class="awlist8" style="margin:0pt; padding-left:0pt;">
+                    <li style="margin-left:21.25pt; text-indent:-21.25pt; font-weight:bold;"><span style="width:9.39pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">开发和测试便利性</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">快速启动和停止：容器可以在几秒钟内启动和停止，非常适合开发和测试环境，节省时间。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">隔离的开发环境：每个开发人员可以在自己的隔离环境中进行开发和测试，避免相互之间的依赖冲突。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="8" type="1" class="awlist9" style="margin:0pt; padding-left:0pt;">
+                    <li style="margin-left:21.25pt; text-indent:-21.25pt; font-weight:bold;"><span style="width:9.39pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:宋体;">社区和生态系统</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">丰富的生态系统：</span>Docker <span style="font-family:宋体;">拥有庞大的社区和生态系统，包括&nbsp;</span>Docker Hub <span style="font-family:宋体;">上丰富的镜像仓库，可以方便地获取和使用各种应用镜像。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:宋体;">活跃的社区支持：有大量的社区资源和支持，可以帮助开发者快速解决问题并获得最佳实践建议。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt;">&nbsp;</p>
+                <ol start="2" type="1" class="awlist10" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:16pt; font-weight:bold; list-style-position:inside;"><span style="width:3.62pt; font:7pt 'Times New Roman'; display:inline-block;">&nbsp;&nbsp;</span><span style="font-family:宋体;">打包</span>Docker<span style="font-family:宋体;">镜像</span></li>
+                </ol>
+                <ol type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:12pt; font-weight:bold; list-style-position:inside;"><span style="font-family:宋体;">编写</span>Dockerfile</li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt;">Dockerfile<span style="font-family:宋体;">是一个包含一系列指令的文本文件，这些指令定义了</span>Docker<span style="font-family:宋体;">镜像的内容和设置。以下是一个简单的示例</span>Dockerfile<span style="font-family:宋体;">，用于一个</span>Python<span style="font-family:宋体;">应用程序：</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; line-height:18pt; widows:2; orphans:2; background-color:#1f1f1f;"><span style="font-family:Menlo; font-size:12pt; color:#6a9955; background-color:#1f1f1f;"># 使用官方的 Python 3.9 版本作为基础镜像</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; line-height:18pt; widows:2; orphans:2; background-color:#1f1f1f;"><span style="font-family:Menlo; font-size:12pt; color:#c586c0; background-color:#1f1f1f;">FROM</span><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">&nbsp;</span><span style="font-family:Menlo; font-size:12pt; color:#4ec9b0; background-color:#1f1f1f;">python</span><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">:</span><span style="font-family:Menlo; font-size:12pt; color:#9cdcfe; background-color:#1f1f1f;">3.9.17-slim</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; line-height:18pt; widows:2; orphans:2; background-color:#1f1f1f;"><span style="font-family:Menlo; font-size:12pt; color:#cccccc;">&nbsp;</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; line-height:18pt; widows:2; orphans:2; background-color:#1f1f1f;"><span style="font-family:Menlo; font-size:12pt; color:#6a9955; background-color:#1f1f1f;"># 设置工作目录</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; line-height:18pt; widows:2; orphans:2; background-color:#1f1f1f;"><span style="font-family:Menlo; font-size:12pt; color:#c586c0; background-color:#1f1f1f;">WORKDIR</span><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">&nbsp;</span><span style="font-family:Menlo; font-size:12pt; color:#9cdcfe; background-color:#1f1f1f;">/app</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; line-height:18pt; widows:2; orphans:2; background-color:#1f1f1f;"><span style="font-family:Menlo; font-size:12pt; color:#6a9955; background-color:#1f1f1f;"># 复制 requirements.txt 并安装依赖</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; line-height:18pt; widows:2; orphans:2; background-color:#1f1f1f;"><span style="font-family:Menlo; font-size:12pt; color:#c586c0; background-color:#1f1f1f;">COPY</span><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">&nbsp;</span><span style="font-family:Menlo; font-size:12pt; color:#9cdcfe; background-color:#1f1f1f;">requirements.txt</span><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">&nbsp;</span><span style="font-family:Menlo; font-size:12pt; color:#9cdcfe; background-color:#1f1f1f;">requirements.txt</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; line-height:18pt; widows:2; orphans:2; background-color:#1f1f1f;"><span style="font-family:Menlo; font-size:12pt; color:#c586c0; background-color:#1f1f1f;">RUN</span><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">&nbsp;</span><span style="font-family:Menlo; font-size:12pt; color:#9cdcfe; background-color:#1f1f1f;">pip</span><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">&nbsp;</span><span style="font-family:Menlo; font-size:12pt; color:#9cdcfe; background-color:#1f1f1f;">install</span><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">&nbsp;</span><span style="font-family:Menlo; font-size:12pt; color:#9cdcfe; background-color:#1f1f1f;">-r</span><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">&nbsp;</span><span style="font-family:Menlo; font-size:12pt; color:#9cdcfe; background-color:#1f1f1f;">requirements.txt</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; line-height:18pt; widows:2; orphans:2; background-color:#1f1f1f;"><span style="font-family:Menlo; font-size:12pt; color:#6a9955; background-color:#1f1f1f;"># 安装 Tkinter 和 OpenCV 依赖的库</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; line-height:18pt; widows:2; orphans:2; background-color:#1f1f1f;"><span style="font-family:Menlo; font-size:12pt; color:#c586c0; background-color:#1f1f1f;">RUN</span><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">&nbsp;</span><span style="font-family:Menlo; font-size:12pt; color:#9cdcfe; background-color:#1f1f1f;">apt-get</span><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">&nbsp;</span><span style="font-family:Menlo; font-size:12pt; color:#9cdcfe; background-color:#1f1f1f;">update</span><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">&nbsp;</span><span style="font-family:Menlo; font-size:12pt; color:#9cdcfe; background-color:#1f1f1f;">&amp;&amp;</span><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">&nbsp;</span><span style="font-family:Menlo; font-size:12pt; color:#9cdcfe; background-color:#1f1f1f;">apt-get</span><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">&nbsp;</span><span style="font-family:Menlo; font-size:12pt; color:#9cdcfe; background-color:#1f1f1f;">install</span><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">&nbsp;</span><span style="font-family:Menlo; font-size:12pt; color:#9cdcfe; background-color:#1f1f1f;">-y</span><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">&nbsp;</span><span style="font-family:Menlo; font-size:12pt; color:#569cd6; background-color:#1f1f1f;">\</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; line-height:18pt; widows:2; orphans:2; background-color:#1f1f1f;"><span style="font-family:Menlo; font-size:12pt; color:#9cdcfe; background-color:#1f1f1f;">libgl1-mesa-glx</span><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">&nbsp;</span><span style="font-family:Menlo; font-size:12pt; color:#569cd6; background-color:#1f1f1f;">\</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; line-height:18pt; widows:2; orphans:2; background-color:#1f1f1f;"><span style="font-family:Menlo; font-size:12pt; color:#9cdcfe; background-color:#1f1f1f;">libglib2.0-0</span><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">&nbsp;</span><span style="font-family:Menlo; font-size:12pt; color:#569cd6; background-color:#1f1f1f;">\</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; line-height:18pt; widows:2; orphans:2; background-color:#1f1f1f;"><span style="font-family:Menlo; font-size:12pt; color:#9cdcfe; background-color:#1f1f1f;">python3-tk</span><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">&nbsp;</span><span style="font-family:Menlo; font-size:12pt; color:#569cd6; background-color:#1f1f1f;">\</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; line-height:18pt; widows:2; orphans:2; background-color:#1f1f1f;"><span style="font-family:Menlo; font-size:12pt; color:#9cdcfe; background-color:#1f1f1f;">tk-dev</span><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">&nbsp;</span><span style="font-family:Menlo; font-size:12pt; color:#569cd6; background-color:#1f1f1f;">\</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; line-height:18pt; widows:2; orphans:2; background-color:#1f1f1f;"><span style="font-family:Menlo; font-size:12pt; color:#9cdcfe; background-color:#1f1f1f;">&amp;&amp;</span><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">&nbsp;</span><span style="font-family:Menlo; font-size:12pt; color:#9cdcfe; background-color:#1f1f1f;">apt-get</span><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">&nbsp;</span><span style="font-family:Menlo; font-size:12pt; color:#9cdcfe; background-color:#1f1f1f;">clean</span><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">&nbsp;</span><span style="font-family:Menlo; font-size:12pt; color:#569cd6; background-color:#1f1f1f;">\</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; line-height:18pt; widows:2; orphans:2; background-color:#1f1f1f;"><span style="font-family:Menlo; font-size:12pt; color:#9cdcfe; background-color:#1f1f1f;">&amp;&amp;</span><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">&nbsp;</span><span style="font-family:Menlo; font-size:12pt; color:#9cdcfe; background-color:#1f1f1f;">rm</span><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">&nbsp;</span><span style="font-family:Menlo; font-size:12pt; color:#9cdcfe; background-color:#1f1f1f;">-rf</span><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">&nbsp;</span><span style="font-family:Menlo; font-size:12pt; color:#9cdcfe; background-color:#1f1f1f;">/var/lib/apt/lists/*</span><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">&nbsp;</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; line-height:18pt; widows:2; orphans:2; background-color:#1f1f1f;"><span style="font-family:Menlo; font-size:12pt; color:#6a9955; background-color:#1f1f1f;"># 复制项目文件到工作目录</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; line-height:18pt; widows:2; orphans:2; background-color:#1f1f1f;"><span style="font-family:Menlo; font-size:12pt; color:#c586c0; background-color:#1f1f1f;">COPY</span><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">&nbsp;</span><span style="font-family:Menlo; font-size:12pt; color:#9cdcfe; background-color:#1f1f1f;">.</span><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">&nbsp;</span><span style="font-family:Menlo; font-size:12pt; color:#9cdcfe; background-color:#1f1f1f;">.</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; line-height:18pt; widows:2; orphans:2; background-color:#1f1f1f;"><span style="font-family:Menlo; font-size:12pt; color:#6a9955; background-color:#1f1f1f;"># 设置环境变量</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; line-height:18pt; widows:2; orphans:2; background-color:#1f1f1f;"><span style="font-family:Menlo; font-size:12pt; color:#6a9955; background-color:#1f1f1f;"># ENV FLASK_APP=app</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; line-height:18pt; widows:2; orphans:2; background-color:#1f1f1f;"><span style="font-family:Menlo; font-size:12pt; color:#6a9955; background-color:#1f1f1f;"># ENV FLASK_RUN_HOST=0.0.0.0</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; line-height:18pt; widows:2; orphans:2; background-color:#1f1f1f;"><span style="font-family:Menlo; font-size:12pt; color:#6a9955; background-color:#1f1f1f;"># 赋予启动脚本执行权限</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; line-height:18pt; widows:2; orphans:2; background-color:#1f1f1f;"><span style="font-family:Menlo; font-size:12pt; color:#6a9955; background-color:#1f1f1f;"># RUN chmod +x startup_rag.sh</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; line-height:18pt; widows:2; orphans:2; background-color:#1f1f1f;"><span style="font-family:Menlo; font-size:12pt; color:#6a9955; background-color:#1f1f1f;"># RUN chmod +x startup.sh</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; line-height:18pt; widows:2; orphans:2; background-color:#1f1f1f;"><span style="font-family:Menlo; font-size:12pt; color:#6a9955; background-color:#1f1f1f;"># 暴露应用运行的端口（可选，因为我们会在 docker-compose.yml 中指定端口）</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; line-height:18pt; widows:2; orphans:2; background-color:#1f1f1f;"><span style="font-family:Menlo; font-size:12pt; color:#c586c0; background-color:#1f1f1f;">EXPOSE</span><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">&nbsp;</span><span style="font-family:Menlo; font-size:12pt; color:#9cdcfe; background-color:#1f1f1f;">6999</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; line-height:18pt; widows:2; orphans:2; background-color:#1f1f1f;"><span style="font-family:Menlo; font-size:12pt; color:#c586c0; background-color:#1f1f1f;">EXPOSE</span><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">&nbsp;</span><span style="font-family:Menlo; font-size:12pt; color:#9cdcfe; background-color:#1f1f1f;">16665</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; line-height:18pt; widows:2; orphans:2; background-color:#1f1f1f;"><span style="font-family:Menlo; font-size:12pt; color:#6a9955; background-color:#1f1f1f;"># 设置默认命令，可以在 docker-compose.yml 中覆盖</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; line-height:18pt; widows:2; orphans:2; background-color:#1f1f1f;"><span style="font-family:Menlo; font-size:12pt; color:#c586c0; background-color:#1f1f1f;">CMD</span><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">&nbsp;</span><span style="font-family:Menlo; font-size:12pt; color:#9cdcfe; background-color:#1f1f1f;">[</span><span style="font-family:Menlo; font-size:12pt; color:#ce9178; background-color:#1f1f1f;">&quot;python&quot;</span><span style="font-family:Menlo; font-size:12pt; color:#9cdcfe; background-color:#1f1f1f;">,</span><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">&nbsp;</span><span style="font-family:Menlo; font-size:12pt; color:#ce9178; background-color:#1f1f1f;">&quot;main_wechat.py&quot;</span><span style="font-family:Menlo; font-size:12pt; color:#9cdcfe; background-color:#1f1f1f;">]</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2;">&nbsp;</p>
+                <ol start="2" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:12pt; font-weight:bold; list-style-position:inside;"><span style="font-family:宋体;">编写</span>docker-compose.yml<span style="font-family:宋体;">文件</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2;">Docker Compose <span style="font-family:宋体;">是一个用于定义和运行多容器&nbsp;</span>Docker <span style="font-family:宋体;">应用的工具。通过&nbsp;</span>Compose<span style="font-family:宋体;">，你可以使用一个&nbsp;</span>YAML <span style="font-family:宋体;">文件来配置应用程序的服务。然后，使用一个单独的命令来创建和启动所有服务。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; line-height:18pt; widows:2; orphans:2; background-color:#1f1f1f;"><span style="font-family:Menlo; font-size:12pt; color:#569cd6; background-color:#1f1f1f;">version</span><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">:&nbsp;</span><span style="font-family:Menlo; font-size:12pt; color:#ce9178; background-color:#1f1f1f;">&apos;3.8&apos;</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; line-height:18pt; widows:2; orphans:2; background-color:#1f1f1f;"><span style="font-family:Menlo; font-size:12pt; color:#cccccc;">&nbsp;</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; line-height:18pt; widows:2; orphans:2; background-color:#1f1f1f;"><span style="font-family:Menlo; font-size:12pt; color:#569cd6; background-color:#1f1f1f;">services</span><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">:</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; line-height:18pt; widows:2; orphans:2; background-color:#1f1f1f;"><span style="font-family:Menlo; font-size:12pt; color:#569cd6; background-color:#1f1f1f;">itchat</span><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">:</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; line-height:18pt; widows:2; orphans:2; background-color:#1f1f1f;"><span style="font-family:Menlo; font-size:12pt; color:#569cd6; background-color:#1f1f1f;">build</span><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">:&nbsp;</span><span style="font-family:Menlo; font-size:12pt; color:#b5cea8; background-color:#1f1f1f;">.</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; line-height:18pt; widows:2; orphans:2; background-color:#1f1f1f;"><span style="font-family:Menlo; font-size:12pt; color:#569cd6; background-color:#1f1f1f;">ports</span><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">:</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; line-height:18pt; widows:2; orphans:2; background-color:#1f1f1f;"><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">-&nbsp;</span><span style="font-family:Menlo; font-size:12pt; color:#ce9178; background-color:#1f1f1f;">&quot;6999:6999&quot;</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; line-height:18pt; widows:2; orphans:2; background-color:#1f1f1f;"><span style="font-family:Menlo; font-size:12pt; color:#569cd6; background-color:#1f1f1f;">volumes</span><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">:</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; line-height:18pt; widows:2; orphans:2; background-color:#1f1f1f;"><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">-&nbsp;</span><span style="font-family:Menlo; font-size:12pt; color:#ce9178; background-color:#1f1f1f;">.:/app</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; line-height:18pt; widows:2; orphans:2; background-color:#1f1f1f;"><span style="font-family:Menlo; font-size:12pt; color:#569cd6; background-color:#1f1f1f;">command</span><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">: [</span><span style="font-family:Menlo; font-size:12pt; color:#ce9178; background-color:#1f1f1f;">&quot;python&quot;</span><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">,&nbsp;</span><span style="font-family:Menlo; font-size:12pt; color:#ce9178; background-color:#1f1f1f;">&quot;main_wechat.py&quot;</span><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">]</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; line-height:18pt; widows:2; orphans:2; background-color:#1f1f1f;"><span style="font-family:Menlo; font-size:12pt; color:#569cd6; background-color:#1f1f1f;">rag</span><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">:</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; line-height:18pt; widows:2; orphans:2; background-color:#1f1f1f;"><span style="font-family:Menlo; font-size:12pt; color:#569cd6; background-color:#1f1f1f;">build</span><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">:&nbsp;</span><span style="font-family:Menlo; font-size:12pt; color:#b5cea8; background-color:#1f1f1f;">.</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; line-height:18pt; widows:2; orphans:2; background-color:#1f1f1f;"><span style="font-family:Menlo; font-size:12pt; color:#569cd6; background-color:#1f1f1f;">ports</span><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">:</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; line-height:18pt; widows:2; orphans:2; background-color:#1f1f1f;"><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">-&nbsp;</span><span style="font-family:Menlo; font-size:12pt; color:#ce9178; background-color:#1f1f1f;">&quot;16665:16665&quot;</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; line-height:18pt; widows:2; orphans:2; background-color:#1f1f1f;"><span style="font-family:Menlo; font-size:12pt; color:#569cd6; background-color:#1f1f1f;">volumes</span><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">:</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; line-height:18pt; widows:2; orphans:2; background-color:#1f1f1f;"><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">-&nbsp;</span><span style="font-family:Menlo; font-size:12pt; color:#ce9178; background-color:#1f1f1f;">.:/app</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; line-height:18pt; widows:2; orphans:2; background-color:#1f1f1f;"><span style="font-family:Menlo; font-size:12pt; color:#569cd6; background-color:#1f1f1f;">command</span><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">: [</span><span style="font-family:Menlo; font-size:12pt; color:#ce9178; background-color:#1f1f1f;">&quot;python&quot;</span><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">,&nbsp;</span><span style="font-family:Menlo; font-size:12pt; color:#ce9178; background-color:#1f1f1f;">&quot;main_wechat.py&quot;</span><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">,&nbsp;</span><span style="font-family:Menlo; font-size:12pt; color:#ce9178; background-color:#1f1f1f;">&quot;-r&quot;</span><span style="font-family:Menlo; font-size:12pt; color:#cccccc; background-color:#1f1f1f;">]</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2;">&nbsp;</p>
+                <ol start="3" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:12pt; font-weight:bold; list-style-position:inside;"><span style="font-family:宋体;">构建</span>Docker<span style="font-family:宋体;">镜像</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2;"><span style="font-family:宋体;">使用</span>docker build<span style="font-family:宋体;">命令基于</span>Dockerfile<span style="font-family:宋体;">构建镜像。你需要在包含</span>Dockerfile<span style="font-family:宋体;">的目录中运行此命令：</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2;">docker build -t my_image:latest .</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2;"><span style="font-family:宋体;">或</span>docker-compose build</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2;">docker images</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2;">&nbsp;</p>
+                <ol start="4" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:12pt; font-weight:bold; list-style-position:inside;"><span style="font-family:宋体;">运行</span>Docker<span style="font-family:宋体;">容器</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2;"><span style="font-family:宋体;">使用</span>docker run<span style="font-family:宋体;">命令基于新镜像运行容器，以验证其功能：</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2;">docker run -d --name my_container -p 8000:8000 my_image:latest</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2;"><span style="font-family:宋体;">或</span>docker-compose up server_name -d</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2;">&middot;&nbsp; -d <span style="font-family:宋体;">选项表示以分离模式运行容器。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2;">&middot;&nbsp; --name <span style="font-family:宋体;">选项用于指定容器的名称。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2;">&middot;&nbsp; -p <span style="font-family:宋体;">选项用于将主机的端口映射到容器的端口。</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2;">&nbsp;</p>
+                <ol start="5" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:12pt; font-weight:bold; list-style-position:inside;"><span style="font-family:宋体;">推送镜像到镜像仓库</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2;"><span style="font-family:宋体;">首先，使用以下命令登录到</span>Docker Hub<span style="font-family:宋体;">：</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;">docker login</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:12pt;"><strong>&nbsp;</strong></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2;"><span style="font-family:宋体;">然后，使用</span>docker tag<span style="font-family:宋体;">命令标记镜像，以匹配仓库格式：</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2;">docker tag my_image:latest your_dockerhub_username/my_image:latest</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2;"><span style="font-family:宋体;">使用</span>docker push<span style="font-family:宋体;">命令将镜像推送到</span>Docker Hub<span style="font-family:宋体;">：</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2;">docker push your_dockerhub_username/my_image:latest</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2;">&nbsp;</p>
+                <ol start="6" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:12pt; font-weight:bold; list-style-position:inside;"><span style="font-family:宋体;">拉取镜像</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2;"><span style="font-family:宋体;">其他用户可以使用</span>docker pull<span style="font-family:宋体;">命令从</span>Docker Hub<span style="font-family:宋体;">拉取镜像：</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2;">docker pull your_dockerhub_username/my_image:latest</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2;">&nbsp;</p>
+                <ol start="7" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:12pt; font-weight:bold; list-style-position:inside;"><span style="font-family:宋体;">终止服务</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2;"><span style="font-family:宋体;">构建后启动容器</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2;">docker-compose up server_name -d</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2;"><span style="font-family:宋体;">停止并删除所有容器</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2;">docker-compose down</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2;"><span style="font-family:宋体;">暂停某服务</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2;">docker-compose stop rag</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2;"><span style="font-family:宋体;">列出所有运行的服务</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2;">docker-compose ps</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2;"><span style="font-family:宋体;">显示所有服务的日志</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2;">docker-compose logs</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2;">&nbsp;</p>
+                <ol start="8" type="1" style="margin:0pt; padding-left:0pt;">
+                    <li style="font-size:12pt; font-weight:bold; list-style-position:inside;"><span style="font-family:宋体;">导出镜像</span></li>
+                </ol>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2;"><span style="font-family:宋体;">导出镜像</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2;">docker save -o my_flask_app_v1.tar my_flask_app:latest</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2;"><span style="font-family:宋体;">将文件传输到其他&nbsp;</span>PC<span style="font-family:宋体;">（以&nbsp;</span>SCP <span style="font-family:宋体;">为例）</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2;">scp my_flask_app_v1.tar user@other-pc:/path/to/destination</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2;"><span style="font-family:宋体;">在其他&nbsp;</span>PC <span style="font-family:宋体;">上导入镜像</span></p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2;">docker load -i /path/to/destination/my_flask_app_v1.tar</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; text-align:left; widows:2; orphans:2;">&nbsp;</p>
+                <p style="margin-top:0pt; margin-bottom:0pt; font-size:16pt;"><strong>&nbsp;</strong></p>
+            </article>
+            <!-- 更多文章-->
+        </section>
+    </main>
+
+    <footer>
+        <p>版权所有 &copy; 2024 Steven的博客</p>
+    </footer>
+
+</body>
+</html>
